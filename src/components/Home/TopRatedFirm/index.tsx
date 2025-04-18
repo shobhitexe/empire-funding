@@ -41,6 +41,12 @@ export default function TopRatedFirm() {
           <div
             key={item.title}
             className="max-w-md flex flex-col gap-7 p-7 rounded-2xl"
+            style={{
+              backgroundImage: "url('/images/top-rated/bg.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
           >
             <Image
               src={`/images/top-rated/${idx + 1}.svg`}

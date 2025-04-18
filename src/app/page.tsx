@@ -1,6 +1,9 @@
 import {
   BestTraders,
+  FaqsHome,
+  Footer,
   Hero,
+  LastCTASection,
   MultipleAssets,
   PayoutTicker,
   Testimonials,
@@ -18,6 +21,9 @@ export default function Home() {
       <TopRatedFirm />
       <BestTraders />
       <Testimonials />
+      <FaqsHome />
+      <LastCTASection />
+      <Footer />
     </main>
   );
 }

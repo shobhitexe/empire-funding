@@ -114,7 +114,7 @@ export default function BestTraders() {
           {PayoutsArr.map((item, idx) => (
             <div
               key={item.name + idx}
-              className="flex items-center gap-10 max-w-xl w-full justify-between bg-[#05120B] border border-[#244D37] p-3 rounded-2xl"
+              className="flex items-center gap-10 w-full justify-between bg-[#05120B] border border-[#244D37] p-3 rounded-2xl"
             >
               <div className="flex items-center gap-5">
                 <Image src={item.icon} alt={item.name} width={60} height={60} />
