@@ -31,7 +31,7 @@ const Data = [
 
 export default function TopRatedFirm() {
   return (
-    <div className="my-20 container mx-auto flex flex-col gap-10">
+    <div className="my-24 container mx-auto flex flex-col gap-16">
       <Heading className="text-center">
         Why We&apos;re <GreenText>Top Rated PropFirm</GreenText>
       </Heading>

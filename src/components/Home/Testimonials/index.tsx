@@ -108,7 +108,7 @@ const thirdRow = reviews.slice(reviews.length / 2);
 
 export default function Testimonials() {
   return (
-    <div className="container mx-auto text-center my-20">
+    <div className="container mx-auto text-center my-24">
       <div className="text-[#40FF95] text-xl">Testimonials</div>
 
       <div className="flex flex-col items-center mt-2 gap-3">
@@ -135,7 +135,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div>
+      <div className="mt-14">
         <div className="relative flex gap-5 h-[500px] w-full flex-row items-center justify-center overflow-hidden">
           <Marquee pauseOnHover vertical className="[--duration:20s]">
             {firstRow.map((review, idx) => (

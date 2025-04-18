@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 export default function LastCTASection() {
   return (
     <div
-      className="container mx-auto text-center h-[500px] flex flex-col items-center justify-center gap-10 rounded-3xl"
+      className="container mx-auto text-center h-[500px] flex flex-col items-center justify-center gap-10 my-10 rounded-3xl"
       style={{
         backgroundImage: "url('/images/section.webp')",
         backgroundSize: "cover",

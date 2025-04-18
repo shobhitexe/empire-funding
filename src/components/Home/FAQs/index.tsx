@@ -33,7 +33,7 @@ const Faqs = [
 
 export default function FaqsHome() {
   return (
-    <div className="my-20 container mx-auto">
+    <div className="my-28 container mx-auto flex flex-col gap-5">
       <div className="flex flex-col gap-2 text-center">
         <Heading>
           Frequently Asked <GreenText>Questions</GreenText>
@@ -44,7 +44,11 @@ export default function FaqsHome() {
         </SubHeading>
       </div>
 
-      <Accordion type="single" collapsible className="mt-5 max-w-7xl mx-auto">
+      <Accordion
+        type="single"
+        collapsible
+        className="mt-5 max-w-7xl mx-auto w-full"
+      >
         {Faqs.map((item, idx) => (
           <AccordionItem
             key={item.que + idx}

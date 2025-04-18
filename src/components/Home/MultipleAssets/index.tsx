@@ -28,7 +28,7 @@ const MultipleAssetsArr = [
 
 export default function MultipleAssets() {
   return (
-    <div className="container mx-auto py-20 flex flex-col gap-10">
+    <div className="container mx-auto py-24 flex flex-col gap-14">
       <div className="flex flex-col gap-2 text-center">
         <Heading>
           Multiple Trading <GreenText>Assets</GreenText>
