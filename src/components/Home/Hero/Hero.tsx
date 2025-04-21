@@ -3,9 +3,9 @@ import { Button } from "../../ui/button";
 import Image from "next/image";
 
 const paymentMethods = [
-  { src: "/images/hero/Visa.png", alt: "visa" },
-  { src: "/images/hero/Mastercard.png", alt: "mastercard" },
-  { src: "/images/hero/Bitcoin.png", alt: "bitcoin" },
+  { src: "/images/hero/visa.png", alt: "visa" },
+  { src: "/images/hero/mastercard.png", alt: "mastercard" },
+  { src: "/images/hero/bitcoin.png", alt: "bitcoin" },
   { src: "/images/hero/eth.png", alt: "eth" },
   { src: "/images/hero/usdt.png", alt: "usdt" },
 ];

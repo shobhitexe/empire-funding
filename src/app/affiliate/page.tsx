@@ -1,0 +1,218 @@
+import { LastCTASection } from "@/components";
+import { Button } from "@/components/ui/button";
+import GreenText from "@/components/ui/green-text";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+
+const AffiliateTiers = [
+  {
+    referral: "0 - 25 Life Time Referrals",
+    commission: "12.5% Commission",
+    rewards: "No Challenge Rewards",
+  },
+  {
+    referral: "26 - 75 Life Time Referrals",
+    commission: "15% Commission",
+    rewards: "No Challenge Rewards",
+  },
+  {
+    referral: "76 - 200 Life Time Referrals",
+    commission: "17.5% Commission",
+    rewards: "1x Free 25k Challenge",
+  },
+  {
+    referral: "201+ Life Time Referrals",
+    commission: "20% Commission",
+    rewards: "1x Free 50k Challenge",
+  },
+];
+
+const AffiliateBenefits = [
+  "365 Days Tracking Cookies",
+  "Monthly Recurring Commissions",
+  "Earn on repeat purchases",
+  "Get access to insights with our affiliate dashboard",
+];
+
+const HowItWorks = [
+  {
+    title: "Enrol & access",
+    desc: "Register and access your affiliate dashboard",
+  },
+  {
+    title: "Share your link",
+    desc: "Receive your unique tracking link for referring to Blueberry Funded",
+  },
+  {
+    title: "Track your referrals",
+    desc: "As your visitors come to our site, we track their progress to purchasing an evaluation",
+  },
+  {
+    title: "Receive commissions",
+    desc: "Once a referred trader's order is confirmed, your commissions are added into your affiliate dashboard",
+  },
+  {
+    title: "Withdraw",
+    desc: "As your commissions grow, you can withdraw these directly via Riseworks",
+  },
+];
+
+export default function page() {
+  return (
+    <div className="flex flex-col gap-10">
+      <div className="text-center flex items-center justify-center flex-col gap-4 py-20">
+        <div className="flex items-center gap-1 text-6xl font-semibold">
+          <div>Join the Empire</div>
+          <GreenText>Funded</GreenText> <div>team!</div>
+        </div>
+        <div className="font-light text-light max-w-3xl text-xl">
+          Boost your income with our Affiliate Program! Refer new traders and
+          earn up to 20% commission on each successful sign-up.
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Button size={"xl"} variant={"green"}>
+            Join Affiliate <ArrowRight />
+          </Button>
+
+          <Button size={"xl"} variant={"outline"}>
+            Affiliate Login <ArrowRight />
+          </Button>
+        </div>
+      </div>
+
+      <div className="container mx-auto grid grid-cols-3 gap-5">
+        {AffiliateTiers.map((item, idx) => (
+          <div
+            key={item.referral}
+            className="bg-[#090909] rounded-3xl p-5 border flex flex-col gap-3"
+          >
+            <div className="text-[#69FFB2] font-semibold text-xl">
+              Tier {idx + 1}
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Image
+                src={"/images/affiliate/referral.svg"}
+                alt={"referral"}
+                width={50}
+                height={50}
+              />
+
+              <div>{item.referral}</div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Image
+                src={"/images/affiliate/commission.svg"}
+                alt={"commission"}
+                width={50}
+                height={50}
+              />
+
+              <div>{item.commission}</div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Image
+                src={"/images/affiliate/rewards.svg"}
+                alt={"rewards"}
+                width={50}
+                height={50}
+              />
+
+              <div>{item.rewards}</div>
+            </div>
+          </div>
+        ))}
+
+        <div className="col-span-2 bg-[#020B06] border rounded-3xl flex flex-col items-center">
+          <div className="flex flex-col items-center justify-between p-5">
+            <Image
+              src={"/images/affiliate/star.svg"}
+              alt={"star"}
+              width={80}
+              height={80}
+            />
+
+            <div className="text-[#8AFEC1] text-2xl font-semibold">Bespoke</div>
+          </div>
+
+          <div className="font-semibold max-w-3xl text-center text-xl">
+            If you have a proven track record at other prop firms, we can offer
+            you a personalised and competitive package.
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#020B06]">
+        <div className="container mx-auto my-10 flex flex-col gap-5">
+          <div className="text-[#40FF95]">FUNDED</div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center text-5xl gap-1 justify-center font-semibold">
+              <div>Affiliate</div>
+              <GreenText>Benefits</GreenText>
+            </div>
+
+            <Button variant={"green"} size={"xl"}>
+              Join Affiliate <ArrowRight />
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 gap-10 mt-10">
+            {AffiliateBenefits.map((item) => (
+              <div
+                key={item}
+                style={{
+                  backgroundImage: "url('/images/affiliate-bg.svg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="p-5 rounded-2xl text-4xl h-[250px]"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto">
+        <div className="text-center flex flex-col gap-2">
+          <div className="text-[#40FF95] text-lg">PRICING</div>
+          <div className="text-5xl font-semibold">
+            How it <GreenText>Works?</GreenText>{" "}
+          </div>
+        </div>
+        <div className="grid grid-cols-3 mt-10 gap-10">
+          {HowItWorks.map((item, idx) => (
+            <div key={item.title} className="flex items-center gap-5 max-w-sm">
+              <Image
+                src={`/images/about/${idx + 1}.svg`}
+                alt={item.title}
+                width={80}
+                height={80}
+              />
+
+              <div className="flex flex-col gap-3">
+                <div className="text-xl font-semibold"> {item.title}</div>
+                <div className="text-light">{item.desc}</div>
+              </div>
+            </div>
+          ))}
+
+          <Button
+            size={"xl"}
+            variant={"green"}
+            className="w-fit relative top-10"
+          >
+            Join Affiliate <ArrowRight />
+          </Button>
+        </div>
+      </div>
+
+      <LastCTASection />
+    </div>
+  );
+}

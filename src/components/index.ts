@@ -1,3 +1,6 @@
+import ContactUsForm from "./ContactUs/ContactUsForm";
+import LastCTASectionContactUs from "./ContactUs/LastCtaSectionContactUs";
+import FaqsSection from "./Faqs/FaqsSection";
 import Footer from "./Footer";
 import BestTraders from "./Home/BestTraders";
 import FaqsHome from "./Home/FAQs";
@@ -22,4 +25,7 @@ export {
   FaqsHome,
   LastCTASection,
   Footer,
+  ContactUsForm,
+  LastCTASectionContactUs,
+  FaqsSection,
 };

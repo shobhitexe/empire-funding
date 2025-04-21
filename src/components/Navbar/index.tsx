@@ -6,7 +6,7 @@ import { User } from "lucide-react";
 export const links = [
   { title: "Programs", href: "/#challenges" },
   { title: "Affiliate", href: "/affiliate" },
-  { title: "Trading Rules", href: "/rules" },
+  { title: "About Us", href: "/about-us" },
   { title: "FAQ", href: "/faqs" },
   { title: "Contact Us", href: "/contact-us" },
 ];

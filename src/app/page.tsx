@@ -1,7 +1,6 @@
 import {
   BestTraders,
   FaqsHome,
-  Footer,
   Hero,
   LastCTASection,
   MultipleAssets,
@@ -23,7 +22,6 @@ export default function Home() {
       <Testimonials />
       <FaqsHome />
       <LastCTASection />
-      <Footer />
     </main>
   );
 }
