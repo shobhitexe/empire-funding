@@ -9,7 +9,6 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import { FaqsContent } from "./FaqsContent";
-import LastCTASection from "../LastCtaSection";
 
 const tabNames = ["Accounts", "Withdrawals", "KYC"];
 
@@ -17,8 +16,8 @@ export default function FaqsSection() {
   const [tab, setTab] = useState(0);
 
   return (
-    <div className="flex flex-col gap-5 container mx-auto">
-      <div className="flex justify-center gap-5">
+    <div className="flex flex-col sm:gap-5 gap-3 container mx-auto">
+      <div className="flex max-sm:flex-wrap justify-center sm:gap-5 gap-3">
         {tabNames.map((item, idx) => (
           <Button
             key={item}
@@ -34,7 +33,7 @@ export default function FaqsSection() {
       <Accordion
         type="single"
         collapsible
-        className="mt-5 max-w-7xl mx-auto w-full"
+        className="sm:mt-5 mt-0 max-w-7xl mx-auto w-full max-sm:px-5"
       >
         {FaqsContent[tab].map((item, idx) => (
           <AccordionItem
@@ -47,10 +46,6 @@ export default function FaqsSection() {
           </AccordionItem>
         ))}
       </Accordion>
-
-      <div className="mt-10" />
-
-      <LastCTASection />
     </div>
   );
 }

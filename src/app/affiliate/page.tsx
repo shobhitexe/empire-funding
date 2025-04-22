@@ -59,18 +59,18 @@ const HowItWorks = [
 
 export default function page() {
   return (
-    <div className="flex flex-col gap-10">
-      <div className="text-center flex items-center justify-center flex-col gap-4 pt-20 pb-10">
-        <div className="flex items-center gap-1 text-6xl font-semibold">
+    <div className="flex flex-col sm:gap-10 gap-5">
+      <div className="text-center flex items-center justify-center flex-col gap-4 sm:pt-20 pt-7 pb-10 px-5">
+        <div className="flex sm:flex-row flex-col items-center gap-1 md:text-6xl sm:text-5xl text-4xl font-semibold">
           <div>Join the Empire</div>
           <GreenText>Funded</GreenText> <div>team!</div>
         </div>
-        <div className="font-light text-light max-w-3xl text-xl">
+        <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg text-base">
           Boost your income with our Affiliate Program! Refer new traders and
           earn up to 20% commission on each successful sign-up.
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex sm:flex-row flex-col items-center gap-3">
           <Button size={"xl"} variant={"green"}>
             Join Affiliate <ArrowRight />
           </Button>
@@ -81,7 +81,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="container mx-auto grid grid-cols-3 gap-5">
+      <div className="container px-5 mx-auto xs:grid flex flex-col sm:grid-cols-3 xs:grid-cols-1 grid-cols-1 sm:gap-5 gap-3">
         {AffiliateTiers.map((item, idx) => (
           <div
             key={item.referral}
@@ -135,21 +135,23 @@ export default function page() {
               height={80}
             />
 
-            <div className="text-[#8AFEC1] text-2xl font-semibold">Bespoke</div>
+            <div className="text-[#8AFEC1] sm:text-2xl text-xl font-semibold">
+              Bespoke
+            </div>
           </div>
 
-          <div className="font-semibold max-w-3xl text-center text-xl">
+          <div className="font-semibold max-w-3xl text-center sm:text-xl text-lg px-5 pb-5">
             If you have a proven track record at other prop firms, we can offer
             you a personalised and competitive package.
           </div>
         </div>
       </div>
 
-      <div className="bg-[#020B06]">
-        <div className="container mx-auto my-10 flex flex-col gap-5">
+      <div className="bg-[#020B06] px-5">
+        <div className="container mx-auto my-10 flex flex-col sm:gap-5">
           <div className="text-[#40FF95]">FUNDED</div>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center text-5xl gap-1 justify-center font-semibold">
+          <div className="flex sm:flex-row flex-col sm:items-center items-start justify-between gap-5">
+            <div className="flex items-center sm:text-5xl text-4xl gap-1 justify-center font-semibold">
               <div>Affiliate</div>
               <GreenText>Benefits</GreenText>
             </div>
@@ -159,7 +161,7 @@ export default function page() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 mt-10">
+          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-5 mt-10">
             {AffiliateBenefits.map((item) => (
               <div
                 key={item}
@@ -169,7 +171,7 @@ export default function page() {
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
-                className="p-5 rounded-2xl text-4xl h-[250px]"
+                className="p-5 rounded-2xl md:text-4xl sm:text-3xl text-2xl sm:h-[250px] xs:h-[200px] max-xs:aspect-video"
               >
                 {item}
               </div>
@@ -178,21 +180,25 @@ export default function page() {
         </div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto max-sm:px-5">
         <div className="text-center flex flex-col gap-2">
           <div className="text-[#40FF95] text-lg">PRICING</div>
-          <div className="text-5xl font-semibold">
+          <div className="sm:text-5xl text-4xl font-semibold">
             How it <GreenText>Works?</GreenText>{" "}
           </div>
         </div>
-        <div className="grid grid-cols-3 mt-10 gap-10">
+        <div className="grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 sm:mt-10 mt-5 sm:gap-10 xs:gap-5 gap-3">
           {HowItWorks.map((item, idx) => (
-            <div key={item.title} className="flex items-center gap-5 max-w-sm">
+            <div
+              key={item.title}
+              className="flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3 max-w-sm sm:border-none border rounded-2xl p-5 bg-[#020B06]"
+            >
               <Image
                 src={`/images/about/${idx + 1}.svg`}
                 alt={item.title}
                 width={80}
                 height={80}
+                className="sm:w-[80px] w-[60px]"
               />
 
               <div className="flex flex-col gap-3">
@@ -205,7 +211,7 @@ export default function page() {
           <Button
             size={"xl"}
             variant={"green"}
-            className="w-fit relative top-10"
+            className="sm:w-fit w-full relative xs:top-10 top-5"
           >
             Join Affiliate <ArrowRight />
           </Button>

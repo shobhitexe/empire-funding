@@ -47,7 +47,7 @@ export default function FaqsHome() {
       <Accordion
         type="single"
         collapsible
-        className="mt-5 max-w-7xl mx-auto w-full"
+        className="sm:mt-5 max-w-7xl mx-auto w-full"
       >
         {Faqs.map((item, idx) => (
           <AccordionItem

@@ -13,11 +13,11 @@ export default function page() {
   return (
     <div className="bg-black">
       <div className="flex flex-col gap-10">
-        <div className="text-center flex items-center justify-center flex-col gap-2 pt-20">
-          <div className="flex items-center gap-1 text-6xl font-semibold">
+        <div className="text-center flex items-center justify-center flex-col gap-2 sm:pt-20 pt-10">
+          <div className="flex items-center gap-1 md:text-6xl sm:text-5xl text-4xl font-semibold">
             <GreenText>About</GreenText> <div>Us</div>
           </div>
-          <div className="font-light text-light max-w-3xl text-xl">
+          <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg">
             I know... just like you many traders have these questions, so here
             are the answers!
           </div>
@@ -28,16 +28,16 @@ export default function page() {
           alt="about"
           width={3000}
           height={2000}
-          className="w-[60%] mx-auto relative -top-10 container"
+          className="sm:w-[60%] mx-auto relative -top-10 container"
         />
 
         <div className="text-center flex flex-col gap-4">
-          <div className="text-5xl font-semibold">
+          <div className="md:text-5xl sm:text-4xl text-3xl font-semibold">
             <GreenText>
               Empire Trading: Forging a New Era in Prop Trading
             </GreenText>
           </div>
-          <div className="font-light text-light max-w-6xl text-center mx-auto">
+          <div className="font-light text-light max-w-6xl text-center mx-auto sm:text-base text-sm px-5">
             At Empire Trading, we believe that trading success should be
             nurtured in a stress-free environment. Our innovative approach
             offers free, unlimited retries on every challenge, empowering you to
@@ -47,9 +47,9 @@ export default function page() {
           </div>
         </div>
 
-        <div className="py-10 px-20 bg-[#020B06]">
-          <div className="grid grid-cols-3 container mx-auto items-center gap-10">
-            <div className="flex flex-col font-semibold text-6xl justify-center">
+        <div className="py-10 sm:px-20 px-5 bg-[#020B06]">
+          <div className="grid sm:grid-cols-3 grid-cols-1 container mx-auto items-center sm:gap-10 gap-5">
+            <div className="flex flex-col font-semibold md:text-6xl sm:text-5xl text-4xl justify-center">
               <div>Our Global</div>
               <GreenText>
                 Outreach <span className="text-white">and</span>
@@ -58,7 +58,7 @@ export default function page() {
             </div>
 
             <div
-              className="flex flex-col justify-end gap-4 p-10 rounded-2xl h-[400px]"
+              className="flex flex-col justify-end gap-4 sm:p-10 p-5 rounded-2xl sm:h-[400px]"
               style={{
                 backgroundImage: "url('/images/lastsection.webp')",
                 backgroundSize: "cover",
@@ -83,7 +83,7 @@ export default function page() {
               {Data.map((item) => (
                 <div
                   key={item.title}
-                  className="flex items-center gap-2 text-3xl font-semibold border-y border-[#333333] py-7"
+                  className="flex items-center gap-2 md:text-3xl sm:text-2xl text-xl font-semibold border-y border-[#333333] sm:py-7 py-5"
                 >
                   <div className="text-[#69FFB2]">{item.title}</div>
                   <div>{item.sub}</div>
@@ -93,31 +93,32 @@ export default function page() {
           </div>
         </div>
 
-        <div className="container mx-auto text-center my-10">
+        <div className="container mx-auto text-center sm:my-10 my-5 max-sm:px-5">
           <div className="text-[#40FF95]">ABOUT</div>
 
-          <div className="flex items-center text-5xl gap-1 justify-center font-semibold">
+          <div className="flex items-center sm:text-5xl text-4xl gap-1 justify-center font-semibold">
             <GreenText>Who</GreenText>
             <div>we are?</div>
           </div>
 
-          <div className="bg-[#0C1511] w-full max-w-5xl mx-auto h-[500px] flex items-center justify-center p-5 rounded-2xl mt-7">
-            <div className="bg-[#040303] w-full h-full flex items-center justify-center relative rounded-2xl">
+          <div className="bg-[#0C1511] w-full max-w-5xl mx-auto aspect-video flex items-center justify-center sm:p-5  p-2 rounded-2xl sm:mt-7 mt-5">
+            <div className="bg-[#040303] w-full aspect-video flex items-center justify-center relative rounded-2xl">
               <Image
                 src={"/images/play.svg"}
                 alt={"play"}
                 width={110}
                 height={110}
+                className="sm:w-[110px] w-[60px]"
               />
             </div>
           </div>
         </div>
 
         <div className="bg-[#020B06]">
-          <div className="container mx-auto my-10 flex flex-col gap-5">
+          <div className="container mx-auto my-10 flex flex-col sm:gap-5 max-sm:px-5">
             <div className="text-[#40FF95]">PRESENCE</div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center text-5xl gap-1 justify-center font-semibold">
+            <div className="flex sm:flex-row flex-col sm:items-center items-start justify-between gap-5">
+              <div className="flex items-center sm:text-5xl text-4xl gap-1 justify-center font-semibold">
                 <div>Global</div>
                 <GreenText>Presence</GreenText>
               </div>
@@ -127,7 +128,7 @@ export default function page() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 gap-10 mt-10">
+            <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-5 sm:mt-10 mt-5">
               <div className="bg-black p-10 rounded-2xl flex flex-col gap-5">
                 <div className="text-3xl font-semibold">Global Presence</div>
 
@@ -140,13 +141,13 @@ export default function page() {
               </div>
 
               <div className="bg-black p-10 rounded-2xl flex flex-col gap-5">
-                <div className="text-3xl font-semibold">
+                <div className="sm:text-3xl text-2xl font-semibold">
                   In house trading
                   <br />
                   infrastructure
                 </div>
 
-                <div className="text-light font-light text-xl">
+                <div className="text-light font-light md:text-xl sm:text-lg text-base">
                   Being part of the Empire means that we take out the various
                   middlemen common in the prop industry and run our own trading
                   infrastructure with access to a comprehensive range of
@@ -167,7 +168,7 @@ export default function page() {
 function LastCTASection() {
   return (
     <div
-      className="container mx-auto text-center h-[500px] flex flex-col items-center justify-center gap-10 my-10 rounded-3xl"
+      className="container mx-auto sm:w-full w-[90%] text-center md:h-[500px] py-10 flex flex-col items-center justify-center gap-10 my-10 rounded-3xl"
       style={{
         backgroundImage: "url('/images/lastsection.webp')",
         backgroundSize: "cover",
@@ -175,9 +176,9 @@ function LastCTASection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex justify-between w-full px-20">
-        <div className="flex flex-col items-start text-6xl font-semibold gap-1">
-          <span>Our Partnered</span>
+      <div className="flex md:flex-row flex-col gap-5 justify-between w-full sm:px-20 px-5">
+        <div className="flex flex-col items-start md:text-6xl sm:text-5xl text-4xl font-semibold gap-1">
+          <span className="text-left">Our Partnered</span>
           <span className="text-[#39FF9C]">Broker</span>
 
           <Button variant={"green"} size={"xl"} className="mt-10">
@@ -185,7 +186,7 @@ function LastCTASection() {
           </Button>
         </div>
 
-        <div className="text-xl max-w-2xl text-left">
+        <div className="md:text-xl sm:text-lg text-base max-w-2xl text-left">
           Empire Trading works in direct collaboration with our broker partner
           Blueberry Markets.
           <br />
