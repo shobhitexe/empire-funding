@@ -52,7 +52,7 @@ export default function TradingPlatform() {
         {Phases.map((item) => (
           <div
             key={item.title}
-            className="flex w-full max-w-md flex-col gap-5 bg-[#00150D] p-7 rounded-2xl relative border border-white/5"
+            className="flex group w-full max-w-md flex-col gap-5 bg-[#00150D] p-7 rounded-2xl relative border border-white/5"
           >
             <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#000000] via-[#FFFFFF]/20 to-[#000000]" />
 
@@ -65,7 +65,7 @@ export default function TradingPlatform() {
                 className="z-10 relative"
               />
 
-              <div className="absolute bg-[#59D28F] h-10 w-10 rounded-full top-5 left-3 blur-md" />
+              <div className="absolute bg-[#59D28F]/0 group-hover:bg-[#59D28F] duration-300 h-10 w-10 rounded-full top-5 left-3 blur-md" />
             </div>
 
             <div className="flex flex-col sm:gap-4 gap-2">

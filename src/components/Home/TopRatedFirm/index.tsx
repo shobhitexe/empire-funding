@@ -36,7 +36,7 @@ export default function TopRatedFirm() {
         Why We&apos;re <GreenText>Top Rated PropFirm</GreenText>
       </Heading>
 
-      <div className="grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-5 px-5">
+      <div className="grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-5 sm:px-5 px-7">
         {Data.map((item, idx) => (
           <div
             key={item.title}

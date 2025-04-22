@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
 import { User } from "lucide-react";
+import MobileNav from "./MobileNav";
 
 export const links = [
   { title: "Programs", href: "/#challenges" },
@@ -56,9 +57,9 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* <div className="md:hidden flex">
-      <MobileNav />
-    </div> */}
+        <div className="md:hidden flex">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );

@@ -44,9 +44,7 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 
-
   --color-light: #D1D1D1;
-
 
   --breakpoint-xs: 480px;
   --breakpoint-ss: 620px;
@@ -54,7 +52,7 @@
   --breakpoint-md: 1060px;
   --breakpoint-lg: 1200px;
   --breakpoint-xl: 1700px;
-  
+
 }
 
 body {
@@ -138,7 +136,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
 
 @keyframes marquee {
   from {

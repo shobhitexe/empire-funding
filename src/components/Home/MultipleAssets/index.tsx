@@ -40,7 +40,7 @@ export default function MultipleAssets() {
         {MultipleAssetsArr.map((item) => (
           <div
             key={item.title}
-            className="border border-white/5 w-full max-w-sm flex flex-col items-center text-center rounded-3xl pb-5"
+            className="border border-white/5 hover:border-white/20 duration-200 w-full max-w-sm flex flex-col items-center text-center rounded-3xl pb-5"
             style={{ boxShadow: "0px -65px 142.9px 0px #003d1b59 inset" }}
           >
             <Image
