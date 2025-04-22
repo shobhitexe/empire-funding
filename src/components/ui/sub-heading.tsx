@@ -8,5 +8,9 @@ export default function SubHeading({
   children: ReactNode;
   className?: string;
 }) {
-  return <h2 className={cn(`text-light text-xl`, className)}>{children}</h2>;
+  return (
+    <h2 className={cn(`text-light sm:text-xl text-lg`, className)}>
+      {children}
+    </h2>
+  );
 }

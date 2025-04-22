@@ -54,7 +54,7 @@ const FooterLinks = [
 export default function Footer() {
   return (
     <div
-      className="bg-[#020B06] md:p-20 p-10 pb-10 flex flex-col gap-10 mt-20 relative"
+      className="bg-[#020B06] md:p-20 sm:p-10 p-5 pb-10 flex flex-col gap-10 mt-20 relative"
       style={{
         background:
           "radial-gradient(at bottom left, #007937AD -40%, #0E0E0E 60%)",

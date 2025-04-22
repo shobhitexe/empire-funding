@@ -31,16 +31,16 @@ const Data = [
 
 export default function TopRatedFirm() {
   return (
-    <div className="my-24 container mx-auto flex flex-col gap-16">
+    <div className="sm:my-24 my-14 container mx-auto flex flex-col sm:gap-16 gap-8">
       <Heading className="text-center">
         Why We&apos;re <GreenText>Top Rated PropFirm</GreenText>
       </Heading>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-5 px-5">
         {Data.map((item, idx) => (
           <div
             key={item.title}
-            className="max-w-md flex flex-col gap-7 p-7 rounded-2xl"
+            className="max-w-md flex flex-col gap-7 sm:p-7 p-5 rounded-2xl max-sm:border"
             style={{
               backgroundImage: "url('/images/top-rated/bg.png')",
               backgroundSize: "cover",
@@ -53,11 +53,16 @@ export default function TopRatedFirm() {
               alt={item.title}
               width={70}
               height={70}
+              className="md:w-[70px] w-[60px]"
             />
 
             <div className="flex flex-col gap-2">
-              <div className="font-semibold text-2xl">{item.title}</div>
-              <div className="text-light font-light max-w-xs">{item.desc}</div>
+              <div className="font-semibold sm:text-2xl text-xl">
+                {item.title}
+              </div>
+              <div className="text-light font-light max-w-xs sm:text-base text-sm">
+                {item.desc}
+              </div>
             </div>
           </div>
         ))}

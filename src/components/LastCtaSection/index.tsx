@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 export default function LastCTASection() {
   return (
     <div
-      className="container mx-auto text-center h-[500px] flex flex-col items-center justify-center gap-10 my-10 rounded-3xl"
+      className="container sm:w-full w-[90%] mx-auto text-center sm:h-[500px] xs:h-[400px] h-[350px] flex flex-col items-center justify-center gap-10 sm:my-10 my-7 rounded-3xl"
       style={{
         backgroundImage: "url('/images/section.webp')",
         backgroundSize: "cover",
@@ -11,7 +11,7 @@ export default function LastCTASection() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex flex-col items-center text-6xl font-semibold gap-1">
+      <div className="flex flex-col items-center md:text-6xl sm:text-5xl text-4xl font-semibold gap-1 px-5">
         <span>Let&apos;s join with millions of</span>
         <span className="text-[#39FF9C]">Traders in the world</span>
       </div>

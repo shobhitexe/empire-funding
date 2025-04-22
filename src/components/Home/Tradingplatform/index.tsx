@@ -22,11 +22,11 @@ const Phases = [
 
 export default function TradingPlatform() {
   return (
-    <div className="my-10 container mx-auto bg-[#01110B96] rounded-2xl border border-white/5">
-      <div className="flex items-center justify-around p-5">
+    <div className="sm:my-10 my-5 container mx-auto bg-[#01110B96] rounded-2xl border border-white/5 max-sm:w-[90%]">
+      <div className="flex sm:flex-row flex-col items-center justify-around p-5">
         <div className="flex flex-col gap-4">
           <div className="text-[#40FF95] font-semibold">HOW IT WORKS</div>
-          <div className="md:text-6xl xs:text-5xl text-4xl font-medium">
+          <div className="md:text-6xl sm:text-5xl text-4xl font-medium">
             Maximum Profit &<br />
             Secure <GreenText>Trading Platform</GreenText>
           </div>
@@ -48,7 +48,7 @@ export default function TradingPlatform() {
         />
       </div>
 
-      <div className="flex items-stretch justify-center pb-10 gap-5">
+      <div className="flex max-sm:flex-wrap items-stretch justify-center pb-10 gap-5 px-5">
         {Phases.map((item) => (
           <div
             key={item.title}
@@ -68,7 +68,7 @@ export default function TradingPlatform() {
               <div className="absolute bg-[#59D28F] h-10 w-10 rounded-full top-5 left-3 blur-md" />
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col sm:gap-4 gap-2">
               <div className="font-semibold text-2xl">{item.title}</div>
               <div className="text-light font-light max-w-xs">{item.desc}</div>
             </div>

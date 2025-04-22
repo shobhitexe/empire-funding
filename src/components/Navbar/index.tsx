@@ -28,6 +28,7 @@ export default function Navbar() {
             alt={"logo"}
             width={183}
             height={32}
+            className="sm:w-[183px] w-[150px]"
           />
         </Link>
 

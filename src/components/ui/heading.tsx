@@ -11,7 +11,7 @@ export default function Heading({
   return (
     <h1
       className={cn(
-        `md:text-6xl sm:text-5xl text-4xl font-semibold`,
+        `md:text-6xl sm:text-5xl text-4xl font-semibold px-5`,
         className
       )}
     >

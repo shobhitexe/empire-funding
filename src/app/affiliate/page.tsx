@@ -60,7 +60,7 @@ const HowItWorks = [
 export default function page() {
   return (
     <div className="flex flex-col gap-10">
-      <div className="text-center flex items-center justify-center flex-col gap-4 py-20">
+      <div className="text-center flex items-center justify-center flex-col gap-4 pt-20 pb-10">
         <div className="flex items-center gap-1 text-6xl font-semibold">
           <div>Join the Empire</div>
           <GreenText>Funded</GreenText> <div>team!</div>

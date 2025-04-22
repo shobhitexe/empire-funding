@@ -84,8 +84,8 @@ PayoutsArr = Array.from({ length: 10 }, () => PayoutsArr).flat();
 
 export default function BestTraders() {
   return (
-    <div className="container mx-auto grid grid-cols-2 items-center w-full my-10">
-      <div className="flex flex-col gap-5">
+    <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-10 items-center w-full my-10 px-5">
+      <div className="flex flex-col gap-5 md:text-left text-center">
         <div className="md:text-6xl xs:text-5xl text-4xl">
           Rewarding Our
           <br />
@@ -97,11 +97,13 @@ export default function BestTraders() {
           Trader.
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex flex-wrap items-center md:justify-start justify-center gap-5">
           {Stats.map((item) => (
             <div key={item.sub} className="font-semibold">
-              <div className="text-[#69FFB2] text-3xl">{item.title}</div>
-              <div className="text-xl">{item.sub}</div>
+              <div className="text-[#69FFB2] sm:text-3xl text-2xl">
+                {item.title}
+              </div>
+              <div className="sm:text-xl text-lg">{item.sub}</div>
             </div>
           ))}
         </div>
@@ -117,19 +119,27 @@ export default function BestTraders() {
               className="flex items-center gap-10 w-full justify-between bg-[#05120B] border border-[#244D37] p-3 rounded-2xl"
             >
               <div className="flex items-center gap-5">
-                <Image src={item.icon} alt={item.name} width={60} height={60} />
+                <Image
+                  src={item.icon}
+                  alt={item.name}
+                  width={60}
+                  height={60}
+                  className="sm:w-[60px] xs:w-[50px] w-[40px]"
+                />
 
                 <div className="flex flex-col">
-                  <div className="text-xl font-bold">{item.name}</div>
-                  <div>{item.country}</div>
+                  <div className="sm:text-xl xs:text-lg text-base font-bold">
+                    {item.name}
+                  </div>
+                  <div className="sm:text-base text-sm">{item.country}</div>
                 </div>
               </div>
 
               <div className="flex flex-col">
-                <div className="text-[#A2FFCC] text-2xl font-bold">
+                <div className="text-[#A2FFCC] sm:text-2xl xs:text-xl text-lg font-bold">
                   {item.amount}
                 </div>
-                <div className="bg-[#136036] w-fit text-center rounded-md px-3 py-px text-sm">
+                <div className="bg-[#136036] w-fit text-center rounded-md sm:px-3 px-2 py-px text-sm">
                   {item.duration}
                 </div>
               </div>

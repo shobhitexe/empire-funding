@@ -108,7 +108,7 @@ const thirdRow = reviews.slice(reviews.length / 2);
 
 export default function Testimonials() {
   return (
-    <div className="container mx-auto text-center my-24">
+    <div className="container mx-auto text-center sm:my-24 my-14">
       <div className="text-[#40FF95] text-xl">Testimonials</div>
 
       <div className="flex flex-col items-center mt-2 gap-3">
@@ -124,7 +124,7 @@ export default function Testimonials() {
           className="mt-2"
         />
 
-        <div className="flex gap-2 items-center">
+        <div className="flex sm:flex-row flex-col gap-2 items-center">
           <span className="pt-1">Rated 4.8 / 5 based on 4,258 reviews on</span>
           <Image
             src={"/images/testimonials/t2.svg"}
@@ -135,7 +135,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="mt-14">
+      <div className="sm:flex hidden mt-14">
         <div className="relative flex gap-5 h-[500px] w-full flex-row items-center justify-center overflow-hidden">
           <Marquee pauseOnHover vertical className="[--duration:20s]">
             {firstRow.map((review, idx) => (
@@ -148,6 +148,28 @@ export default function Testimonials() {
             ))}
           </Marquee>
           <Marquee pauseOnHover vertical className="[--duration:20s]">
+            {thirdRow.map((review, idx) => (
+              <ReviewCard key={review.name + idx} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>
+        </div>
+      </div>
+
+      <div className="sm:hidden flex mt-5">
+        <div className="relative flex gap-5 sm:h-[500px] h-full w-full flex-col items-center justify-center overflow-hidden">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review, idx) => (
+              <ReviewCard key={review.name + idx} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+            {secondRow.map((review, idx) => (
+              <ReviewCard key={review.name + idx} {...review} />
+            ))}
+          </Marquee>
+          <Marquee pauseOnHover className="[--duration:20s]">
             {thirdRow.map((review, idx) => (
               <ReviewCard key={review.name + idx} {...review} />
             ))}
@@ -172,7 +194,7 @@ const ReviewCard = ({
   body: string;
 }) => {
   return (
-    <div className="bg-gradient-to-b from-white/20 to-black p-px rounded-xl max-w-md">
+    <div className="bg-gradient-to-b from-white/20 to-black p-px rounded-xl sm:max-w-md xs:max-w-sm max-w-xs">
       <figure
         className={
           "relative h-full w-fit cursor-pointer overflow-hidden rounded-xl p-5 flex flex-col gap-4 bg-[#030907]"
@@ -199,7 +221,9 @@ const ReviewCard = ({
           <div className="font-semibold text-xl text-left text-light">
             {title}
           </div>
-          <blockquote className="mt-1 text-left">{body}</blockquote>
+          <blockquote className="mt-1 text-left sm:text-base text-sm">
+            {body}
+          </blockquote>
         </div>
       </figure>
     </div>

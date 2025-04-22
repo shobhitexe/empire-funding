@@ -33,7 +33,7 @@ const Faqs = [
 
 export default function FaqsHome() {
   return (
-    <div className="my-28 container mx-auto flex flex-col gap-5">
+    <div className="sm:my-28 my-16 container mx-auto flex flex-col sm:gap-5 gap-3 px-5">
       <div className="flex flex-col gap-2 text-center">
         <Heading>
           Frequently Asked <GreenText>Questions</GreenText>
