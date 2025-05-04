@@ -1,4 +1,5 @@
 import {
+  AccountConfig,
   BestTraders,
   FaqsHome,
   Hero,
@@ -17,6 +18,7 @@ export default function Home() {
       <PayoutTicker />
       <MultipleAssets />
       <TradingPlatform />
+      <AccountConfig />
       <TopRatedFirm />
       <BestTraders />
       <Testimonials />

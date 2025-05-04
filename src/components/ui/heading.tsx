@@ -9,12 +9,7 @@ export default function Heading({
   className?: string;
 }) {
   return (
-    <h1
-      className={cn(
-        `md:text-6xl sm:text-5xl text-4xl font-semibold px-5`,
-        className
-      )}
-    >
+    <h1 className={cn(`sm:text-5xl text-4xl font-semibold px-5`, className)}>
       {children}
     </h1>
   );

@@ -1,0 +1,194 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import GreenText from "@/components/ui/green-text";
+import Heading from "@/components/ui/heading";
+import SubHeading from "@/components/ui/sub-heading";
+import { Calendar, Percent, Scale, TrendingDown } from "lucide-react";
+import { useState } from "react";
+
+const TradingPath = ["Instant", "1-Step", "2-Step"];
+
+const AccountSize = [
+  ["$25K", "$50K", "$100K"],
+  ["$10k", "$25K", "$50K", "$100K", "$200K"],
+  ["$10k", "$25K", "$50K", "$100K", "$200K"],
+];
+
+const Pricing = [
+  [497, 897, 1657],
+  [107, 217, 328, 546, 986],
+  [97, 197, 297, 497, 897],
+];
+
+export default function AccountConfig() {
+  const [step, setStep] = useState(0);
+  const [accSize, setAccSize] = useState(0);
+
+  return (
+    <div className="sm:my-24 my-14 container mx-auto">
+      <div className="flex flex-col gap-2 text-center">
+        <Heading>
+          Become an <GreenText>Empire Trader</GreenText>
+        </Heading>
+        <SubHeading>
+          Choose the evaluation based on your preference to become an Empire
+          Trader.
+        </SubHeading>
+      </div>
+
+      <div className="max-w-7xl mx-auto mt-5 flex flex-col gap-5">
+        <div className="grid grid-cols-[4fr_2fr] items-end gap-5">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
+              <div className="text-xl font-semibold">
+                Choose your Trading Path
+              </div>
+              <div className="bg-[#00150D] p-2 rounded-2xl grid grid-cols-3 items-center gap-3">
+                {TradingPath.map((item, idx) => (
+                  <Button
+                    key={item}
+                    variant={step === idx ? "green" : "outline"}
+                    onClick={() => setStep(idx)}
+                    className="h-14 font-semibold"
+                  >
+                    {item}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="text-xl font-semibold">Select Account Size</div>
+              <div
+                className={`bg-[#00150D] p-2 rounded-2xl grid ${
+                  step === 0 ? "grid-cols-3" : "grid-cols-5"
+                } items-center gap-3`}
+              >
+                {AccountSize[step].map((item, idx) => (
+                  <Button
+                    key={item}
+                    variant={accSize === idx ? "green" : "outline"}
+                    onClick={() => setAccSize(idx)}
+                    className="h-14 font-semibold"
+                  >
+                    {item}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#00150D] h-[85%] w-full rounded-3xl flex flex-col gap-3 items-center justify-center p-5">
+            <div className="font-semibold">START NOW AT ONLY</div>
+            <div className="text-6xl font-bold">${Pricing[step][accSize]}</div>
+            <Button variant={"green"} className="h-11 px-10 font-semibold">
+              Get Funded
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex items-stretch gap-5">
+          <div className="bg-[#00150D] p-5 rounded-2xl flex flex-col gap-3">
+            <div className="text-xl font-semibold border-b border-[#385546] pb-2">
+              1. VERIFICATION
+            </div>
+            <div className="text-[#8F8F8F] text-sm">
+              Choose a simulated account size and try to reach the minimum
+              simulated gains target. Trade all available instruments. Subject
+              to certain rules and objectives, your trading style is completely
+              up to you!
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <TrendingDown className="text-[#59D28F]" /> Max Daily Drawdown
+                </div>
+                <div>2%</div>
+              </div>
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <TrendingDown className="text-[#59D28F]" /> Max Overall
+                  Drawdown
+                </div>
+                <div>2%</div>
+              </div>
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Calendar className="text-[#59D28F] size-5" /> Minimum
+                  Profitable Days
+                </div>
+                <div>2%</div>
+              </div>
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Scale className="text-[#59D28F] size-5" /> Sim Trading
+                  Leverage
+                </div>
+                <div>2%</div>
+              </div>
+            </div>
+          </div>
+          {step === 2 && (
+            <div className="bg-[#00150D] p-5 rounded-2xl flex flex-col items-start gap-3">
+              <div className="text-xl font-semibold border-b border-[#385546] pb-2 w-full">
+                2. LIVE SIMULATED TRADER
+              </div>
+              <div className="text-[#8F8F8F] text-sm">
+                You can now start trading on a simulated basis in the
+                EmpireTrading program without simulated gain targets as long as
+                you won&apos;t reach max simulated loss or daily simulated loss
+                limits.
+              </div>
+
+              <div className="flex flex-col gap-2 w-full">
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Percent className="text-[#59D28F]" /> Payout Share
+                  </div>
+                  <div>2%</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingDown className="text-[#59D28F]" /> Max Daily
+                    Drawdown
+                  </div>
+                  <div>2%</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingDown className="text-[#59D28F]" /> Max Overall
+                    Drawdown
+                  </div>
+                  <div>2%</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="text-[#59D28F] size-5" /> Payout
+                    Frequency
+                  </div>
+                  <div>2%</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="text-[#59D28F] size-5" />
+                    Trading Period
+                  </div>
+                  <div>2%</div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
