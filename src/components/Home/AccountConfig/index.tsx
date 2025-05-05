@@ -26,7 +26,7 @@ export default function AccountConfig() {
   const [accSize, setAccSize] = useState(0);
 
   return (
-    <div className="sm:my-24 my-14 container mx-auto">
+    <div className="sm:my-24 my-14 container mx-auto px-5">
       <div className="flex flex-col gap-2 text-center">
         <Heading>
           Become an <GreenText>Empire Trader</GreenText>
@@ -38,10 +38,10 @@ export default function AccountConfig() {
       </div>
 
       <div className="max-w-7xl mx-auto mt-5 flex flex-col gap-5">
-        <div className="grid grid-cols-[4fr_2fr] items-end gap-5">
-          <div className="flex flex-col gap-4">
+        <div className="grid sm:grid-cols-[4fr_2fr] grid-cols-1 items-end sm:gap-5 gap-4">
+          <div className="flex flex-col sm:gap-4 gap-2">
             <div className="flex flex-col gap-2">
-              <div className="text-xl font-semibold">
+              <div className="sm:text-xl text-lg font-semibold">
                 Choose your Trading Path
               </div>
               <div className="bg-[#00150D] p-2 rounded-2xl grid grid-cols-3 items-center gap-3">
@@ -50,7 +50,7 @@ export default function AccountConfig() {
                     key={item}
                     variant={step === idx ? "green" : "outline"}
                     onClick={() => setStep(idx)}
-                    className="h-14 font-semibold"
+                    className="sm:h-14 h-10 font-semibold"
                   >
                     {item}
                   </Button>
@@ -59,7 +59,9 @@ export default function AccountConfig() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <div className="text-xl font-semibold">Select Account Size</div>
+              <div className="sm:text-xl text-lg font-semibold">
+                Select Account Size
+              </div>
               <div
                 className={`bg-[#00150D] p-2 rounded-2xl grid ${
                   step === 0 ? "grid-cols-3" : "grid-cols-5"
@@ -70,7 +72,7 @@ export default function AccountConfig() {
                     key={item}
                     variant={accSize === idx ? "green" : "outline"}
                     onClick={() => setAccSize(idx)}
-                    className="h-14 font-semibold"
+                    className="sm:h-14 h-10 font-semibold"
                   >
                     {item}
                   </Button>
@@ -79,7 +81,7 @@ export default function AccountConfig() {
             </div>
           </div>
 
-          <div className="bg-[#00150D] h-[85%] w-full rounded-3xl flex flex-col gap-3 items-center justify-center p-5">
+          <div className="bg-[#00150D] sm:h-[85%] w-full rounded-3xl flex flex-col gap-3 items-center text-center justify-center p-5">
             <div className="font-semibold">START NOW AT ONLY</div>
             <div className="text-6xl font-bold">${Pricing[step][accSize]}</div>
             <Button variant={"green"} className="h-11 px-10 font-semibold">
@@ -88,7 +90,7 @@ export default function AccountConfig() {
           </div>
         </div>
 
-        <div className="flex items-stretch gap-5">
+        <div className="flex sm:flex-row flex-col items-stretch gap-5">
           <div className="bg-[#00150D] p-5 rounded-2xl flex flex-col gap-3">
             <div className="text-xl font-semibold border-b border-[#385546] pb-2">
               1. VERIFICATION
@@ -133,60 +135,61 @@ export default function AccountConfig() {
               </div>
             </div>
           </div>
-          {step === 2 && (
-            <div className="bg-[#00150D] p-5 rounded-2xl flex flex-col items-start gap-3">
-              <div className="text-xl font-semibold border-b border-[#385546] pb-2 w-full">
-                2. LIVE SIMULATED TRADER
+          <div
+            className={`bg-[#00150D] p-5 rounded-2xl flex flex-col items-start gap-3 ${
+              step !== 2 ? "blur max-sm:hidden" : ""
+            }`}
+          >
+            <div className="text-xl font-semibold border-b border-[#385546] pb-2 w-full">
+              2. LIVE SIMULATED TRADER
+            </div>
+            <div className="text-[#8F8F8F] text-sm">
+              You can now start trading on a simulated basis in the
+              EmpireTrading program without simulated gain targets as long as
+              you won&apos;t reach max simulated loss or daily simulated loss
+              limits.
+            </div>
+
+            <div className="flex flex-col gap-2 w-full">
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Percent className="text-[#59D28F]" /> Payout Share
+                </div>
+                <div>2%</div>
               </div>
-              <div className="text-[#8F8F8F] text-sm">
-                You can now start trading on a simulated basis in the
-                EmpireTrading program without simulated gain targets as long as
-                you won&apos;t reach max simulated loss or daily simulated loss
-                limits.
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <TrendingDown className="text-[#59D28F]" /> Max Daily Drawdown
+                </div>
+                <div>2%</div>
               </div>
 
-              <div className="flex flex-col gap-2 w-full">
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <Percent className="text-[#59D28F]" /> Payout Share
-                  </div>
-                  <div>2%</div>
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <TrendingDown className="text-[#59D28F]" /> Max Overall
+                  Drawdown
                 </div>
+                <div>2%</div>
+              </div>
 
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <TrendingDown className="text-[#59D28F]" /> Max Daily
-                    Drawdown
-                  </div>
-                  <div>2%</div>
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Calendar className="text-[#59D28F] size-5" /> Payout
+                  Frequency
                 </div>
+                <div>2%</div>
+              </div>
 
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <TrendingDown className="text-[#59D28F]" /> Max Overall
-                    Drawdown
-                  </div>
-                  <div>2%</div>
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Calendar className="text-[#59D28F] size-5" />
+                  Trading Period
                 </div>
-
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="text-[#59D28F] size-5" /> Payout
-                    Frequency
-                  </div>
-                  <div>2%</div>
-                </div>
-
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="text-[#59D28F] size-5" />
-                    Trading Period
-                  </div>
-                  <div>2%</div>
-                </div>
+                <div>2%</div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
