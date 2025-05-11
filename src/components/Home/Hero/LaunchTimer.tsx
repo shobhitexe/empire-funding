@@ -34,10 +34,12 @@ export default function CountDown() {
 
   return (
     isClient && (
-      <div className="flex flex-col gap-2 text-xl font-semibold items-center mt-3">
-        <div>We launch in</div>
+      <div className="flex sm:justify-start">
+        <div className="flex flex-col gap-2 text-xl font-semibold mt-3">
+          <div className="text-center">We launch in</div>
 
-        <Countdown date={new Date(1747593000000)} renderer={renderer} />
+          <Countdown date={new Date(1747593000000)} renderer={renderer} />
+        </div>
       </div>
     )
   );
