@@ -58,7 +58,7 @@ export default function MobileNav() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Log in <User />
+                Start Now <User />
               </Link>
             </div>
           </motion.div>
