@@ -1,15 +1,16 @@
 // import { ArrowRight } from "lucide-react";
 // import { Button } from "../../ui/button";
-import Image from "next/image";
+// import Image from "next/image";
+import CountDown from "./LaunchTimer";
 import PrelaunchForm from "./pre-launch-form";
 
-const paymentMethods = [
-  { src: "/images/hero/visa.png", alt: "visa" },
-  { src: "/images/hero/mastercard.png", alt: "mastercard" },
-  { src: "/images/hero/bitcoin.png", alt: "bitcoin" },
-  { src: "/images/hero/eth.png", alt: "eth" },
-  { src: "/images/hero/usdt.png", alt: "usdt" },
-];
+// const paymentMethods = [
+//   { src: "/images/hero/visa.png", alt: "visa" },
+//   { src: "/images/hero/mastercard.png", alt: "mastercard" },
+//   { src: "/images/hero/bitcoin.png", alt: "bitcoin" },
+//   { src: "/images/hero/eth.png", alt: "eth" },
+//   { src: "/images/hero/usdt.png", alt: "usdt" },
+// ];
 
 export default function Hero() {
   return (
@@ -59,7 +60,7 @@ export default function Hero() {
             </Button>
           </div> */}
 
-          <div className="flex items-center sm:justify-start justify-center gap-2 max-sm:mt-2">
+          {/* <div className="flex items-center sm:justify-start justify-center gap-2 max-sm:mt-2">
             {paymentMethods.map((item) => (
               <Image
                 key={item.src}
@@ -70,7 +71,9 @@ export default function Hero() {
                 className="sm:w-[70px] w-[60px]"
               />
             ))}
-          </div>
+          </div> */}
+
+          <CountDown />
         </div>
 
         <div></div>

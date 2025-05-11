@@ -16,10 +16,17 @@ export default function PrelaunchForm() {
         return;
       }
 
-      toast("Email recorded successfully");
+      toast(
+        <>
+          Hey {formData.get("name")}
+          You&apos;ve been successfully added to exclusive launch list of Empire
+          Trading! <br />
+          <br /> Stay Tuned to not miss on the launch offer💪🏻
+        </>
+      );
     } catch (error) {
       console.log(error);
-      toast("Failed to record email");
+      toast("Failed to record email, Please try later");
     }
   }
 

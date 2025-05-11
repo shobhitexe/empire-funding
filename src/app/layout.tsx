@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 const figtree = Figtree({ variable: "--font-figtree", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Empire Funding",
+  title: "Empire Trading",
   description: "",
 };
 
