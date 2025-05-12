@@ -14,7 +14,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
   } else {
     return (
       <div className="flex items-center flex-col sm:gap-5 gap-3">
-        <div className="flex items-center sm:gap-3 xs:gap-2 gap-1 flex-wraps px-3">
+        <div className="flex items-center justify-center sm:gap-3 xs:gap-2 gap-1 flex-wraps px-3">
           <CountDownCard value={days} type={"DAYS"} /> <SemiColon />
           <CountDownCard value={hours} type={"HOURS"} /> <SemiColon />
           <CountDownCard value={minutes} type={"MINUTES"} /> <SemiColon />
@@ -34,7 +34,7 @@ export default function CountDown() {
 
   return (
     isClient && (
-      <div className="flex sm:justify-start">
+      <div className="flex sm:justify-start justify-center">
         <div className="flex flex-col gap-2 text-xl font-semibold mt-3">
           <div className="text-center">We launch in</div>
 

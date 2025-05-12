@@ -18,10 +18,11 @@ export default function PrelaunchForm() {
 
       toast(
         <>
-          Hey {formData.get("name")}
-          You&apos;ve been successfully added to exclusive launch list of Empire
-          Trading! <br />
-          <br /> Stay Tuned to not miss on the launch offer💪🏻
+          Hey {formData.get("name")}, thanks for signing up. You have been
+          successfully added to Empire Trading&apos;s launch list!
+          <br />
+          <br />
+          Stay tuned for more exclusive offers! 💪🏻
         </>
       );
     } catch (error) {
@@ -31,7 +32,10 @@ export default function PrelaunchForm() {
   }
 
   return (
-    <form action={SubmitFormClient} className="flex flex-col gap-5 max-w-md">
+    <form
+      action={SubmitFormClient}
+      className="flex flex-col gap-5 max-w-md max-sm:mx-auto w-full"
+    >
       <div className="grid w-full max-w-sms items-center gap-1.5">
         <Input required type="text" name="name" placeholder="Name" />
       </div>
