@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           <p className="sm:text-xl xs:text-base text-sm max-w-xl font-light sm:text-left text-center">
-            On All Challenges exclusively on the Launch Day!
+            On All Challenges exclusively on Launch Day!
           </p>
 
           <PrelaunchForm />
