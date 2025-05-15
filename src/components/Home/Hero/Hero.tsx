@@ -1,16 +1,14 @@
-// import { ArrowRight } from "lucide-react";
-// import { Button } from "../../ui/button";
-// import Image from "next/image";
-import CountDown from "./LaunchTimer";
-import PrelaunchForm from "./pre-launch-form";
+import { ArrowRight } from "lucide-react";
+import { Button } from "../../ui/button";
+import Image from "next/image";
 
-// const paymentMethods = [
-//   { src: "/images/hero/visa.png", alt: "visa" },
-//   { src: "/images/hero/mastercard.png", alt: "mastercard" },
-//   { src: "/images/hero/bitcoin.png", alt: "bitcoin" },
-//   { src: "/images/hero/eth.png", alt: "eth" },
-//   { src: "/images/hero/usdt.png", alt: "usdt" },
-// ];
+const paymentMethods = [
+  { src: "/images/hero/visa.png", alt: "visa" },
+  { src: "/images/hero/mastercard.png", alt: "mastercard" },
+  { src: "/images/hero/bitcoin.png", alt: "bitcoin" },
+  { src: "/images/hero/eth.png", alt: "eth" },
+  { src: "/images/hero/usdt.png", alt: "usdt" },
+];
 
 export default function Hero() {
   return (
@@ -49,18 +47,18 @@ export default function Hero() {
           </div>
 
           <p className="sm:text-xl xs:text-base text-sm max-w-xl font-light sm:text-left text-center">
-            On All Challenges exclusively on Launch Day!
+            Step into seamless funding, innovative tools, and fast
+            payouts—backed by a thriving community to spark your empire&apos;s
+            rise.
           </p>
 
-          <PrelaunchForm />
-
-          {/* <div className="bg-gradient-to-bl p-px from-[#00FF99]/50 via-[#000000] via-80% to-[#000000] w-fit max-sm:mx-auto rounded-2xl">
+          <div className="bg-gradient-to-bl p-px from-[#00FF99]/50 via-[#000000] via-80% to-[#000000] w-fit max-sm:mx-auto rounded-2xl">
             <Button className="w-fit text-lg bg-[#001B0C] text-[#59D28F] hover:bg-[#001B0C]/80 sm:h-14 h-12 has-[>svg]:sm:px-36 has-[>svg]:px-10 cursor-pointer rounded-2xl">
               Start Trading <ArrowRight className="sm:w-12 w-7 h-12" />
             </Button>
-          </div> */}
+          </div>
 
-          {/* <div className="flex items-center sm:justify-start justify-center gap-2 max-sm:mt-2">
+          <div className="flex items-center sm:justify-start justify-center gap-2 max-sm:mt-2">
             {paymentMethods.map((item) => (
               <Image
                 key={item.src}
@@ -71,12 +69,8 @@ export default function Hero() {
                 className="sm:w-[70px] w-[60px]"
               />
             ))}
-          </div> */}
-
-          <CountDown />
+          </div>
         </div>
-
-        <div></div>
       </div>
     </section>
   );

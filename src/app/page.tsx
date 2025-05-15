@@ -1,21 +1,21 @@
 import {
-  // AccountConfig,
-  // BestTraders,
-  // FaqsHome,
+  AccountConfig,
+  BestTraders,
+  FaqsHome,
   Hero,
-  // LastCTASection,
-  // MultipleAssets,
-  // PayoutTicker,
-  // Testimonials,
-  // TopRatedFirm,
-  // TradingPlatform,
+  LastCTASection,
+  MultipleAssets,
+  PayoutTicker,
+  Testimonials,
+  TopRatedFirm,
+  TradingPlatform,
 } from "@/components";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <PayoutTicker />
+      <PayoutTicker />
       <MultipleAssets />
       <TradingPlatform />
       <AccountConfig />
@@ -23,7 +23,7 @@ export default function Home() {
       <BestTraders />
       <Testimonials />
       <FaqsHome />
-      <LastCTASection /> */}
+      <LastCTASection />
     </main>
   );
 }

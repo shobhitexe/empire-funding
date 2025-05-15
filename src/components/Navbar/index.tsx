@@ -5,12 +5,11 @@ import { User } from "lucide-react";
 import MobileNav from "./MobileNav";
 
 export const links = [
-  // { title: "Programs", href: "/#challenges" },
-  // { title: "Affiliate", href: "/affiliate" },
-  // { title: "About Us", href: "/about-us" },
-  // { title: "FAQ", href: "/faqs" },
-  // { title: "Contact Us", href: "/contact-us" },
-  { title: "", href: "" },
+  { title: "Programs", href: "/#challenges" },
+  { title: "Affiliate", href: "/affiliate" },
+  { title: "About Us", href: "/about-us" },
+  { title: "FAQ", href: "/faqs" },
+  { title: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -35,12 +34,12 @@ export default function Navbar() {
         </Link>
 
         <div className="z-[10] md:flex hidden items-center gap-5">
-          {/* {links.map((item) => (
+          {links.map((item) => (
             <Link href={item.href} key={item.title} className="group">
               {item.title}
               <div className="group-hover:w-full w-0 mx-auto h-px duration-500 bg-[#00EDA1]" />
             </Link>
-          ))} */}
+          ))}
 
           <Link
             href={"/"}
@@ -54,7 +53,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Start now <User />
+            Log In <User />
           </Link>
         </div>
 

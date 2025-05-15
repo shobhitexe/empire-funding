@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components";
+import { Navbar, Footer } from "@/components";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 import Image from "next/image";
@@ -98,7 +98,7 @@ export default function RootLayout({
       <body className={`${figtree.variable} antialiased`}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
         <Toaster />
 
         <Script
