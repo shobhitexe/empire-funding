@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import Image from "next/image";
+import Link from "next/link";
 
 const Phases = [
   {
@@ -35,9 +36,16 @@ export default function TradingPlatform() {
             Trader.
           </div>
 
-          <Button variant={"green"} size={"xl"} className="w-fit">
+          <Link
+            href={`/#challenges`}
+            className={`${buttonVariants({
+              variant: "green",
+              size: "xl",
+              className: "w-fit rounded-3xl",
+            })}`}
+          >
             Get Funded
-          </Button>
+          </Link>
         </div>
 
         <Image

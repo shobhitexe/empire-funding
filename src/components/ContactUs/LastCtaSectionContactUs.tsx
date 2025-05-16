@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function LastCTASectionContactUs() {
   return (
@@ -22,8 +23,10 @@ export default function LastCTASectionContactUs() {
         Claim your edge in the markets today.
       </div>
 
-      <Button variant={"green"} size={"xl"}>
-        Get Funded <ArrowRight />
+      <Button variant={"green"} size={"xl"} asChild>
+        <Link href={`/#challenges`}>
+          Get Funded <ArrowRight />
+        </Link>
       </Button>
     </div>
   );

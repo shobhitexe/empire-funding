@@ -26,7 +26,7 @@ export default function AccountConfig() {
   const [accSize, setAccSize] = useState(0);
 
   return (
-    <div className="sm:my-24 my-14 container mx-auto px-5">
+    <div id="challenges" className="sm:my-24 my-14 container mx-auto px-5">
       <div className="flex flex-col gap-2 text-center">
         <Heading>
           Become an <GreenText>Empire Trader</GreenText>

@@ -7,25 +7,21 @@ const FooterLinks = [
     heading: "TRADING",
     sub: [
       {
-        title: "How it Works",
-        link: `/trading-rules`,
-      },
-      {
         title: "Affiliate",
         link: `/affiliate`,
       },
       {
-        title: "Web Terminal",
-        link: "",
+        title: "Login",
+        link: "https://app.empiretrading.co/login",
         target: "_blank",
       },
-      { title: "Login", link: "", target: "_blank" },
     ],
   },
   {
     heading: "INFORMATION",
     sub: [
-      { title: "FAQ", link: "", target: "_blank" },
+      { title: "About Us", link: "/about-us" },
+      { title: "FAQ", link: "/faqs" },
       { title: "Contact", link: `/contact-us` },
     ],
   },
@@ -33,13 +29,8 @@ const FooterLinks = [
     heading: "SOCIALS",
     sub: [
       {
-        title: "Twitter",
-        link: "",
-        target: "_blank",
-      },
-      {
         title: "Instagram",
-        link: "",
+        link: "https://www.instagram.com/empiretrading_official",
         target: "_blank",
       },
       {

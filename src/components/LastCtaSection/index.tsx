@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 export default function LastCTASection() {
@@ -17,10 +18,18 @@ export default function LastCTASection() {
       </div>
 
       <div className="flex items-center gap-3">
-        <Button variant={"green"} size={"xl"}>
-          Get Funded
+        <Button variant={"green"} size={"xl"} asChild>
+          <Link href={`/#challenges`}>Get Funded</Link>
         </Button>
-        <Button size={"xl"}>Try Demo</Button>
+        <Button size={"xl"} asChild>
+          <Link
+            href={"https://app.empiretrading.co/login"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Try Demo
+          </Link>
+        </Button>
       </div>
     </div>
   );

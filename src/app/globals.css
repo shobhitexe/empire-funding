@@ -55,8 +55,9 @@
 
 }
 
-body {
+html, body {
   font-family: "Figtree", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {

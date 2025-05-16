@@ -6,24 +6,40 @@ import Image from "next/image";
 
 const AffiliateTiers = [
   {
-    referral: "0 - 25 Life Time Referrals",
-    commission: "12.5% Commission",
-    rewards: "No Challenge Rewards",
-  },
-  {
-    referral: "26 - 75 Life Time Referrals",
+    tier: "Bronze",
+    referral: "0 - 49 Life Time Referrals",
     commission: "15% Commission",
-    rewards: "No Challenge Rewards",
+    rewards: "1x Free 5k Challenge",
   },
   {
-    referral: "76 - 200 Life Time Referrals",
-    commission: "17.5% Commission",
+    tier: "Silver",
+    referral: "50 - 99 Life Time Referrals",
+    commission: "15% Commission",
+    rewards: "1x Free 10k Challenge",
+  },
+  {
+    tier: "Gold",
+    referral: "100 - 249 Life Time Referrals",
+    commission: "15% Commission",
     rewards: "1x Free 25k Challenge",
   },
   {
-    referral: "201+ Life Time Referrals",
-    commission: "20% Commission",
+    tier: "Platinum",
+    referral: "250 - 499 Life Time Referrals",
+    commission: "15% Commission",
     rewards: "1x Free 50k Challenge",
+  },
+  {
+    tier: "Diamond",
+    referral: "500 - 999 Life Time Referrals",
+    commission: "15% Commission",
+    rewards: "1x Free 100k Challenge",
+  },
+  {
+    tier: "Emerald",
+    referral: "1000+ Life Time Referrals",
+    commission: "15% Commission",
+    rewards: "1x Free 200k Challenge",
   },
 ];
 
@@ -82,13 +98,14 @@ export default function page() {
       </div>
 
       <div className="container px-5 mx-auto xs:grid flex flex-col sm:grid-cols-3 xs:grid-cols-1 grid-cols-1 sm:gap-5 gap-3">
-        {AffiliateTiers.map((item, idx) => (
+        {AffiliateTiers.map((item) => (
           <div
-            key={item.referral}
+            key={item.tier}
             className="bg-[#090909] rounded-3xl p-5 border flex flex-col gap-3"
           >
             <div className="text-[#69FFB2] font-semibold text-xl">
-              Tier {idx + 1}
+              {/* Tier {idx + 1} */}
+              {item.tier}
             </div>
 
             <div className="flex items-center gap-3">
@@ -126,7 +143,7 @@ export default function page() {
           </div>
         ))}
 
-        <div className="col-span-2 bg-[#020B06] border rounded-3xl flex flex-col items-center">
+        <div className="col-span-3 bg-[#020B06] border rounded-3xl flex flex-col items-center py-5">
           <div className="flex flex-col items-center justify-between p-5">
             <Image
               src={"/images/affiliate/star.svg"}

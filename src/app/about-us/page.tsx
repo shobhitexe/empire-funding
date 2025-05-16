@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Data = [
   { title: "#1", sub: "Rated for Fastest Payouts" },
@@ -123,8 +124,10 @@ export default function page() {
                 <GreenText>Presence</GreenText>
               </div>
 
-              <Button variant={"green"} size={"xl"}>
-                Get Funded <ArrowRight />
+              <Button variant={"green"} size={"xl"} asChild>
+                <Link href={`/#challenges`}>
+                  Get Funded <ArrowRight />
+                </Link>
               </Button>
             </div>
 
@@ -181,8 +184,10 @@ function LastCTASection() {
           <span className="text-left">Our Partnered</span>
           <span className="text-[#39FF9C]">Broker</span>
 
-          <Button variant={"green"} size={"xl"} className="mt-10">
-            Get Funded <ArrowRight />
+          <Button variant={"green"} size={"xl"} className="mt-10" asChild>
+            <Link href={`/#challenges`}>
+              Get Funded <ArrowRight />
+            </Link>
           </Button>
         </div>
 

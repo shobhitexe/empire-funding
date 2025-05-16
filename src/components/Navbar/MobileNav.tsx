@@ -47,7 +47,7 @@ export default function MobileNav() {
               ))}
 
               <Link
-                href={"/"}
+                href={"https://app.empiretrading.co/login"}
                 className={`${buttonVariants({
                   className: "text-white font-bold",
                 })}`}
