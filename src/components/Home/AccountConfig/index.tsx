@@ -5,6 +5,7 @@ import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
 import { Calendar, Percent, Scale, TrendingDown } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 const TradingPath = ["Instant", "1-Step", "2-Step"];
@@ -84,8 +85,18 @@ export default function AccountConfig() {
           <div className="bg-[#00150D] sm:h-[85%] w-full rounded-3xl flex flex-col gap-3 items-center text-center justify-center p-5">
             <div className="font-semibold">START NOW AT ONLY</div>
             <div className="text-6xl font-bold">${Pricing[step][accSize]}</div>
-            <Button variant={"green"} className="h-11 px-10 font-semibold">
-              Get Funded
+            <Button
+              variant={"green"}
+              className="h-11 px-10 font-semibold"
+              asChild
+            >
+              <Link
+                href={"https://app.empiretrading.co/login"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Funded
+              </Link>
             </Button>
           </div>
         </div>

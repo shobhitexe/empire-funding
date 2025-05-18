@@ -17,7 +17,7 @@ const MultipleAssetsArr = [
     desc: "Fuel your trades with fast funding for tangible gains.",
   },
   {
-    title: "Stocks Index",
+    title: "Stocks",
     desc: "Earn your share of the profits and receive your payout within 24 hrs.",
   },
   {
