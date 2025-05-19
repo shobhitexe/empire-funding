@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 export default function LastCTASection() {
   return (
     <div
-      className="container sm:w-full w-[90%] mx-auto text-center sm:h-[500px] xs:h-[400px] h-[350px] flex flex-col items-center justify-center gap-10 sm:my-10 my-7 rounded-3xl"
+      className="container sm:w-full w-[90%] mx-auto text-center sm:h-[500px] h-[400px] flex flex-col items-center justify-center gap-10 sm:my-10 my-7 rounded-3xl"
       style={{
         backgroundImage: "url('/images/section.webp')",
         backgroundSize: "cover",
@@ -17,7 +17,7 @@ export default function LastCTASection() {
         <span className="text-[#39FF9C]">Traders in the world</span>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap justify-center items-center gap-3">
         <Button variant={"green"} size={"xl"} asChild>
           <Link href={`/#challenges`}>Get Funded</Link>
         </Button>
@@ -28,6 +28,16 @@ export default function LastCTASection() {
             rel="noopener noreferrer"
           >
             Try Demo
+          </Link>
+        </Button>
+
+        <Button size={"xl"} variant={"secondary"} asChild>
+          <Link
+            href={"https://discord.gg/2uJjt4Dtyj"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Join Discord
           </Link>
         </Button>
       </div>

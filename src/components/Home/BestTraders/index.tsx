@@ -2,8 +2,8 @@ import Image from "next/image";
 import { AnimatedList } from "./AnimatedList";
 
 const Stats = [
-  { title: "$2.7M+", sub: "Total Payouts" },
-  { title: "$5K+", sub: "Total Traders" },
+  { title: "$300k+", sub: "Total Payouts" },
+  { title: "2K+", sub: "Total Traders" },
   { title: "5hrs", sub: "Avg.Payout time" },
 ];
 
@@ -92,10 +92,10 @@ export default function BestTraders() {
           <span className="font-semibold pt-2">Best Traders</span>
         </div>
 
-        <div className="text-light">
+        {/* <div className="text-light">
           Choose the evaluation based on your preference to become an Empire
           Trader.
-        </div>
+        </div> */}
 
         <div className="flex flex-wrap items-center md:justify-start justify-center gap-5">
           {Stats.map((item) => (

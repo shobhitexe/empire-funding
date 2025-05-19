@@ -57,11 +57,15 @@ export default function TradingPlatform() {
       </div>
 
       <div className="flex max-sm:flex-wrap items-stretch justify-center pb-10 gap-5 px-5">
-        {Phases.map((item) => (
+        {Phases.map((item, idx) => (
           <div
             key={item.title}
             className="flex group w-full max-w-md flex-col gap-5 bg-[#00150D] p-7 rounded-2xl relative border border-white/5"
           >
+            <div className="absolute right-6 top-5 font-semibold sm:text-xl text-lg">
+              #{idx + 1}
+            </div>
+
             <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#000000] via-[#FFFFFF]/20 to-[#000000]" />
 
             <div className="relative">

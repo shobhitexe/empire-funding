@@ -1,16 +1,15 @@
-import { ContactUsForm, FaqsHome, LastCTASectionContactUs } from "@/components";
+import { ContactUsForm, LastCTASectionContactUs } from "@/components";
 import GreenText from "@/components/ui/green-text";
-import Image from "next/image";
 
-const Data = [
-  { title: "Aofei Jwfj", sub: "sadasdasdasd awdasefefs" },
-  { title: "Joia Hunfw", sub: "sadasdasdasd awdasefefs" },
-  { title: "SADSD EFSAe", sub: "sadasdasdasd awdasefefs" },
-];
+// const Data = [
+//   { title: "Aofei Jwfj", sub: "sadasdasdasd awdasefefs" },
+//   { title: "Joia Hunfw", sub: "sadasdasdasd awdasefefs" },
+//   { title: "SADSD EFSAe", sub: "sadasdasdasd awdasefefs" },
+// ];
 
 export default function page() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-5">
       <div className="text-center flex items-center justify-center flex-col gap-2 sm:py-20 py-10">
         <div className="flex items-center gap-1 md:text-6xl sm:text-5xl text-4xl font-semibold">
           <GreenText>Contact</GreenText> <div>Us</div>
@@ -22,7 +21,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 grid-cols-1 items-center justify-center sm:gap-2 gap-5">
+      {/* <div className="grid sm:grid-cols-2 grid-cols-1 items-center justify-center sm:gap-2 gap-5">
         <ContactUsForm />
 
         <div className="max-sm:px-5">
@@ -59,9 +58,9 @@ export default function page() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <FaqsHome />
+      <ContactUsForm />
 
       <LastCTASectionContactUs />
     </div>

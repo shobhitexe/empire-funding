@@ -1,35 +1,8 @@
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
-const Faqs = [
-  {
-    que: "What Is For Traders?",
-    ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
-  },
-  {
-    que: "Why Should I Choose For Traders?",
-    ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
-  },
-  {
-    que: "What Is a Trading Challenge?",
-    ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
-  },
-  {
-    que: "What Is the Leverage?",
-    ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
-  },
-  {
-    que: "What Is the Leverage?",
-    ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
-  },
-];
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function FaqsHome() {
   return (
@@ -44,22 +17,9 @@ export default function FaqsHome() {
         </SubHeading>
       </div>
 
-      <Accordion
-        type="single"
-        collapsible
-        className="sm:mt-5 max-w-7xl mx-auto w-full"
-      >
-        {Faqs.map((item, idx) => (
-          <AccordionItem
-            key={item.que + idx}
-            value={idx.toString()}
-            className="bg-[#020B06] mt-4"
-          >
-            <AccordionTrigger>{item.que}</AccordionTrigger>
-            <AccordionContent>{item.ans}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <Button size={"xl"} variant={"green"} asChild className="w-fit mx-auto">
+        <Link href={"/faqs"}>See FAQ</Link>
+      </Button>
     </div>
   );
 }
