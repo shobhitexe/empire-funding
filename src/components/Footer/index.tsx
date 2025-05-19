@@ -7,25 +7,22 @@ const FooterLinks = [
     heading: "TRADING",
     sub: [
       {
-        title: "How it Works",
-        link: `/trading-rules`,
-      },
-      {
         title: "Affiliate",
         link: `/affiliate`,
       },
       {
-        title: "Web Terminal",
-        link: "",
+        title: "Login",
+        link: "https://app.empiretrading.co/login",
         target: "_blank",
       },
-      { title: "Login", link: "", target: "_blank" },
     ],
   },
   {
     heading: "INFORMATION",
     sub: [
-      { title: "FAQ", link: "", target: "_blank" },
+      { title: "About Us", link: "/about-us" },
+      { title: "FAQ", link: "/faqs" },
+      { title: "Rules", link: "/rules" },
       { title: "Contact", link: `/contact-us` },
     ],
   },
@@ -33,13 +30,8 @@ const FooterLinks = [
     heading: "SOCIALS",
     sub: [
       {
-        title: "Twitter",
-        link: "",
-        target: "_blank",
-      },
-      {
         title: "Instagram",
-        link: "",
+        link: "https://www.instagram.com/empiretrading_official",
         target: "_blank",
       },
       {
@@ -78,7 +70,7 @@ export default function Footer() {
               href={""}
               className="text-sm flex items-center gap-2 bg-[#151515] hover:bg-red duration-500 py-2 px-5 rounded-xl w-fit mt-10"
             >
-              support@empire.com
+              support@empiretrading.co
             </Link>
           </div>
         </div>
@@ -107,11 +99,11 @@ export default function Footer() {
 
       <div className="w-full h-px bg-white/20" />
       <div className="flex flex-col gap-5">
-        <div className="flex items-center justify-between text-sm">
-          <div>© 2025 Empire Funding Pvt. Ltd. All rights reserved.</div>
-          <div className="flex gap-2">
+        <div className="flex sm:flex-row flex-col gap-4 items-center justify-between text-sm">
+          <div>© 2025 ET Markets Ltd. All rights reserved.</div>
+          <div className="flex gap-3">
             <Link
-              href={""}
+              href={"/documents/tnc.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -119,17 +111,26 @@ export default function Footer() {
               Terms & Conditions
             </Link>
             <Link
-              href={""}
+              href={"/documents/privacy.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
             >
               Privacy Policy
             </Link>
+
+            <Link
+              href={"/documents/aml.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              AML Policy
+            </Link>
           </div>
         </div>
         <div className="text-white/50 sm:text-sm text-xs">
-          {`Empire Funding is an education and evaluation company that does not collect customer deposits or offer financial services to customers. All accounts provided to customers are in a virtual environment with virtual money.`}
+          {`Empire Trading is an education and evaluation company that does not collect customer deposits or offer financial services to customers. All accounts provided to customers are in a virtual environment with virtual money.`}
           <br />
           <br />
           {`All information provided on this website is for educational purposes only in the area of financial market trading and does not serve in anyway as specific investment recommendations, trading recommendations, analysis of investment opportunities or similar general recommendations regarding the trading of investment instruments. The Company does not provide investment services within the meaning of MIFID II The Company is not a licensed investment services provider (securities broker-dealer) within the meaning of MIFID II All trading on the platform made available as part of the services provided by the Company, although it may be based on real trading data and simulates real trading, is only notional trading on a demo account. In this sense, i.e. that it is fictitious trading on fictitious accounts, terms such as “trading” or “trader” should also be understood and should not be given the meanings they have in the context of real trading.`}
@@ -139,7 +140,7 @@ export default function Footer() {
 
           <br />
           <br />
-          {`Restricted countries: Pakistan, Iran, Syria, Myanmar, Bangladesh, Vietnam, North Korea, the Russian Federation, the Republic of Belarus, Cuba, Lebanon, Libya, Sudan, Crimea, Donetsk and Luhansk regions of Ukraine, United Arab Emirates.`}
+          {`Restricted countries: Pakistan, Iran, Syria, Myanmar, Bangladesh, Vietnam, North Korea, the Russian Federation, the Republic of Belarus, Cuba, Lebanon, Libya, Sudan, Crimea, Donetsk and Luhansk regions of Ukraine.`}
         </div>
       </div>
     </div>

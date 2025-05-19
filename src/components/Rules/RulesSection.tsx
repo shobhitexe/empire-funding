@@ -8,11 +8,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import { FaqsContent } from "./FaqsContent";
+import { RulesContent } from "./RulesContent";
 
-const tabNames = ["Accounts", "Withdrawals", "Prohibited Strategies"];
+const tabNames = [
+  "Challenge Requirements",
+  "Trading Settings & Conditions",
+  "What we allow",
+  "What we don't allow",
+];
 
-export default function FaqsSection() {
+export default function RulesSection() {
   const [tab, setTab] = useState(0);
 
   return (
@@ -36,7 +41,7 @@ export default function FaqsSection() {
         collapsible
         className="sm:mt-5 mt-0 max-w-7xl mx-auto w-full max-sm:px-5"
       >
-        {FaqsContent[tab].map((item, idx) => (
+        {RulesContent[tab].map((item, idx) => (
           <AccordionItem
             key={item.que + idx}
             value={idx.toString()}

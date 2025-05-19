@@ -9,7 +9,7 @@ const Data = [
   },
   {
     title: "$0 Minimum Acc Size",
-    desc: "We don't believe in teasing you with lower costs and then making you pay extra for it. With Global Prime, you can start with as little or as much as you like.",
+    desc: "We don't believe in teasing you with lower costs and then making you pay extra for it. With Empire, you can start with as little or as much as you like.",
   },
   {
     title: "Range of Markets",

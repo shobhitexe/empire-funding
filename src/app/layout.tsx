@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components";
+import { Navbar, Footer } from "@/components";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 import Image from "next/image";
@@ -94,11 +94,19 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff"></meta>
+
+        <Script
+          id="hyros-tracking"
+          strategy="afterInteractive"
+          src={`https://210903.t.hyros.com/v1/lst/universal-script?ph=49b50fc4f265ec859a96ad2604b08ba63d3a8d8106fa1e51f89ca0510d61e032&tag=!clicked&ref_url=${encodeURIComponent(
+            typeof window !== "undefined" ? window.location.href : ""
+          )}`}
+        />
       </head>
       <body className={`${figtree.variable} antialiased`}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
         <Toaster />
 
         <Script

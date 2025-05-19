@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import Image from "next/image";
+import Link from "next/link";
 
 const Phases = [
   {
@@ -35,9 +36,16 @@ export default function TradingPlatform() {
             Trader.
           </div>
 
-          <Button variant={"green"} size={"xl"} className="w-fit">
+          <Link
+            href={`/#challenges`}
+            className={`${buttonVariants({
+              variant: "green",
+              size: "xl",
+              className: "w-fit rounded-3xl",
+            })}`}
+          >
             Get Funded
-          </Button>
+          </Link>
         </div>
 
         <Image
@@ -49,11 +57,15 @@ export default function TradingPlatform() {
       </div>
 
       <div className="flex max-sm:flex-wrap items-stretch justify-center pb-10 gap-5 px-5">
-        {Phases.map((item) => (
+        {Phases.map((item, idx) => (
           <div
             key={item.title}
             className="flex group w-full max-w-md flex-col gap-5 bg-[#00150D] p-7 rounded-2xl relative border border-white/5"
           >
+            <div className="absolute right-6 top-5 font-semibold sm:text-xl text-lg text-white/70">
+              {idx + 1}
+            </div>
+
             <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#000000] via-[#FFFFFF]/20 to-[#000000]" />
 
             <div className="relative">

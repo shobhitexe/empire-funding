@@ -45,35 +45,35 @@ export const FaqsContent = [
   // Withdrawals
   [
     {
-      que: "What Is For Traders?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
+      que: "What is a minimum withdrawal amount?",
+      ans: "The Minimum Payout amount is 50$ for both challenges and Affiliates.",
     },
     {
-      que: "Why Should I Choose For Traders?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
-    },
-    {
-      que: "What Is a Trading Challenge?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
+      que: "Withdrawal processing time?",
+      ans: `Payouts at Empire are typically verified and processed promptly upon withdrawal request. However, in rare instances, processing may take up to 3-5 working days (weekends excluded).<br/><br/>
+      Rest assured, our team endeavors to expedite all payouts, aiming to complete them within the same business day, particularly during our operating hours. Your patience and understanding are greatly appreciated as we strive to provide efficient and reliable service to our traders.`,
     },
   ],
-  // KYC
+  // Prohibited Strategies
   [
     {
-      que: "What Is For Traders?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
+      que: "Scalping",
+      ans: `Yes, scalping is indeed allowed at Empire. We believe in providing our traders with the flexibility to employ various trading strategies, including scalping, to optimize their trading experience and achieve their financial goals.<br/><br/>
+      Tick Scalping<br/>While the scalping strategies are allowed there is a restriction rule on the accounts that hold more than 25% of positions for less than 120 seconds. This might result to account breach as considered as tick scalping that abuse the trading systems. `,
     },
     {
-      que: "Why Should I Choose For Traders?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
+      que: "HFT Trading",
+      ans: `At Empire, we prioritize fairness and transparency in our trading environment. Consequently, we do not allow High-Frequency Trading (HFT) on our platform.<br/><br/>
+      Why HFT is Prohibited:<br/>HFT relies on speed and technology rather than traditional trading methods, which can disadvantage other traders. Our aim is to create an equitable environment where traders can succeed based on their skills and strategies, not just technological advantages.<br/><br/>
+      Empowering Traders:<br/>Empire is committed to empowering traders to succeed through informed decision-making and disciplined trading practices. We provide comprehensive support and resources to help traders navigate the markets effectively.`,
     },
     {
-      que: "What Is a Trading Challenge?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
+      que: "Reverse Trading",
+      ans: "Reverse trading refers to the strategy of simultaneously opening opposing positions on different trading accounts, often across multiple firms. The primary intent behind this practice is to hedge bets, mitigate potential losses, or exploit discrepancies between account regulations and risk management systems. While hedging is a legitimate trading strategy when used within a single account, reverse trading across multiple accounts can be problematic, especially within the framework of prop trading firms that enforce strict risk and drawdown policies.",
     },
     {
-      que: "What Is the Leverage?",
-      ans: "To win the game, you need strong support and diligent preparation. Join For Traders Community.",
+      que: "What is Group Trading?",
+      ans: "Group Trading refers to the coordinated action of multiple traders or multiple accounts under the same ownership taking identical or highly similar trading positions simultaneously across different Empire registrations. This practice is often employed to manipulate market outcomes, obscure individual trading performance, or bypass risk management systems.",
     },
   ],
 ];

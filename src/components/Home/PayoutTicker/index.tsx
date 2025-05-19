@@ -12,7 +12,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Dene Wickwarth",
     payout: "$3,613.86",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -24,7 +24,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Lenee Gribbell",
     payout: "$7,055.08",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -36,7 +36,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Bruis Eade",
     payout: "$3,917.57",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -48,7 +48,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Pietrek Drescher",
     payout: "$8,139.46",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -60,7 +60,7 @@ export const payouts = [
   //   img: "/images/payouts/certi.png",
   //   name: "Etienne Nolleth",
   //   payout: "$8,273.75",
-  //   info: { title: "$3.7M", subtitle: "Payouts" },
+  //   info: { title: "$300k", subtitle: "Payouts" },
   // },
 ];
 
@@ -68,11 +68,11 @@ export default function PayoutTicker() {
   return (
     <section className="bg-[#050D08] flex items-center justify-center w-full sm:py-2 py-1">
       <HorizontalTicker duration={30000}>
-        <div className="flex sm:items-center overflow-auto items-start px-3 -rotate-[0.5deg]s bg-[#050D08] bg-payoutTickerBg w-full py-3 md:gap-5 gap-0 justify-around">
+        <div className="flex sm:items-center overflow-auto items-start px-3 -rotate-[0.5deg]s bg-[#050D08] bg-payoutTickerBg w-full py-1 md:gap-5 gap-0 justify-around">
           {payouts.map((item, idx) => (
             <div
               key={idx}
-              className="flex sm:gap-5 gap-14 items-center divide-x-2 divide-purple-400/20 w-full min-w-xs"
+              className="flex gap-5 items-center sm:justify-between w-full sm:min-w-xs min-w-[250px]"
             >
               <div className="flex items-center gap-4">
                 <Image src={item.img} alt={item.name} width={50} height={50} />
@@ -85,6 +85,11 @@ export default function PayoutTicker() {
                   </div>
                 </div>
               </div>
+
+              <div className="min-h-full h-max bg-purple-400/20 text-purple-400/20">
+                |
+              </div>
+
               <div className="flex flex-col md:text-base sm:text-sm text-xs pl-2 pr-5">
                 <div>{item.info.title}</div>
                 <div>{item.info.subtitle}</div>

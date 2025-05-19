@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Data = [
   { title: "#1", sub: "Rated for Fastest Payouts" },
   { title: "3+", sub: "Global Office Locations" },
-  { title: "5K+", sub: "Traders" },
+  { title: "2K+", sub: "Traders" },
 ];
 
 export default function page() {
@@ -17,10 +18,10 @@ export default function page() {
           <div className="flex items-center gap-1 md:text-6xl sm:text-5xl text-4xl font-semibold">
             <GreenText>About</GreenText> <div>Us</div>
           </div>
-          <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg">
+          {/* <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg">
             I know... just like you many traders have these questions, so here
             are the answers!
-          </div>
+          </div> */}
         </div>
 
         <Image
@@ -39,11 +40,12 @@ export default function page() {
           </div>
           <div className="font-light text-light max-w-6xl text-center mx-auto sm:text-base text-sm px-5">
             At Empire Trading, we believe that trading success should be
-            nurtured in a stress-free environment. Our innovative approach
-            offers free, unlimited retries on every challenge, empowering you to
-            learn and grow at your own pace. This flexibility means you can
-            perfect your strategies without the pressure of rigid deadlines,
-            paving the way to becoming a fully funded EmpireTrader.
+            nurtured in an stress-free environment. Our innovative approach
+            offers realistic profit targets, generous drawdown limits, and tight
+            spreads/commissions on every challenge, empowering you to learn and
+            grow at your own pace. This flexibility means you can perfect your
+            strategies without the pressure of strict conditions, paving the way
+            to building your empire.
           </div>
         </div>
 
@@ -101,7 +103,7 @@ export default function page() {
             <div>we are?</div>
           </div>
 
-          <div className="bg-[#0C1511] w-full max-w-5xl mx-auto aspect-video flex items-center justify-center sm:p-5  p-2 rounded-2xl sm:mt-7 mt-5">
+          {/* <div className="bg-[#0C1511] w-full max-w-5xl mx-auto aspect-video flex items-center justify-center sm:p-5  p-2 rounded-2xl sm:mt-7 mt-5">
             <div className="bg-[#040303] w-full aspect-video flex items-center justify-center relative rounded-2xl">
               <Image
                 src={"/images/play.svg"}
@@ -111,6 +113,46 @@ export default function page() {
                 className="sm:w-[110px] w-[60px]"
               />
             </div>
+          </div> */}
+
+          <div className="text-left sm:mt-10 mt-5 bg-[#0C1511] p-5 rounded-xl">
+            At <strong>Empire Trading,</strong> we&apos;re not just a prop
+            firm—we&apos;re a launchpad for wealth-builders.
+            <br />
+            <br />
+            Founded by <strong>Marcus Anthony</strong> and
+            <strong>Max Schreuder,</strong> Empire Trading exists to fund the
+            traders who are ready to turn strategy into capital and discipline
+            into generational wealth. We back those who take this seriously—who
+            show up every day with focus, grit, and the mindset of an operator,
+            not a gambler.
+            <br />
+            <br />
+            We don&apos;t sell dreams. We fund traders.
+            <br />
+            And we do it with purpose.
+            <br />
+            <br />
+            Empire was built on the belief that capital should find its way to
+            those who&apos;ve earned it—not those with the loudest voices or
+            flashiest content. Our evaluations are tough by design, but fair.
+            Every funded account is a contract of trust—our capital, your edge.
+            <br />
+            <br />
+            But this is more than funding. This is about building an Empire of
+            wealth, trader by trader. We support those who pass not just with
+            payouts, but with coaching, resources, and a community of killers
+            all chasing the same goal: freedom through mastery.
+            <br />
+            <br />
+            Whether you&apos;re here to build a second income or change your
+            life, you won&apos;t do it alone. Because once you&apos;re funded,
+            you&apos;re part of the Empire.
+            <strong>
+              Welcome to Empire Trading.
+              <br />
+              Build wealth. Leave legacy.
+            </strong>
           </div>
         </div>
 
@@ -123,8 +165,10 @@ export default function page() {
                 <GreenText>Presence</GreenText>
               </div>
 
-              <Button variant={"green"} size={"xl"}>
-                Get Funded <ArrowRight />
+              <Button variant={"green"} size={"xl"} asChild>
+                <Link href={`/#challenges`}>
+                  Get Funded <ArrowRight />
+                </Link>
               </Button>
             </div>
 
@@ -159,45 +203,47 @@ export default function page() {
           </div>
         </div>
 
-        <LastCTASection />
+        {/* <LastCTASection /> */}
       </div>
     </div>
   );
 }
 
-function LastCTASection() {
-  return (
-    <div
-      className="container mx-auto sm:w-full w-[90%] text-center md:h-[500px] py-10 flex flex-col items-center justify-center gap-10 my-10 rounded-3xl"
-      style={{
-        backgroundImage: "url('/images/lastsection.webp')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="flex md:flex-row flex-col gap-5 justify-between w-full sm:px-20 px-5">
-        <div className="flex flex-col items-start md:text-6xl sm:text-5xl text-4xl font-semibold gap-1">
-          <span className="text-left">Our Partnered</span>
-          <span className="text-[#39FF9C]">Broker</span>
+// function LastCTASection() {
+//   return (
+//     <div
+//       className="container mx-auto sm:w-full w-[90%] text-center md:h-[500px] py-10 flex flex-col items-center justify-center gap-10 my-10 rounded-3xl"
+//       style={{
+//         backgroundImage: "url('/images/lastsection.webp')",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         backgroundRepeat: "no-repeat",
+//       }}
+//     >
+//       <div className="flex md:flex-row flex-col gap-5 justify-between w-full sm:px-20 px-5">
+//         <div className="flex flex-col items-start md:text-6xl sm:text-5xl text-4xl font-semibold gap-1">
+//           <span className="text-left">Our Partnered</span>
+//           <span className="text-[#39FF9C]">Broker</span>
 
-          <Button variant={"green"} size={"xl"} className="mt-10">
-            Get Funded <ArrowRight />
-          </Button>
-        </div>
+//           <Button variant={"green"} size={"xl"} className="mt-10" asChild>
+//             <Link href={`/#challenges`}>
+//               Get Funded <ArrowRight />
+//             </Link>
+//           </Button>
+//         </div>
 
-        <div className="md:text-xl sm:text-lg text-base max-w-2xl text-left">
-          Empire Trading works in direct collaboration with our broker partner
-          Blueberry Markets.
-          <br />
-          <br />
-          Empire Markets was founded in 2016 and has grown into an award winning
-          global Retail Forex brand known for its low spreads and high level of
-          client service. Today they are home to over 50,000 traders worldwide
-          and we are proud to work with them to bring simulated prop trading to
-          the world!
-        </div>
-      </div>
-    </div>
-  );
-}
+//         <div className="md:text-xl sm:text-lg text-base max-w-2xl text-left">
+//           Empire Trading works in direct collaboration with our broker partner
+//           Blueberry Markets.
+//           <br />
+//           <br />
+//           Empire Markets was founded in 2016 and has grown into an award winning
+//           global Retail Forex brand known for its low spreads and high level of
+//           client service. Today they are home to over 50,000 traders worldwide
+//           and we are proud to work with them to bring simulated prop trading to
+//           the world!
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
