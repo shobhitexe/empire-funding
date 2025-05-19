@@ -102,7 +102,7 @@ export default function AccountConfig() {
         <div className="flex sm:flex-row flex-col items-stretch gap-5">
           <div className="bg-[#00150D] p-5 rounded-2xl flex flex-col gap-3">
             <div className="text-xl font-semibold border-b border-[#385546] pb-2">
-              1. {step === 2 ? "PHASE 1" : "FUNDED ACCOUNT"}
+              1. {step === 0 ? "FUNDED ACCOUNT" : "PHASE 1"}
             </div>
             <div className="text-[#8F8F8F] text-sm">
               Choose a simulated account size and try to reach the minimum

@@ -78,8 +78,8 @@ export default function page() {
     <div className="flex flex-col sm:gap-10 gap-5">
       <div className="text-center flex items-center justify-center flex-col gap-4 sm:pt-20 pt-7 pb-10 px-5">
         <div className="flex sm:flex-row flex-col items-center gap-1 md:text-6xl sm:text-5xl text-4xl font-semibold">
-          <div>Join the Empire</div>
-          <GreenText>Funded</GreenText> <div>team!</div>
+          <div>Lead your</div>
+          <GreenText>Empire</GreenText>
         </div>
         <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg text-base">
           Boost your income with our Affiliate Program! Refer new traders and
@@ -88,7 +88,7 @@ export default function page() {
 
         <div className="flex sm:flex-row flex-col items-center gap-3">
           <Button size={"xl"} variant={"green"}>
-            Join Affiliate <ArrowRight />
+            Become an Affiliate <ArrowRight />
           </Button>
 
           <Button size={"xl"} variant={"outline"}>
