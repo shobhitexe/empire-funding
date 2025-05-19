@@ -100,7 +100,7 @@ export default function Footer() {
       <div className="w-full h-px bg-white/20" />
       <div className="flex flex-col gap-5">
         <div className="flex sm:flex-row flex-col gap-4 items-center justify-between text-sm">
-          <div>© 2025 Empire Funding Pvt. Ltd. All rights reserved.</div>
+          <div>© 2025 ET Markets Ltd. All rights reserved.</div>
           <div className="flex gap-3">
             <Link
               href={"/documents/tnc.pdf"}

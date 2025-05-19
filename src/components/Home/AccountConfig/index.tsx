@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
-import { Calendar, Percent, Scale, TrendingDown } from "lucide-react";
+import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -114,33 +114,38 @@ export default function AccountConfig() {
             <div className="flex flex-col gap-2">
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Max Daily Drawdown
+                  <TrendingUp className="text-[#59D28F]" /> Profit Target
                 </div>
-                <div>2%</div>
+                <div>{step === 0 ? "N/A" : step === 1 ? "8%" : "6%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Max Overall
-                  Drawdown
+                  <TrendingDown className="text-[#59D28F]" /> Daily Drawdown
                 </div>
-                <div>2%</div>
+                <div>{step === 2 ? "5%" : "3%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <Calendar className="text-[#59D28F] size-5" /> Minimum
-                  Profitable Days
+                  <TrendingDown className="text-[#59D28F]" /> Maximum Drawdown
                 </div>
-                <div>2%</div>
+                <div>{step === 0 ? "6%" : "12%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <Scale className="text-[#59D28F] size-5" /> Sim Trading
-                  Leverage
+                  <Calendar className="text-[#59D28F] size-5" /> Minimum Trading
+                  Days
                 </div>
-                <div>2%</div>
+                <div>{step === 0 ? "4" : "3"}</div>
+              </div>
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Scale className="text-[#59D28F] size-5" /> Profit Split
+                </div>
+                <div>90%</div>
               </div>
             </div>
           </div>
@@ -162,40 +167,38 @@ export default function AccountConfig() {
             <div className="flex flex-col gap-2 w-full">
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <Percent className="text-[#59D28F]" /> Payout Share
+                  <TrendingUp className="text-[#59D28F]" /> Profit Target
                 </div>
-                <div>2%</div>
+                <div>{step === 0 ? "N/A" : step === 1 ? "8%" : "5%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Max Daily Drawdown
+                  <TrendingDown className="text-[#59D28F]" /> Daily Drawdown
                 </div>
-                <div>2%</div>
+                <div>{step === 2 ? "5%" : "3%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Max Overall
-                  Drawdown
+                  <TrendingDown className="text-[#59D28F]" /> Maximum Drawdown
                 </div>
-                <div>2%</div>
+                <div>{step === 0 ? "6%" : "12%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <Calendar className="text-[#59D28F] size-5" /> Payout
-                  Frequency
+                  <Calendar className="text-[#59D28F] size-5" /> Minimum Trading
+                  Days
                 </div>
-                <div>2%</div>
+                <div>{step === 0 ? "4" : "3"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
-                  <Calendar className="text-[#59D28F] size-5" />
-                  Trading Period
+                  <Scale className="text-[#59D28F] size-5" /> Profit Split
                 </div>
-                <div>2%</div>
+                <div>90%</div>
               </div>
             </div>
           </div>
