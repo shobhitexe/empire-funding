@@ -62,8 +62,8 @@ export default function TradingPlatform() {
             key={item.title}
             className="flex group w-full max-w-md flex-col gap-5 bg-[#00150D] p-7 rounded-2xl relative border border-white/5"
           >
-            <div className="absolute right-6 top-5 font-semibold sm:text-xl text-lg">
-              #{idx + 1}
+            <div className="absolute right-6 top-5 font-semibold sm:text-xl text-lg text-white/70">
+              {idx + 1}
             </div>
 
             <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#000000] via-[#FFFFFF]/20 to-[#000000]" />
