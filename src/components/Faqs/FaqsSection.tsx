@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Button } from "../ui/button";
 import {
   Accordion,
@@ -10,19 +10,20 @@ import {
 } from "../ui/accordion";
 import { FaqsContent } from "./FaqsContent";
 
-const tabNames = ["Accounts", "Withdrawals", "KYC"];
+const tabNames = ["Accounts", "Withdrawals", "Prohibited Strategies"];
 
 export default function FaqsSection() {
   const [tab, setTab] = useState(0);
 
   return (
     <div className="flex flex-col sm:gap-5 gap-3 container mx-auto">
-      <div className="flex max-sm:flex-wrap justify-center sm:gap-5 gap-3">
+      <div className="flex flex-wrap justify-center sm:gap-5 gap-3">
         {tabNames.map((item, idx) => (
           <Button
             key={item}
             variant={idx === tab ? "green" : "outline"}
             size={"xl"}
+            className="max-w-xs w-full"
             onClick={() => setTab(idx)}
           >
             {item}
@@ -42,7 +43,14 @@ export default function FaqsSection() {
             className="bg-[#020B06] mt-4"
           >
             <AccordionTrigger>{item.que}</AccordionTrigger>
-            <AccordionContent>{item.ans}</AccordionContent>
+            <AccordionContent>
+              {item.ans.split("<br/>").map((part, idx) => (
+                <Fragment key={idx}>
+                  {part}
+                  {idx !== item.ans.split("<br/>").length - 1 && <br />}
+                </Fragment>
+              ))}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
