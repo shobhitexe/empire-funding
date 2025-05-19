@@ -13,8 +13,8 @@ import { RulesContent } from "./RulesContent";
 const tabNames = [
   "Challenge Requirements",
   "Trading Settings & Conditions",
-  "What is Allowed with us?",
-  "What is Forbidden with us?",
+  "What we allow",
+  "What we don't allow",
 ];
 
 export default function RulesSection() {
