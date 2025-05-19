@@ -38,7 +38,7 @@ export default function CountDown() {
         <div className="flex flex-col gap-2 text-xl font-semibold mt-3">
           <div className="text-center">We launch in</div>
 
-          <Countdown date={new Date(1747593000000)} renderer={renderer} />
+          <Countdown date={new Date(1747656675000)} renderer={renderer} />
         </div>
       </div>
     )
