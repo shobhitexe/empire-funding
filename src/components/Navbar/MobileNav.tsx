@@ -33,6 +33,7 @@ export default function MobileNav() {
                   href={item.href}
                   key={item.title}
                   className="uppercase font-semibold text-center"
+                  onClick={() => setIsOpen(false)}
                 >
                   <motion.div
                     initial={{ opacity: 0, filter: "blur(10px)", scale: 0.8 }}

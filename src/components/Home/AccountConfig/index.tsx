@@ -11,15 +11,15 @@ import { useState } from "react";
 const TradingPath = ["Instant", "1-Step", "2-Step"];
 
 const AccountSize = [
-  ["$25K", "$50K", "$100K"],
-  ["$10k", "$25K", "$50K", "$100K", "$200K"],
-  ["$10k", "$25K", "$50K", "$100K", "$200K"],
+  ["$5K", "$10K", "$15K", "$25K", "$50K", "$100K"],
+  ["$5K", "$10k", "$25K", "$50K", "$100K", "$200K"],
+  ["$5K", "$10k", "$25K", "$50K", "$100K", "$200K"],
 ];
 
 const Pricing = [
-  [497, 897, 1657],
-  [107, 217, 328, 546, 986],
-  [97, 197, 297, 497, 897],
+  [87, 107, 167, 267, 397, 897],
+  [67, 107, 157, 227, 407, 647],
+  [49, 67, 107, 227, 317, 597],
 ];
 
 export default function AccountConfig() {
@@ -64,16 +64,14 @@ export default function AccountConfig() {
                 Select Account Size
               </div>
               <div
-                className={`bg-[#00150D] p-2 rounded-2xl grid ${
-                  step === 0 ? "grid-cols-3" : "grid-cols-5"
-                } items-center gap-3`}
+                className={`bg-[#00150D] p-2 rounded-2xl grid grid-cols-6 items-center sm:gap-3 gap-1`}
               >
                 {AccountSize[step].map((item, idx) => (
                   <Button
                     key={item}
                     variant={accSize === idx ? "green" : "outline"}
                     onClick={() => setAccSize(idx)}
-                    className="sm:h-14 h-10 font-semibold"
+                    className="sm:h-14 h-10 font-semibold sm:text-base text-sm"
                   >
                     {item}
                   </Button>
@@ -95,7 +93,7 @@ export default function AccountConfig() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get Funded
+                Start Challenge
               </Link>
             </Button>
           </div>

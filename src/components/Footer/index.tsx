@@ -99,11 +99,11 @@ export default function Footer() {
 
       <div className="w-full h-px bg-white/20" />
       <div className="flex flex-col gap-5">
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex sm:flex-row flex-col gap-4 items-center justify-between text-sm">
           <div>© 2025 Empire Funding Pvt. Ltd. All rights reserved.</div>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <Link
-              href={""}
+              href={"/documents/tnc.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -111,12 +111,21 @@ export default function Footer() {
               Terms & Conditions
             </Link>
             <Link
-              href={""}
+              href={"/documents/privacy.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
             >
               Privacy Policy
+            </Link>
+
+            <Link
+              href={"/documents/aml.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              AML Policy
             </Link>
           </div>
         </div>
