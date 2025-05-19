@@ -120,7 +120,7 @@ export default function page() {
             firm—we&apos;re a launchpad for wealth-builders.
             <br />
             <br />
-            Founded by <strong>Marcus Anthony</strong> and
+            Founded by <strong>Marcus Anthony</strong> and{" "}
             <strong>Max Schreuder,</strong> Empire Trading exists to fund the
             traders who are ready to turn strategy into capital and discipline
             into generational wealth. We back those who take this seriously—who
