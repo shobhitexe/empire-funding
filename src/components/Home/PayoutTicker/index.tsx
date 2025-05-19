@@ -12,7 +12,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Dene Wickwarth",
     payout: "$3,613.86",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -24,7 +24,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Lenee Gribbell",
     payout: "$7,055.08",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -36,7 +36,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Bruis Eade",
     payout: "$3,917.57",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -48,7 +48,7 @@ export const payouts = [
     img: "/images/C.png",
     name: "Pietrek Drescher",
     payout: "$8,139.46",
-    info: { title: "$3.7M", subtitle: "Payouts" },
+    info: { title: "$300k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -60,7 +60,7 @@ export const payouts = [
   //   img: "/images/payouts/certi.png",
   //   name: "Etienne Nolleth",
   //   payout: "$8,273.75",
-  //   info: { title: "$3.7M", subtitle: "Payouts" },
+  //   info: { title: "$300k", subtitle: "Payouts" },
   // },
 ];
 
