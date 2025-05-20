@@ -58,14 +58,18 @@ export const FaqsContent = [
   [
     {
       que: "Scalping",
-      ans: `Yes, scalping is indeed allowed at Empire. We believe in providing our traders with the flexibility to employ various trading strategies, including scalping, to optimize their trading experience and achieve their financial goals.<br/><br/>
+      ans: `Yes, scalping is allowed. We believe in providing our traders with the flexibility
+to employ various strategies, including scalping, to optimize their experience and achieve their
+financial goals.<br/><br/>
       Tick Scalping<br/>While the scalping strategies are allowed there is a restriction rule on the accounts that hold more than 25% of positions for less than 120 seconds. This might result to account breach as considered as tick scalping that abuse the trading systems. `,
     },
     {
       que: "HFT Trading",
-      ans: `At Empire, we prioritize fairness and transparency in our trading environment. Consequently, we do not allow High-Frequency Trading (HFT) on our platform.<br/><br/>
-      Why HFT is Prohibited:<br/>HFT relies on speed and technology rather than traditional trading methods, which can disadvantage other traders. Our aim is to create an equitable environment where traders can succeed based on their skills and strategies, not just technological advantages.<br/><br/>
-      Empowering Traders:<br/>Empire is committed to empowering traders to succeed through informed decision-making and disciplined trading practices. We provide comprehensive support and resources to help traders navigate the markets effectively.`,
+      ans: `We prioritize fairness and transparency. Consequently, we do not allow Hight-Frequency
+Trading (HFT) on our platform.<br/><br/>
+      Why HFT is Prohibited:<br/>HFT relies on speed and technology rather than traditional trading methods, which can
+disadvantage other traders. We want to create an equitable environment where traders can
+succeed based on their skills and knowledge, not just technological wizardry.`,
     },
     {
       que: "Reverse Trading",

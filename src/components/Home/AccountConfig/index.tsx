@@ -18,7 +18,7 @@ const AccountSize = [
 
 const Pricing = [
   [87, 107, 167, 267, 397, 897],
-  [67, 107, 157, 227, 407, 647],
+  [67, 107, 157, 287, 407, 647],
   [49, 67, 107, 227, 317, 597],
 ];
 
@@ -202,6 +202,11 @@ export default function AccountConfig() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="text-center sm:mt-3 mt-1 sm:text-base text-sm">
+          100% Profit Split • 24-Hour Payout • 150% Refund • No Minimum Trading
+          Days • 5% Profit Target
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@ export default function TopRatedFirm() {
   return (
     <div className="sm:my-24 my-14 container mx-auto flex flex-col sm:gap-16 gap-8">
       <Heading className="text-center">
-        Why We&apos;re <GreenText>Top Rated PropFirm</GreenText>
+        Why we are a <GreenText>Top Rated PropFirm</GreenText>
       </Heading>
 
       <div className="grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-5 sm:px-5 px-7">

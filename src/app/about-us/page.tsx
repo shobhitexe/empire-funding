@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Data = [
   { title: "#1", sub: "Rated for Fastest Payouts" },
-  { title: "3+", sub: "Global Office Locations" },
   { title: "2K+", sub: "Traders" },
+  { title: "80+", sub: "Countries" },
 ];
 
 export default function page() {
@@ -133,9 +133,9 @@ export default function page() {
             And we do it with purpose.
             <br />
             <br />
-            Empire was built on the belief that capital should find its way to
-            those who&apos;ve earned it—not those with the loudest voices or
-            flashiest content. Our evaluations are tough by design, but fair.
+            Empire Trading was built on the belief that capital should find its
+            way to those who&apos;ve earned it—not those with the loudest voices
+            or flashiest content. Our evaluations are tough by design, but fair.
             Every funded account is a contract of trust—our capital, your edge.
             <br />
             <br />
@@ -148,10 +148,12 @@ export default function page() {
             Whether you&apos;re here to build a second income or change your
             life, you won&apos;t do it alone. Because once you&apos;re funded,
             you&apos;re part of the Empire.
+            <br />
+            <br />
             <strong>
-              Welcome to Empire Trading.
+              Build Wealth,
               <br />
-              Build wealth. Leave legacy.
+              Create a Legacy
             </strong>
           </div>
         </div>

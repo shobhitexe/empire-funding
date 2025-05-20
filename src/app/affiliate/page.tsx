@@ -9,44 +9,44 @@ const AffiliateTiers = [
     tier: "Bronze",
     referral: "0 - 49 Life Time Referrals",
     commission: "15% Commission",
-    rewards: "1x Free 5k Challenge",
+    rewards: "$250 cash bonus",
   },
   {
     tier: "Silver",
     referral: "50 - 99 Life Time Referrals",
     commission: "15% Commission",
-    rewards: "1x Free 10k Challenge",
+    rewards: "$500 cash bonus",
   },
   {
     tier: "Gold",
     referral: "100 - 249 Life Time Referrals",
     commission: "15% Commission",
-    rewards: "1x Free 25k Challenge",
+    rewards: "$1000 cash bonus",
   },
   {
     tier: "Platinum",
     referral: "250 - 499 Life Time Referrals",
     commission: "15% Commission",
-    rewards: "1x Free 50k Challenge",
+    rewards: " $2500 cash bonus",
   },
   {
     tier: "Diamond",
     referral: "500 - 999 Life Time Referrals",
     commission: "15% Commission",
-    rewards: "1x Free 100k Challenge",
+    rewards: "$5000 cash bonus",
   },
   {
     tier: "Emerald",
     referral: "1000+ Life Time Referrals",
     commission: "15% Commission",
-    rewards: "1x Free 200k Challenge",
+    rewards: "$10000 cash bonus",
   },
 ];
 
 const AffiliateBenefits = [
   "365 Days Tracking Cookies",
-  "Monthly Recurring Commissions",
-  "Earn on repeat purchases",
+  "Bonus Performance Incentives",
+  "Competitive Commission Rates",
   "Get access to insights with our affiliate dashboard",
 ];
 
@@ -83,7 +83,7 @@ export default function page() {
         </div>
         <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg text-base">
           Boost your income with our Affiliate Program! Refer new traders and
-          earn up to 20% commission on each successful sign-up.
+          earn up to 15% commission on each successful sign-up.
         </div>
 
         <div className="flex sm:flex-row flex-col items-center gap-3">
@@ -174,7 +174,7 @@ export default function page() {
             </div>
 
             <Button variant={"green"} size={"xl"}>
-              Join Affiliate <ArrowRight />
+              Become an Affiliate <ArrowRight />
             </Button>
           </div>
 
@@ -230,7 +230,7 @@ export default function page() {
             variant={"green"}
             className="sm:w-fit w-full relative xs:top-10 top-5"
           >
-            Join Affiliate <ArrowRight />
+            Become an Affiliate <ArrowRight />
           </Button>
         </div>
       </div>

@@ -13,8 +13,8 @@ export default function LastCTASection() {
       }}
     >
       <div className="flex flex-col items-center md:text-6xl sm:text-5xl text-4xl font-semibold gap-1 px-5">
-        <span>Let&apos;s join with millions of</span>
-        <span className="text-[#39FF9C]">Traders in the world</span>
+        <span>Join millions of Traders</span>
+        <span className="text-[#39FF9C]">around the world</span>
       </div>
 
       <div className="flex flex-wrap justify-center items-center gap-3">
