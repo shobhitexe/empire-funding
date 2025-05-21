@@ -327,7 +327,11 @@ export const RulesContent = [
     },
     {
       que: "Use of Expert Advisors (EAs)",
-      ans: "We allow the use of Expert Advisors in both Challenge and Funded accounts.",
+      ans: (
+        <div>
+          We allow the use of Expert Advisors in the Challenge Phase only.
+        </div>
+      ),
     },
     {
       que: "Copy Trading",
