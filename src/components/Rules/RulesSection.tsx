@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Button } from "../ui/button";
 import {
   Accordion,
@@ -15,6 +15,7 @@ const tabNames = [
   "Trading Settings & Conditions",
   "What we allow",
   "What we don't allow",
+  "Funded Requirements",
 ];
 
 export default function RulesSection() {
@@ -49,12 +50,13 @@ export default function RulesSection() {
           >
             <AccordionTrigger>{item.que}</AccordionTrigger>
             <AccordionContent>
-              {item.ans.split("<br/>").map((part, idx) => (
+              {/* {item.ans.split("<br/>").map((part, idx) => (
                 <Fragment key={idx}>
                   {part}
                   {idx !== item.ans.split("<br/>").length - 1 && <br />}
                 </Fragment>
-              ))}
+              ))} */}
+              {item.ans}
             </AccordionContent>
           </AccordionItem>
         ))}
