@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Button } from "../ui/button";
 import {
   Accordion,
@@ -10,7 +10,7 @@ import {
 } from "../ui/accordion";
 import { FaqsContent } from "./FaqsContent";
 
-const tabNames = ["Accounts", "Withdrawals", "Prohibited Strategies"];
+const tabNames = ["Accounts", "Pay-outs", "Prohibited Strategies"];
 
 export default function FaqsSection() {
   const [tab, setTab] = useState(0);
@@ -43,14 +43,7 @@ export default function FaqsSection() {
             className="bg-[#020B06] mt-4"
           >
             <AccordionTrigger>{item.que}</AccordionTrigger>
-            <AccordionContent>
-              {item.ans.split("<br/>").map((part, idx) => (
-                <Fragment key={idx}>
-                  {part}
-                  {idx !== item.ans.split("<br/>").length - 1 && <br />}
-                </Fragment>
-              ))}
-            </AccordionContent>
+            <AccordionContent>{item.ans}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

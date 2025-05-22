@@ -206,7 +206,7 @@ export const RulesContent = [
                     Account Size
                   </th>
                   <th className="border border-gray-400 px-4 py-2">
-                    Minimum Equity Allowed
+                    Profit Target
                   </th>
                 </tr>
               </thead>
@@ -287,15 +287,41 @@ export const RulesContent = [
       que: "Leverage & Commissions",
       ans: (
         <div>
-          We offer a structured and transparent trading environment, with
-          specific leverage ratios and commission rates across various asset
-          classNamees.
+          We charge $7.5 per lot across all markets.
           <br />
-          Forex (FX) - 1:50
           <br />
-          Metals - 1:20 (ability to upgrade to 1:75)
+          We offer the following leverage across each market:
           <br />
-          Crypto - 1:
+          <br />
+          <div>
+            <div className="border border-gray-400 px-4 py-2">Leverage</div>
+            <table className="table-auto border border-gray-400 w-full text-left">
+              <tbody>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">Forex</td>
+                  <td className="border border-gray-400 px-4 py-2">1:50</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">
+                    Commodities
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">1:10</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">Futures</td>
+                  <td className="border border-gray-400 px-4 py-2">1:10</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">Stock</td>
+                  <td className="border border-gray-400 px-4 py-2">1:10</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">Crypto</td>
+                  <td className="border border-gray-400 px-4 py-2">1:5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       ),
     },

@@ -89,7 +89,7 @@ export default function AccountConfig() {
               asChild
             >
               <Link
-                href={"https://app.empiretrading.co/login"}
+                href={"https://app.empiretrading.co/checkoutpage"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
