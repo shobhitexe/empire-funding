@@ -468,13 +468,13 @@ abuse of trading systems.`,
       que: "Consistency Rule",
       ans: (
         <div>
-          We have a 15% Consistency Score on Funded accounts, and this must be
+          We have a 45% Consistency Score on Funded accounts, and this must be
           met to request a payout.
           <br />
           <br />
-          If you do not meet the 15% consistency score, you can continue trading
+          If you do not meet the 45% consistency score, you can continue trading
           until you meet the consistency score. This means that the biggest
-          winning day can not exceed 15% of the profits
+          winning day can not exceed 45% of the profits
         </div>
       ),
     },
