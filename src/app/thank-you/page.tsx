@@ -12,7 +12,7 @@ export default function page() {
             "linear-gradient(47.01deg, rgba(16, 185, 129, 0.16) 0%, rgba(52, 211, 153, 0.08) 50%, rgba(5, 150, 105, 0.16) 100%)",
         }}
       >
-        <Image src={"/images/tick.svg"} alt={"tick"} width={183} height={183} />
+        <Image src={"/images/tick.svg"} alt={"tick"} width={150} height={150} />
 
         <div className="flex flex-col items-start justify-center gap-4">
           <div className="font-bold text-2xl">Thank you</div>
