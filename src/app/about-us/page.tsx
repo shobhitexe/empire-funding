@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Data = [
   { title: "#1", sub: "Rated for Fastest Payouts" },
-  { title: "2K+", sub: "Traders" },
+  { title: "200+", sub: "Traders" },
   { title: "80+", sub: "Countries" },
 ];
 

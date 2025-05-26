@@ -11,20 +11,20 @@ export const payouts = [
   {
     img: "/images/C.png",
     name: "Dene Wickwarth",
-    payout: "$3,613.86",
-    info: { title: "$300k", subtitle: "Payouts" },
+    payout: "$1,613.86",
+    info: { title: "$30k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
     name: "Janice Gaggen",
-    payout: "$8,179.15",
+    payout: "$817.15",
     info: { title: "180+", subtitle: "Countries" },
   },
   {
     img: "/images/C.png",
     name: "Lenee Gribbell",
-    payout: "$7,055.08",
-    info: { title: "$300k", subtitle: "Payouts" },
+    payout: "$705.08",
+    info: { title: "$30k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
@@ -35,25 +35,25 @@ export const payouts = [
   {
     img: "/images/C.png",
     name: "Bruis Eade",
-    payout: "$3,917.57",
-    info: { title: "$300k", subtitle: "Payouts" },
+    payout: "$391.57",
+    info: { title: "$30k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
     name: "Rodrique Raggles",
-    payout: "$4,548.69",
+    payout: "$454.69",
     info: { title: "180+", subtitle: "Countries" },
   },
   {
     img: "/images/C.png",
     name: "Pietrek Drescher",
-    payout: "$8,139.46",
-    info: { title: "$300k", subtitle: "Payouts" },
+    payout: "$813.46",
+    info: { title: "$30k", subtitle: "Payouts" },
   },
   {
     img: "/images/C.png",
     name: "Gilbert Curro",
-    payout: "$9,617.59",
+    payout: "$961.59",
     info: { title: "180+", subtitle: "Countries" },
   },
   // {

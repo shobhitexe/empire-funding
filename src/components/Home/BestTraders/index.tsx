@@ -2,8 +2,8 @@ import Image from "next/image";
 import { AnimatedList } from "./AnimatedList";
 
 const Stats = [
-  { title: "$300k+", sub: "Total Payouts" },
-  { title: "2K+", sub: "Total Traders" },
+  { title: "$30k+", sub: "Total Payouts" },
+  { title: "200+", sub: "Total Traders" },
   { title: "5hrs", sub: "Avg.Payout time" },
 ];
 
