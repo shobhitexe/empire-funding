@@ -57,7 +57,7 @@ export default function Popup() {
             <Input required type="email" name="email" placeholder="Email" />
           </div>
 
-          <Button variant={"green"} className="w-full mt-5">
+          <Button variant={"green"} size={"xl"} className="w-full mt-3">
             Claim Your Offer
           </Button>
         </form>
