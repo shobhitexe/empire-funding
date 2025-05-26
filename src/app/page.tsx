@@ -6,6 +6,7 @@ import {
   LastCTASection,
   MultipleAssets,
   PayoutTicker,
+  Popup,
   Testimonials,
   TopRatedFirm,
   TradingPlatform,
@@ -24,6 +25,7 @@ export default function Home() {
       <Testimonials />
       <FaqsHome />
       <LastCTASection />
+      <Popup />
     </main>
   );
 }
