@@ -71,7 +71,7 @@ export const FaqsContent = [
       que: "What platforms can I trade on?",
       ans: (
         <div>
-          Currently, we only support MT5 with plans on integrating more
+          Currently, we only support Platform 5 with plans on integrating more
           platforms in the future!
         </div>
       ),

@@ -13,7 +13,7 @@ export default function LastCTASection() {
       }}
     >
       <div className="flex flex-col items-center md:text-6xl sm:text-5xl text-4xl font-semibold gap-1 px-5">
-        <span>Join millions of Traders</span>
+        <span>Join thousands of Traders</span>
         <span className="text-[#39FF9C]">around the world</span>
       </div>
 

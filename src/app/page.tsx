@@ -7,7 +7,7 @@ import {
   MultipleAssets,
   PayoutTicker,
   Popup,
-  Testimonials,
+  // Testimonials,
   TopRatedFirm,
   TradingPlatform,
 } from "@/components";
@@ -22,7 +22,7 @@ export default function Home() {
       <AccountConfig />
       <TopRatedFirm />
       <BestTraders />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FaqsHome />
       <LastCTASection />
       <Popup />
