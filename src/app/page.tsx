@@ -5,7 +5,7 @@ import {
   Hero,
   LastCTASection,
   MultipleAssets,
-  PayoutTicker,
+  // PayoutTicker,
   Popup,
   // Testimonials,
   TopRatedFirm,
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <PayoutTicker />
+      {/* <PayoutTicker /> */}
       <MultipleAssets />
       <TradingPlatform />
       <AccountConfig />
