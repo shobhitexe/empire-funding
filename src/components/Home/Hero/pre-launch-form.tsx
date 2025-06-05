@@ -19,7 +19,7 @@ export default function PrelaunchForm() {
       toast(
         <>
           Hey {formData.get("name")}, thanks for signing up. You have been
-          successfully added to Empire Trading&apos;s launch list!
+          successfully added to Empire Funded&apos;s launch list!
           <br />
           <br />
           Stay tuned for more exclusive offers! 💪🏻

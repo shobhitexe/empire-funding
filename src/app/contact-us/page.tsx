@@ -15,7 +15,7 @@ export default function page() {
           <GreenText>Contact</GreenText> <div>Us</div>
         </div>
         <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg text-base">
-          Curious about Empire trading or ready to seize new opportunities?
+          Curious about Empire Funded or ready to seize new opportunities?
           We&apos;re here to help. Our dedicated team is eager to assist you on
           your journey to prop trading success.{" "}
         </div>

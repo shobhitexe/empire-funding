@@ -9,7 +9,7 @@ import Image from "next/image";
 const figtree = Figtree({ variable: "--font-figtree", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Empire Trading",
+  title: "Empire Funded",
   description: "",
 };
 

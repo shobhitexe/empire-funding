@@ -5,24 +5,24 @@ import Image from "next/image";
 
 const MultipleAssetsArr = [
   {
-    title: "Crypto Trading",
-    desc: "Trade crypto with swift funding and innovative tools.",
+    title: "Up to 100% Profit Splits",
+    desc: "Keep every dollar you earn—our funding model lets you keep up to 100% of your profits.",
   },
   {
-    title: "Forex Trading",
-    desc: "Master currencies with rapid funding and precision tools.",
+    title: "1-Step Challenge",
+    desc: "One clear target, one easy step—prove your skills and unlock funding with no extra steps.",
   },
   {
-    title: "Commodities",
-    desc: "Fuel your trades with fast funding for tangible gains.",
+    title: "Lightning Fast Payouts",
+    desc: "Trade hard today, spend tomorrow—experience truly lightning-fast payouts.",
   },
   {
-    title: "Stocks",
-    desc: "Earn your share of the profits and receive your payout within 24 hrs.",
+    title: "Trade News Freely",
+    desc: "Keep your positions open and trade without any restrictions, even during major news releases.",
   },
   {
-    title: "Futures Trading",
-    desc: "Earn your share of the profits and receive your payout within 24 hrs.",
+    title: "6% Profit Target—Super Low",
+    desc: "Hit your mark effortlessly with our ultra-low 6% profit target—less stress, more trading.",
   },
 ];
 
@@ -31,7 +31,7 @@ export default function MultipleAssets() {
     <div className="container mx-auto sm:py-24 py-14 flex flex-col gap-14 px-5">
       <div className="flex flex-col gap-2 text-center">
         <Heading>
-          Multiple Trading <GreenText>Assets</GreenText>
+          Industry-Leading <GreenText>Features</GreenText>
         </Heading>
         <SubHeading>Trade in the following markets:</SubHeading>
       </div>

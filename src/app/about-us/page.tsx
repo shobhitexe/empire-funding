@@ -35,13 +35,13 @@ export default function page() {
         <div className="text-center flex flex-col gap-4">
           <div className="md:text-5xl sm:text-4xl text-3xl font-semibold">
             <GreenText>
-              Empire Trading: Forging a New Era in Prop Trading
+              Empire Funded: Forging a New Era in Prop Trading
             </GreenText>
           </div>
           <div className="font-light text-light max-w-6xl text-center mx-auto sm:text-base text-sm px-5">
-            At Empire Trading, we believe that trading success should be
-            nurtured in an stress-free environment. Our innovative approach
-            offers realistic profit targets, generous drawdown limits, and tight
+            At Empire Funded, we believe that trading success should be nurtured
+            in an stress-free environment. Our innovative approach offers
+            realistic profit targets, generous drawdown limits, and tight
             spreads/commissions on every challenge, empowering you to learn and
             grow at your own pace. This flexibility means you can perfect your
             strategies without the pressure of strict conditions, paving the way
@@ -116,12 +116,12 @@ export default function page() {
           </div> */}
 
           <div className="text-left sm:mt-10 mt-5 bg-[#0C1511] p-5 rounded-xl">
-            At <strong>Empire Trading,</strong> we&apos;re not just a prop
+            At <strong>Empire Funded,</strong> we&apos;re not just a prop
             firm—we&apos;re a launchpad for wealth-builders.
             <br />
             <br />
             Founded by <strong>Marcus Anthony</strong> and{" "}
-            <strong>Max Schreuder,</strong> Empire Trading exists to fund the
+            <strong>Max Schreuder,</strong> Empire Funded exists to fund the
             traders who are ready to turn strategy into capital and discipline
             into generational wealth. We back those who take this seriously—who
             show up every day with focus, grit, and the mindset of an operator,
@@ -133,7 +133,7 @@ export default function page() {
             And we do it with purpose.
             <br />
             <br />
-            Empire Trading was built on the belief that capital should find its
+            Empire Funded was built on the belief that capital should find its
             way to those who&apos;ve earned it—not those with the loudest voices
             or flashiest content. Our evaluations are tough by design, but fair.
             Every funded account is a contract of trust—our capital, your edge.
@@ -235,7 +235,7 @@ export default function page() {
 //         </div>
 
 //         <div className="md:text-xl sm:text-lg text-base max-w-2xl text-left">
-//           Empire Trading works in direct collaboration with our broker partner
+//           Empire Funded works in direct collaboration with our broker partner
 //           Blueberry Markets.
 //           <br />
 //           <br />

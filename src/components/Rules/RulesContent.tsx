@@ -69,7 +69,7 @@ export const RulesContent = [
       ans: (
         <div className="flex flex-col gap-4">
           <div>
-            All Empire Trading evaluations have static Drawdown limitations. The
+            All Empire Funded evaluations have static Drawdown limitations. The
             Maximum Drawdown allowed is 12% from the initial balance, breaching
             this will result in the account being closed.
           </div>
@@ -482,7 +482,7 @@ abuse of trading systems.`,
       que: "News Trading",
       ans: (
         <div>
-          In an Empire Trading Challenge Phase 1 and Phase 2, you can trade
+          In an Empire Funded Challenge Phase 1 and Phase 2, you can trade
           freely during new releases. However, we implement restrictions on
           Funded Accounts.
           <br />
