@@ -13,7 +13,7 @@ const Data = [
 export default function page() {
   return (
     <div className="bg-black">
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col sm:gap-10 gap-5">
         <div className="text-center flex items-center justify-center flex-col gap-2 sm:pt-20 pt-10">
           <div className="flex items-center gap-1 md:text-6xl sm:text-5xl text-4xl font-semibold">
             <GreenText>About</GreenText> <div>Us</div>
@@ -25,11 +25,11 @@ export default function page() {
         </div>
 
         <Image
-          src={"/images/about.avif"}
+          src={"/images/founders.avif"}
           alt="about"
-          width={3000}
-          height={2000}
-          className="sm:w-[60%] mx-auto relative -top-10 container"
+          width={1280}
+          height={720}
+          className="sm:w-[60%] mx-auto relative container px-5"
         />
 
         <div className="text-center flex flex-col gap-4">
