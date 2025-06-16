@@ -34,9 +34,7 @@ export default function page() {
 
         <div className="text-center flex flex-col gap-4">
           <div className="md:text-5xl sm:text-4xl text-3xl font-semibold">
-            <GreenText>
-              Empire Funded: Forging a New Era in Prop Trading
-            </GreenText>
+            <GreenText>Forging a New Era in Prop Trading</GreenText>
           </div>
           <div className="font-light text-light max-w-6xl text-center mx-auto sm:text-base text-sm px-5">
             At Empire Funded, we believe that trading success should be nurtured
