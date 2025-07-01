@@ -14,6 +14,7 @@ import TopRatedFirm from "./Home/TopRatedFirm";
 import TradingPlatform from "./Home/Tradingplatform";
 import LastCTASection from "./LastCtaSection";
 import Navbar from "./Navbar";
+import Offerstrip from "./Navbar/Offerstrip";
 import RulesSection from "./Rules/RulesSection";
 
 export {
@@ -34,4 +35,5 @@ export {
   AccountConfig,
   RulesSection,
   Popup,
+  Offerstrip,
 };
