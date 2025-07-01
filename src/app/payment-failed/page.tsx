@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/ui/button";
-import Image from "next/image";
+import { X } from "lucide-react";
 import Link from "next/link";
 
 export default function page() {
@@ -12,14 +12,15 @@ export default function page() {
             "linear-gradient(47.01deg, rgba(16, 185, 129, 0.16) 0%, rgba(52, 211, 153, 0.08) 50%, rgba(5, 150, 105, 0.16) 100%)",
         }}
       >
-        <Image src={"/images/tick.svg"} alt={"tick"} width={150} height={150} />
+        {/* <Image src={"/images/tick.svg"} alt={"tick"} width={150} height={150} /> */}
+
+        <X className="size-36 bg-red-500 rounded-full p-5" />
 
         <div className="flex flex-col items-start justify-center gap-4">
-          <div className="font-bold text-2xl">Thank you</div>
-          <div>Your Purchase has been completed</div>
+          <div className="font-bold text-2xl">Oops!</div>
+          <div>Something went wrong.</div>
           <div className="text-sm text-muted-foreground">
-            You will receive an email shortly. Please check the spam folder in
-            case.
+            If any amount was debited, please contact support.
           </div>
           <Link href={"/"} className={`${buttonVariants({})}`}>
             Return to Dashboard

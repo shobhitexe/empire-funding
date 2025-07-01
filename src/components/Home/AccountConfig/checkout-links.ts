@@ -1,0 +1,26 @@
+export const checkOutLinks = [
+  [
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=22",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=23",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=24",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=25",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=26",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=27",
+  ],
+  [
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=28",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=29",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=30",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=31",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=32",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=33",
+  ],
+  [
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=34",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=35",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=36",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=37",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=38",
+    "https://empirefundedcheckout.com/checkout/?add-to-cart=39",
+  ],
+];

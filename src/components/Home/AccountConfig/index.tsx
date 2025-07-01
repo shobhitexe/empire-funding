@@ -7,6 +7,7 @@ import SubHeading from "@/components/ui/sub-heading";
 import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { checkOutLinks } from "./checkout-links";
 
 const TradingPath = ["Instant", "1-Step", "2-Step"];
 
@@ -89,7 +90,7 @@ export default function AccountConfig() {
               asChild
             >
               <Link
-                href={"https://app.empiretrading.co/checkoutpage"}
+                href={checkOutLinks[step][accSize]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
