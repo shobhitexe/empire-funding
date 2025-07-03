@@ -7,22 +7,27 @@ const MultipleAssetsArr = [
   {
     title: "Up to 100% Profit Splits",
     desc: "Keep every dollar you earn—our funding model lets you keep up to 100% of your profits.",
+    img: "/images/split.png",
   },
   {
     title: "1-Step Challenge",
     desc: "One clear target, one easy step—prove your skills and unlock funding with no extra steps.",
+    img: "/images/step.png",
   },
   {
     title: "Lightning Fast Payouts",
     desc: "Trade hard today, spend tomorrow—experience truly lightning-fast payouts.",
+    img: "/images/fast.png",
   },
   {
     title: "Trade News Freely",
     desc: "Keep your positions open and trade without any restrictions, even during major news releases.",
+    img: "/images/news.png",
   },
   {
     title: "6% Profit Target—Super Low",
     desc: "Hit your mark effortlessly with our ultra-low 6% profit target—less stress, more trading.",
+    img: "/images/target.png",
   },
 ];
 
@@ -44,15 +49,15 @@ export default function MultipleAssets() {
             style={{ boxShadow: "0px -65px 142.9px 0px #003d1b59 inset" }}
           >
             <Image
-              src={"/images/dollar.svg"}
+              src={item.img}
               alt={item.title}
-              width={70}
-              height={70}
-              className="relative -top-5"
+              width={90}
+              height={90}
+              className="relative sm:-top-7 -top-5"
             />
 
             <div className="flex flex-col gap-1">
-              <div className="font-semibold text-2xl">{item.title}</div>
+              <div className="font-semibold text-2xl px-2">{item.title}</div>
               <div className="text-light font-light max-w-xs">{item.desc}</div>
             </div>
           </div>

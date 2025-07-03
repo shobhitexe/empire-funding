@@ -9,6 +9,7 @@ const paymentMethods = [
   { src: "/images/hero/bitcoin.png", alt: "bitcoin" },
   { src: "/images/hero/eth.png", alt: "eth" },
   { src: "/images/hero/usdt.png", alt: "usdt" },
+  { src: "/images/hero/upi.png", alt: "upi" },
 ];
 
 export default function Hero() {

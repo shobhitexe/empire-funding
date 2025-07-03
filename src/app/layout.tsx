@@ -25,7 +25,6 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
         />
-
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -106,6 +105,25 @@ export default function RootLayout({
           src={`https://210903.t.hyros.com/v1/lst/universal-script?ph=49b50fc4f265ec859a96ad2604b08ba63d3a8d8106fa1e51f89ca0510d61e032&tag=!clicked&ref_url=${encodeURIComponent(
             typeof window !== "undefined" ? window.location.href : ""
           )}`}
+        />
+
+        <script async src="//cdn.trackdesk.com/tracking.js"></script>
+
+        <Script
+          id="trackdesk"
+          strategy="afterInteractive"
+          src={`(function(t,d,k){(t[k]=t[k]||[]).push(d);t[d]=t[d]||t[k].f||function(){(t[d].q=t[d].q||[]).push(arguments)}})
+            (window,"trackdesk","TrackdeskObject");
+            trackdesk("empirefunded", "click");`}
+        />
+
+        <Script
+          id="trackdeskConversion"
+          strategy="afterInteractive"
+          src={`(function(t,d,k){(t[k]=t[k]||[]).push(d);t[d]=t[d]||t[k].f||function(){(t[d].q=t[d].q||[]).push(arguments)}})
+            (window,"trackdesk","TrackdeskObject");
+            trackdesk("empirefunded", "conversion", {
+            "conversionType": "sale"});`}
         />
       </head>
       <body className={`${figtree.variable} antialiased`}>
