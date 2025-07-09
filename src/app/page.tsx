@@ -7,6 +7,7 @@ import {
   MultipleAssets,
   // PayoutTicker,
   Popup,
+  ProfitCalculator,
   // Testimonials,
   TopRatedFirm,
   TradingPlatform,
@@ -21,6 +22,7 @@ export default function Home() {
       <TradingPlatform />
       <AccountConfig />
       <TopRatedFirm />
+      <ProfitCalculator />
       <BestTraders />
       {/* <Testimonials /> */}
       <FaqsHome />

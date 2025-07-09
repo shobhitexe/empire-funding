@@ -205,9 +205,20 @@ export default function AccountConfig() {
           </div>
         </div>
 
-        <div className="text-center sm:mt-3 mt-1 sm:text-base text-sm">
+        {/* <div className="text-center sm:mt-3 mt-1 sm:text-base text-sm">
           100% Profit Split • 24-Hour Payout • 150% Refund • No Minimum Trading
           Days • 5% Profit Target
+        </div> */}
+        <div
+          style={{
+            backgroundImage: "url('/images/paid-bg.svg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="text-[#4BFFC6] font-bold text-center py-4 rounded-xl sm:text-2xl text-base"
+        >
+          Get Paid in 48 Hours or Get $2000!
         </div>
       </div>
     </div>

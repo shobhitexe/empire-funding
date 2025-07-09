@@ -1,6 +1,5 @@
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
-import SubHeading from "@/components/ui/sub-heading";
 import Image from "next/image";
 
 const MultipleAssetsArr = [
@@ -11,7 +10,7 @@ const MultipleAssetsArr = [
   },
   {
     title: "1-Step Challenge",
-    desc: "One clear target, one easy step—prove your skills and unlock funding with no extra steps.",
+    desc: "Buy a pre-funded account and start payouts immediately. No challenge, no wait. Simply pick your account size, pay a one-time fee, and access real capital with zero hurdles.",
     img: "/images/step.png",
   },
   {
@@ -38,7 +37,7 @@ export default function MultipleAssets() {
         <Heading>
           Industry-Leading <GreenText>Features</GreenText>
         </Heading>
-        <SubHeading>Trade in the following markets:</SubHeading>
+        {/* <SubHeading>Trade in the following markets:</SubHeading> */}
       </div>
 
       <div className="flex flex-wrap items-stretch justify-center gap-10">
