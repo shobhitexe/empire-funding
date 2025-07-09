@@ -6,7 +6,7 @@ import {
   LastCTASection,
   MultipleAssets,
   // PayoutTicker,
-  Popup,
+  // Popup,
   ProfitCalculator,
   // Testimonials,
   TopRatedFirm,
@@ -27,7 +27,7 @@ export default function Home() {
       {/* <Testimonials /> */}
       <FaqsHome />
       <LastCTASection />
-      <Popup />
+      {/* <Popup /> */}
     </main>
   );
 }
