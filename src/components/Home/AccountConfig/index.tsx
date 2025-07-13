@@ -6,7 +6,7 @@ import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
 import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { checkOutLinks } from "./checkout-links";
 
 const TradingPath = ["Instant", "1-Step", "2-Step"];
@@ -18,14 +18,31 @@ const AccountSize = [
 ];
 
 const Pricing = [
-  [87, 107, 167, 267, 397, 897],
-  [67, 107, 157, 287, 407, 647],
-  [49, 67, 107, 227, 317, 597],
+  ["$87", "$107", "$167", "$267", "$397", "$897"],
+  ["$67", "$107", "$157", "$287", "$407", "$647"],
+  ["$49", "$67", "$107", "$227", "$317", "$597"],
+];
+
+const PricingINR = [
+  ["₹7,459", "₹9,179", "₹14,319", "₹22,889", "₹34,039", "₹76,949"],
+  ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
+  ["₹4,199", "₹5,749", "₹9,179", "₹19,479", "₹27,199", "₹51,199"],
 ];
 
 export default function AccountConfig() {
   const [step, setStep] = useState(0);
   const [accSize, setAccSize] = useState(0);
+
+  const [country, setCountry] = useState("");
+
+  useEffect(() => {
+    async function detectCountry() {
+      const { default: getUserCountry } = await import("js-user-country");
+      setCountry(getUserCountry().name);
+    }
+
+    detectCountry();
+  }, []);
 
   return (
     <div id="challenges" className="sm:my-24 my-14 container mx-auto px-5">
@@ -83,7 +100,11 @@ export default function AccountConfig() {
 
           <div className="bg-[#00150D] sm:h-[85%] w-full rounded-3xl flex flex-col gap-3 items-center text-center justify-center p-5">
             <div className="font-semibold">START NOW AT ONLY</div>
-            <div className="text-6xl font-bold">${Pricing[step][accSize]}</div>
+            <div className="text-6xl font-bold">
+              {country === "India"
+                ? PricingINR[step][accSize]
+                : Pricing[step][accSize]}
+            </div>
             <Button
               variant={"green"}
               className="h-11 px-10 font-semibold"
