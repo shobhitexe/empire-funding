@@ -9,7 +9,7 @@ const MultipleAssetsArr = [
     img: "/images/split.png",
   },
   {
-    title: "1-Step Challenge",
+    title: "Instant Funding",
     desc: "Buy a pre-funded account and start payouts immediately. No challenge, no wait. Simply pick your account size, pay a one-time fee, and access real capital with zero hurdles.",
     img: "/images/step.png",
   },
