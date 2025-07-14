@@ -146,7 +146,7 @@ export default function ProfitCalculator() {
               aria-label="accounts"
               className="ml-1"
               defaultValue={10}
-              max={40}
+              max={60}
               getAriaValueText={valuetextPercentage}
               valueLabelDisplay="on"
               onChange={handlePercentageChange}
@@ -192,11 +192,11 @@ export default function ProfitCalculator() {
           </div>
         </div>
 
-        <div className="relative sm:max-w-md sm:w-full mx-auto">
-          <div className="absolute w-3/4 h-3/4 bg-pink/30 rounded-full blur-3xl z-0 -left-10 bottom-0"></div>
-          <div className="absolute w-3/4 h-3/4 bg-blue/30 rounded-full blur-3xl z-0 -right-10 top-0"></div>
+        <div className="relative sm:max-w-md max-w-xs w-full mx-auto">
+          {/* <div className="absolute w-3/4 h-3/4 bg-pink/30 rounded-full blur-3xl z-0 -left-10 bottom-0"></div>
+          <div className="absolute w-3/4 h-3/4 bg-blue/30 rounded-full blur-3xl z-0 -right-10 top-0"></div> */}
 
-          <div className="sm:bg-earnBg bg-white/10 backdrop-filter backdrop-blur-3xl bg-opacity-10 sm:py-10 py-5 px-10 bg-cover bg-no-repeat rounded-3xl flex flex-col md:gap-5 gap-2 relative z-10 text-white">
+          <div className="sm:bg-earnBg bg-white/10 max-sm:w-full backdrop-filter backdrop-blur-3xl bg-opacity-10 sm:py-10 py-5 px-10 bg-cover bg-no-repeat rounded-3xl flex flex-col md:gap-5 gap-2 relative z-10 text-white">
             <div className="text-center lg:text-3xl md:text-2xl xs:text-xl text-lg font-circularBold z-10">
               Your total profit with <br /> 90% Profit Split.
             </div>
