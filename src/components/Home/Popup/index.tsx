@@ -6,8 +6,19 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { SubmitForm } from "../Hero/submit-form-action";
 import { toast } from "sonner";
+import { useEffect, useState } from "react";
 
 export default function Popup() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 10000); // 10 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   async function SubmitFormClient(formData: FormData) {
     try {
       const res = await SubmitForm(formData);
@@ -30,7 +41,7 @@ export default function Popup() {
   }
 
   return (
-    <Dialog defaultOpen>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
         <DialogTitle />
         <Image

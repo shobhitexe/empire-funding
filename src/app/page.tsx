@@ -5,10 +5,10 @@ import {
   Hero,
   LastCTASection,
   MultipleAssets,
-  // PayoutTicker,
-  // Popup,
+  PayoutTicker,
+  Popup,
   ProfitCalculator,
-  // Testimonials,
+  Testimonials,
   TopRatedFirm,
   TradingPlatform,
 } from "@/components";
@@ -17,17 +17,17 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <PayoutTicker /> */}
+      <PayoutTicker />
       <MultipleAssets />
       <TradingPlatform />
       <AccountConfig />
       <TopRatedFirm />
       <ProfitCalculator />
       <BestTraders />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <FaqsHome />
       <LastCTASection />
-      {/* <Popup /> */}
+      <Popup />
     </main>
   );
 }
