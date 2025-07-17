@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, Trackdesk } from "@/components";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 import Image from "next/image";
@@ -125,6 +125,8 @@ export default function RootLayout({
             trackdesk("empirefunded", "conversion", {
             "conversionType": "sale"});`}
         />
+
+        <Trackdesk />
       </head>
       <body className={`${figtree.variable} antialiased`}>
         <Navbar />

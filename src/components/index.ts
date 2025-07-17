@@ -17,6 +17,7 @@ import LastCTASection from "./LastCtaSection";
 import Navbar from "./Navbar";
 import Offerstrip from "./Navbar/Offerstrip";
 import RulesSection from "./Rules/RulesSection";
+import Trackdesk from "./Scripts/Trackdesk";
 
 export {
   Navbar,
@@ -38,4 +39,5 @@ export {
   Popup,
   Offerstrip,
   ProfitCalculator,
+  Trackdesk,
 };

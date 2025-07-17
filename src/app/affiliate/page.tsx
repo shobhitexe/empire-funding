@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AffiliateTiers = [
   {
@@ -87,13 +88,25 @@ export default function page() {
         </div>
 
         <div className="flex sm:flex-row flex-col items-center gap-3">
-          <Button size={"xl"} variant={"green"}>
-            Become an Affiliate <ArrowRight />
-          </Button>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://empirefunded.trackdesk.com/"}
+          >
+            <Button size={"xl"} variant={"green"}>
+              Become an Affiliate <ArrowRight />
+            </Button>
+          </Link>
 
-          <Button size={"xl"} variant={"outline"}>
-            Affiliate Login <ArrowRight />
-          </Button>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://empirefunded.trackdesk.com/"}
+          >
+            <Button size={"xl"} variant={"outline"}>
+              Affiliate Login <ArrowRight />
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -173,9 +186,16 @@ export default function page() {
               <GreenText>Benefits</GreenText>
             </div>
 
-            <Button variant={"green"} size={"xl"}>
-              Become an Affiliate <ArrowRight />
-            </Button>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={"https://empirefunded.trackdesk.com/"}
+            >
+              {" "}
+              <Button variant={"green"} size={"xl"}>
+                Become an Affiliate <ArrowRight />
+              </Button>
+            </Link>
           </div>
 
           <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-5 mt-10">
@@ -225,13 +245,19 @@ export default function page() {
             </div>
           ))}
 
-          <Button
-            size={"xl"}
-            variant={"green"}
-            className="sm:w-fit w-full relative xs:top-10 top-5"
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://empirefunded.trackdesk.com/"}
           >
-            Become an Affiliate <ArrowRight />
-          </Button>
+            <Button
+              size={"xl"}
+              variant={"green"}
+              className="sm:w-fit w-full relative xs:top-10 top-5"
+            >
+              Become an Affiliate <ArrowRight />
+            </Button>
+          </Link>
         </div>
       </div>
 
