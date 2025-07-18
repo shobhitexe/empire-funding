@@ -11,11 +11,10 @@ import {
 import { RulesContent } from "./RulesContent";
 
 const tabNames = [
-  "Challenge Requirements",
-  "Trading Settings & Conditions",
-  "What we allow",
-  "What we don't allow",
-  "Funded Requirements",
+  "2-Step Challenges",
+  "1-Step Challenges",
+  "Funded Accounts",
+  "Instant-Funded Accounts",
 ];
 
 export default function RulesSection() {

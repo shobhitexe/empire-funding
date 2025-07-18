@@ -10,8 +10,8 @@ export default function page() {
           <GreenText>Rules</GreenText>
         </div>
         <div className="font-light text-light max-w-3xl md:text-xl sm:text-lg text-base">
-          I know... just like you many traders have these questions, so here are
-          the answers!
+          Just like you many traders have these questions, so here are the
+          answers!
         </div>
       </div>
 

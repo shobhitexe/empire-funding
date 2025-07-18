@@ -31,12 +31,17 @@ const FooterLinks = [
     sub: [
       {
         title: "Instagram",
-        link: "https://www.instagram.com/empiretrading_official",
+        link: "https://www.instagram.com/empire.funded",
         target: "_blank",
       },
       {
         title: "Discord",
-        link: "",
+        link: "http://discord.gg/empirefunded",
+        target: "_blank",
+      },
+      {
+        title: "X (Twitter)",
+        link: "http://x.com/empire.funded",
         target: "_blank",
       },
     ],
@@ -67,10 +72,10 @@ export default function Footer() {
             </div>
 
             <Link
-              href={""}
+              href={"mailto:support@empirefunded.com"}
               className="text-sm flex items-center gap-2 bg-[#151515] hover:bg-red duration-500 py-2 px-5 rounded-xl w-fit mt-10"
             >
-              support@empiretrading.co
+              support@empirefunded.com
             </Link>
           </div>
         </div>

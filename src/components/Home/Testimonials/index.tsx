@@ -113,7 +113,7 @@ export default function Testimonials() {
 
       <div className="flex flex-col items-center mt-2 gap-3">
         <Heading>
-          <GreenText>Trust Us -</GreenText> You&apos;re In Safe Hands
+          <GreenText>Real Reviews.</GreenText> Real Traders. Real Payouts.
         </Heading>
 
         <Image

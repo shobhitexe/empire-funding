@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const Data = [
   {
-    title: "Lower Spreads",
+    title: "Lowest Spreads",
     desc: "Reduce your trading costs with our average spread on majors from 0.0 pips, low commissions, and deep interbank liquidity.",
   },
   {
-    title: "$0 Minimum Acc Size",
+    title: "Payouts Guarantee",
     desc: "We don't believe in teasing you with lower costs and then making you pay extra for it. With Empire, you can start with as little or as much as you like.",
   },
   {
@@ -16,16 +16,16 @@ const Data = [
     desc: "Trade our 150+ range of global markets covering FX, Indices, Commodities, Cryptocurrency, and more.",
   },
   {
-    title: "No Fees to Deposit",
-    desc: "We cover all your deposit fees on all 20+ funding methods. Fund with Visa, MasterCard, PayPal, Neteller, Skrill and more.",
+    title: "Scale up to $2M in Funding",
+    desc: "Every win moves you closer to $2 million in funding. Perform well, level up, and get rewarded.",
   },
   {
-    title: "24/7 Support",
+    title: "24/7 Trader Support",
     desc: "The market never sleeps, so neither does our team. The Empire is here to help you on your trading journey all day, every day.",
   },
   {
-    title: "Low Latency",
-    desc: "X-Connected low latency servers within the NY4 datacentre execute your trades with fast execution speeds from as low as 5ms.",
+    title: "AI Trader Journal",
+    desc: "AI sees what you miss - and helps you win.",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function TopRatedFirm() {
   return (
     <div className="sm:my-24 my-14 container mx-auto flex flex-col sm:gap-16 gap-8">
       <Heading className="text-center">
-        Why we are a <GreenText>Top Rated PropFirm</GreenText>
+        Why we are a <GreenText>#1 Fastest Growing Prop Firm</GreenText>
       </Heading>
 
       <div className="grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-5 sm:px-5 px-7">

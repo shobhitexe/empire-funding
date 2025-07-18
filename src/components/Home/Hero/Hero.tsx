@@ -32,11 +32,11 @@ export default function Hero() {
             }}
           >
             <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#66666600] via-[#00FF99] to-[#66666600]" />
-            <span className="font-semibold">#1 Top</span> Rated PropFirm
+            <span className="font-semibold">#1 Fastest</span> Growing Prop Firm
           </div>
 
-          <div className="md:text-7xl sm:text-6xl xs:text-5xl text-4xl font-bold flex flex-col sm:items-start items-center max-sm:text-center">
-            <h1>Join the Launch Offer!</h1>
+          <div className="md:text-6xl sm:text-5xl xs:text-4xl text-3xl font-bold flex flex-col sm:items-start items-center max-sm:text-center">
+            <h1>Trusted by traders worldwide for speed,</h1>
             <h1
               className="w-fit text-transparent bg-clip-text pb-1"
               style={{
@@ -44,14 +44,13 @@ export default function Hero() {
                   "linear-gradient(164.43deg, #50FFCA 53.05%, #006C43 96.81%)",
               }}
             >
-              Get Instant 30% Off
+              transparency, and payouts.
             </h1>
           </div>
 
           <p className="sm:text-xl xs:text-base text-sm max-w-xl font-light sm:text-left text-center">
-            Step into seamless funding, innovative tools, and fast
-            payouts—backed by a thriving community to spark your empire&apos;s
-            rise.
+            Join the firm that&apos;s flipping the script - with next-day
+            payouts, no nonsense rules, and real trader support.
           </p>
 
           <Link
@@ -59,7 +58,7 @@ export default function Hero() {
             className="bg-gradient-to-bl p-px from-[#00FF99]/50 via-[#000000] via-80% to-[#000000] w-fit max-sm:mx-auto rounded-2xl"
           >
             <Button className="w-fit text-lg bg-[#001B0C] text-[#59D28F] hover:bg-[#001B0C]/80 sm:h-14 h-12 has-[>svg]:sm:px-36 has-[>svg]:px-10 cursor-pointer rounded-2xl">
-              Start Trading <ArrowRight className="sm:w-12 w-7 h-12" />
+              Get Funded Now <ArrowRight className="sm:w-12 w-7 h-12" />
             </Button>
           </Link>
 

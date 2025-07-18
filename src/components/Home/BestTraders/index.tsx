@@ -2,9 +2,9 @@ import Image from "next/image";
 import { AnimatedList } from "./AnimatedList";
 
 const Stats = [
-  { title: "$30k+", sub: "Total Payouts" },
-  { title: "200+", sub: "Total Traders" },
-  { title: "5hrs", sub: "Avg.Payout time" },
+  { title: "$120k+", sub: "Total Payouts" },
+  { title: "800+", sub: "Total Traders" },
+  { title: "2hrs", sub: "Avg.Payout time" },
 ];
 
 let PayoutsArr = [
@@ -87,9 +87,12 @@ export default function BestTraders() {
     <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-10 items-center w-full my-10 px-5">
       <div className="flex flex-col gap-5 md:text-left text-center">
         <div className="md:text-6xl xs:text-5xl text-4xl">
-          Rewarding Our
+          Live Payouts
           <br />
-          <span className="font-semibold pt-2">Best Traders</span>
+          <span className="font-semibold pt-2">
+            Trusted by
+            <br /> Traders Worldwide.
+          </span>
         </div>
 
         {/* <div className="text-light">

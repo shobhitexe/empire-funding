@@ -12,8 +12,8 @@ export default function FaqsHome() {
           Frequently Asked <GreenText>Questions</GreenText>
         </Heading>
         <SubHeading>
-          I know... just like you many traders have these questions, so here are
-          the answers!
+          Just like you many traders have these questions, so here are the
+          answers!
         </SubHeading>
       </div>
 

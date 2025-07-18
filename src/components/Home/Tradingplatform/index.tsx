@@ -27,9 +27,12 @@ export default function TradingPlatform() {
       <div className="flex sm:flex-row flex-col items-center justify-around p-5">
         <div className="flex flex-col gap-4">
           <div className="text-[#40FF95] font-semibold">HOW IT WORKS</div>
-          <div className="md:text-6xl sm:text-5xl text-4xl font-medium">
-            Maximum Profit &<br />
-            Secure <GreenText>Trading Platform</GreenText>
+          <div className="md:text-5xl sm:text-5xl text-3xl font-medium">
+            Get Funded, Grow Fast, <br />
+            Get Rewarded{" "}
+            <GreenText>
+              From Challenge <br /> to Payout - In Just 3 Steps
+            </GreenText>
           </div>
           <div className="text-light font-light">
             Choose the evaluation based on your preference to become an Empire
@@ -44,7 +47,7 @@ export default function TradingPlatform() {
               className: "w-fit rounded-3xl",
             })}`}
           >
-            Get Funded
+            Get Funded Now
           </Link>
         </div>
 
