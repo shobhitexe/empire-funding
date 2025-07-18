@@ -91,7 +91,7 @@ export default function page() {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href={"https://empirefunded.trackdesk.com/"}
+            href={"https://empirefunded.trackdesk.com/sign-up"}
           >
             <Button size={"xl"} variant={"green"}>
               Become an Affiliate <ArrowRight />
@@ -189,7 +189,7 @@ export default function page() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href={"https://empirefunded.trackdesk.com/"}
+              href={"https://empirefunded.trackdesk.com/sign-up"}
             >
               {" "}
               <Button variant={"green"} size={"xl"}>
