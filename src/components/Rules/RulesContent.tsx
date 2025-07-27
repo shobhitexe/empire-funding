@@ -213,7 +213,6 @@ export const RulesContent = [
               </ul>
             </div>
             <br />
-            <br />
             The Profit Target is balance-based meaning only closed positions
             contribute to the profit earned on an account. Open positions DO NOT
             contribute to the profit target.
@@ -1144,20 +1143,6 @@ export const RulesContent = [
     // },
 
     {
-      que: "Stop Loss Requirement",
-      ans: (
-        <div>
-          Stop Losses are mandatory across all our Funded Accounts
-          <br />
-          <br />
-          Each trade must contain a Stop Loss Order. Any trades closed without a
-          Stop Loss Order will not count, and any profits gained will be
-          deducted at the payout.
-        </div>
-      ),
-    },
-
-    {
       que: "Drawdown",
       ans: (
         <div>
@@ -1168,10 +1153,72 @@ export const RulesContent = [
         </div>
       ),
     },
+
+    {
+      que: "Consistency Rule",
+      ans: (
+        <div>
+          The Consistency Rule refers to high-profit trading days. We have a 45%
+          Consistency Score on Funded accounts, and this must be met to request
+          a payout. This means that the total profit gained cannot exceed 45% on
+          a single trading day.
+          <br />
+          <br />
+          For example:
+          <ul>
+            <li>
+              - Trader A on a 100K Funded Account gains $2,000 on a single
+              trading day.
+            </li>
+            <li>
+              - They then make a further $1,000 the next trading day, totaling
+              their profits to $3,000.
+            </li>
+            <li>
+              - Trader A will be unable to request a payout since 60% ($2,000)
+              of their profit came from a single trading day.
+            </li>
+            <li>
+              - They will need to continue trading to decrease their consistency
+              score.
+            </li>
+            <li>
+              - Obtaining a further $2,000 will decrease their consistency score
+              to 40% which means they will be eligible for a payout.
+            </li>
+          </ul>
+          <br />
+          If you do not meet the 45% consistency score, you can continue trading
+          until you do. This means that the biggest winning day can not exceed
+          45% of the profits.
+        </div>
+      ),
+    },
+
     {
       que: "Holding time restrictions",
-      ans: <div>All trades must be held for a minimum of two minutes.</div>,
+      ans: <div>All trades must be held for a minimum of 60 minutes.</div>,
     },
+
+    {
+      que: "Stop Loss Requirement",
+      ans: (
+        <div>
+          Stop Losses are mandatory across all our Instant-Funded Accounts
+          <br />
+          <br />
+          Each trade must contain a Stop Loss Order. Any trades closed without a
+          Stop Loss Order will not count, and any profits gained will be
+          deducted at the payout.
+          <br />
+          <br />
+          Opening consecutive positions without placing a Stop Loss will result
+          in a single strike. After three strikes, your account will be
+          breached.
+        </div>
+      ),
+    },
+
     {
       que: "Lot size restrictions",
       ans: (
@@ -1316,6 +1363,345 @@ export const RulesContent = [
               </tbody>
             </table>
           </div>
+        </div>
+      ),
+    },
+
+    {
+      que: "Permitted vs Prohibited actions",
+      ans: (
+        <div>
+          While we allow the vast majority, we do possess limitations on
+          specific trading strategies and methods. This information can be found
+          here:
+        </div>
+      ),
+    },
+  ],
+  //Payouts and Scaling
+  [
+    {
+      que: "When can I request my payout",
+      ans: (
+        <div>
+          <strong>For the 1-step evaluation,</strong> you can request a payout
+          every 30 days during the live phase, starting from the date of your
+          first placed trade. No minimum number of trading days is required.
+          However, each trade must have a{" "}
+          <strong>minimum duration of 2 minutes</strong> and must follow the
+          other rules to qualify for withdrawal
+          <br />
+          <br />
+          <strong>For the 2-step evaluation,</strong>
+          you can request a payout every 5 days during the live phase, starting
+          from the date of your first placed trade. No minimum number of trading
+          days is required. However, each trade must have a{" "}
+          <strong>minimum duration of 1 minutes</strong> and must follow the
+          other rules to qualify for withdrawal.
+        </div>
+      ),
+    },
+    {
+      que: "Payout Cycle Limits 🧾",
+      ans: (
+        <div>
+          For <strong>1-Step Accounts:</strong>
+          <br />
+          The <strong>maximum payout per cycle is capped at 7%</strong> of your
+          account&apos;s starting balance. This means that even if you generate
+          more profit, only up to 7% will be eligible for withdrawal in each
+          payout request. Any excess profit remains in your account for future
+          payouts.
+          <br />
+          <br />
+          For <strong>2-Step Accounts:</strong>
+          <br />
+          The <strong>maximum payout per cycle</strong> is set at{" "}
+          <strong>10%</strong> of your starting balance. Similar to the 1-step
+          setup, any profit beyond the 10% cap won&apos;t be included in the
+          current payout and can&apos;t be added/withdrawn in the next cycle.
+        </div>
+      ),
+    },
+    {
+      que: "Payout Period",
+      ans: (
+        <div>
+          Our Payout Period is Bi-weekly (14 days).
+          <br />
+          <br />
+          Traders may request a Payout at the end of each Payout Period.
+          <br />
+          <br />
+          Payouts are subject to approval by our team, and will be responded to
+          within 48 hours after making a request.
+        </div>
+      ),
+    },
+    {
+      que: "Payout Time",
+      ans: (
+        <div>
+          Approved payouts will be deposited into your account within 24 hours
+          or sooner.
+        </div>
+      ),
+    },
+    {
+      que: "Payout Delays",
+      ans: (
+        <div>
+          We guarantee that payout requests will be responded to within 48
+          hours. If we fail to do so, we will deposit $2,500 into your account.
+        </div>
+      ),
+    },
+    {
+      que: "Consistency Rule",
+      ans: (
+        <div>
+          Our Payout Consistency Rule operates similar to the Funded
+          Account&apos;s Consistency Rule.
+          <br />
+          <br />
+          <strong> Daily Profit Limit</strong>
+          <br />
+          No single trading day&apos;s profit may exceed <strong>45%</strong> of
+          the total Profit for the payout period.
+          <br />
+          For instance, if the total Profit over the Payout Period was $10,000,
+          no single day&apos;s profit should exceed $4,500. Any profits above
+          this limit are excluded from the payout.
+          <br />
+          <br />
+          <strong> Daily Profit Limit</strong>
+          <br />
+          No individual trade can exceed <strong>40%</strong> of the total
+          requested Profit for the payout period.
+          <br />
+          For example, if the total Profit is $10,000, a single trade cannot be
+          responsible for generating $4,000 or more in that payout period.
+          Profits above this limit will be excluded in the Payout.
+        </div>
+      ),
+    },
+    {
+      que: "Approved vs Prohibited amounts",
+      ans: (
+        <div>
+          During our evaluation of a payout request, if certain amounts are tied
+          to trades that violate our rules, we will not include this in the
+          final payout amount.
+          <br />
+          <br />
+          For instance, if a trader requests a payout for $1,000 but $400 is
+          tied to trades that violated our rules, the trader will only be
+          eligible for a payout of $600.
+        </div>
+      ),
+    },
+    {
+      que: "Minimum Payout Requirement",
+      ans: (
+        <div>
+          The Minimum Payout Requirement on accounts below $25,000 is $1.
+          <br />
+          <br />
+          On accounts that are above $25,000, we require a minimum of 5% gain on
+          the initial account balance to request a payout.
+        </div>
+      ),
+    },
+    {
+      que: "Account Scaling",
+      ans: (
+        <div>
+          We provide the option to scale your account in place of a Payout.
+          Account Scaling refers to increasing the initial balance of your
+          Funded Account. We offer the opportunity to scale your account by
+          double the Payout Amount.
+          <br />
+          <br />
+          For instance, on a 100K Funded Account, if you have made a gain of
+          $10,000 and have reached the end of the Payout Period. You may request
+          to Scale your initial account size by $20,000, as opposed to receiving
+          a Payout.
+          <br />
+          <br />
+          Accounts may be scaled up to $1 million in capital. If you wish to
+          scale further, please contact us.
+        </div>
+      ),
+    },
+    {
+      que: "Challenge Fee Refund",
+      ans: (
+        <div>
+          You will be refunded your challenge fee after passing your evaluation
+          and upon achieving your third payout on your Funded Account.
+        </div>
+      ),
+    },
+  ],
+  //Prohibited Actions
+  [
+    {
+      que: "News Trading",
+      ans: (
+        <div>
+          You may trade news freely on our Challenge accounts. However, we
+          implement restrictions on Funded Accounts.
+          <br />
+          <br />
+          On a Funded Account, traders are NOT allowed to execute any new trade
+          or close an existing trade on the targeted instrument in the window of
+          two minutes before, and after the release of news.
+          <br />
+          <br />
+          We consider a trade execution as opening or closing either a pending
+          order (including Stop Loss or Take Profit) or market execution. You
+          are allowed to hold your trade(s) on the targeted instrument(s) that
+          were opened more than two minutes before the restricted news event. If
+          you Stop Loss or Take Profit is activated/filled during the restricted
+          time window, it is also considered an order execution. If our system
+          detects profits being made in this window, they will be deducted
+          during the payout.
+        </div>
+      ),
+    },
+    {
+      que: "Copy Trading",
+      ans: (
+        <div>
+          While we allow it in our Evaluation/Challenge Phase, it is prohibited
+          on Funded Accounts.
+        </div>
+      ),
+    },
+    {
+      que: "Expert Advisors (EAs)",
+      ans: (
+        <div>
+          While we allow it in our Evaluation/Challenge Phase, it is prohibited
+          on Funded Accounts.
+        </div>
+      ),
+    },
+    {
+      que: "HFT",
+      ans: (
+        <div>
+          We do not allow High-Frequency Trading (HFT) on our platform.
+          <br />
+          <br />
+          HFT relies on speed and technology rather than actual analysis. Our
+          aim is to create a fair and transparent environment where traders
+          succeed based on their skill and discipline, rather than technological
+          advantages
+        </div>
+      ),
+    },
+    {
+      que: "Grid Trading",
+      ans: (
+        <div>
+          We do not allow Grid-Trading on our platform.
+          <br />
+          <br />
+          Grid-trading involves placing multiple buy and sell orders at
+          predetermined price levels, creating a &apos;grid-like&apos;
+          structure. This approach aims to profit from market fluctuations
+          without the need to predict its direction.
+        </div>
+      ),
+    },
+    {
+      que: "Tick Scalping",
+      ans: (
+        <div>
+          While scalping strategies are allowed, there is a restriction on the
+          accounts that hold more than 50% for less than 120 seconds. This will
+          result in an account breach as it is considered as &apos;tick
+          scalping&apos; and an abuse of trading systems.
+        </div>
+      ),
+    },
+    {
+      que: "Reverse Trading",
+      ans: (
+        <div>
+          Reverse trading is simultaneously opening opposing positions on
+          different trading accounts, often across multiple firms. The intent of
+          this practice is to hedge bets, mitigate potential losses, or exploit
+          discrepancies between account regulations and risk management systems.
+          While hedging is a legitimate trading strategy when used within a
+          single account, reverse trading across multiple accounts is seen as an
+          abuse of trading systems. Any signs of reverse trading detected on
+          your account will be marked as a breach.
+        </div>
+      ),
+    },
+    {
+      que: "Gambling",
+      ans: (
+        <div>
+          We prohibit several trading behavior that are characteristics of
+          gambling:
+          <br />
+          <br />
+          One-sided bets: Placing large trades without proper risk management or
+          diversification is considered a forbidden trading practice.
+          <br />
+          <br />
+          Over-leveraging: Using excessive leverage to maximise potential
+          profits can lead to significant losses and is therefore discouraged.
+          <br />
+          <br />
+          Overexposure: Allocating a substantial portion of your account to a
+          single trade or correlated trades is not permitted.
+          <br />
+          <br />
+          Account Rolling: Transferring funds or trades between accounts to
+          circumvent rules is prohibited.
+        </div>
+      ),
+    },
+    {
+      que: "What happens if I win a giveaway?",
+      ans: (
+        <div>
+          Congratulations!
+          <br />
+          <br />
+          If you have won any of our giveaways, our support team will be in
+          contact with you shortly.
+          <br />
+          <br />
+          Once you have proven your identity, you will receive your account
+          credentials shortly.
+        </div>
+      ),
+    },
+    {
+      que: "What are the rules on giveaway accounts?",
+      ans: (
+        <div>
+          Giveaway accounts follow the same rules regulating our 2-Step
+          Challenge accounts. However, there are some additional rules
+          concerning payouts.
+          <br />
+          <br />
+          Giveaway accounts require a minimum of 10% profit to be achieved
+          before requesting a payout in the Funded Account phase.
+          <br />
+          <br />
+          Giveaway accounts contain a 3% profit cap per payout period. This
+          means, the total profit you may withdraw from a giveaway account will
+          always be 3% of the initial balance.
+          <br />
+          <br />
+          The first withdrawal on a giveaway account is set as an automatic
+          purchase of a 2-Step Challenge account of equal value.
         </div>
       ),
     },

@@ -125,7 +125,7 @@ export default function Testimonials() {
         />
 
         <div className="flex sm:flex-row flex-col gap-2 items-center">
-          <span className="pt-1">Rated 4.8 / 5 based on 4,258 reviews on</span>
+          <span className="pt-1">Rated 4.4 / 5 based on 4,258 reviews on</span>
           <Image
             src={"/images/testimonials/t2.svg"}
             alt={"trustpilot"}

@@ -15,6 +15,8 @@ const tabNames = [
   "1-Step Challenges",
   "Funded Accounts",
   "Instant-Funded Accounts",
+  "Payouts and Scaling",
+  "Prohibited Actions",
 ];
 
 export default function RulesSection() {
