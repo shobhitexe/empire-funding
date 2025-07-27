@@ -24,19 +24,39 @@ export default function Hero() {
     >
       <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 sm:py-28 py-16 px-5">
         <div className="flex flex-col sm:gap-5 gap-4">
-          <div
-            className="bg-black rounded-full w-fit max-sm:mx-auto px-5 py-2 relative sm:text-base text-sm"
-            style={{
-              background:
-                "radial-gradient(at center top, #007937AD -40%, #0E0E0E 60%)",
-            }}
-          >
-            <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#66666600] via-[#00FF99] to-[#66666600]" />
-            <span className="font-semibold">#1 Fastest</span> Growing Prop Firm
+          <div className="flex sm:flex-row flex-col-reverse items-center gap-2">
+            <div
+              className="bg-black rounded-full w-fit max-sm:mx-auto px-5 py-2 relative sm:text-base text-sm"
+              style={{
+                background:
+                  "radial-gradient(at center top, #007937AD -40%, #0E0E0E 60%)",
+              }}
+            >
+              <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#66666600] via-[#00FF99] to-[#66666600]" />
+              <span className="font-semibold">#1 Fastest</span> Growing Prop
+              Firm
+            </div>
+
+            <div
+              className="bg-black rounded-full w-fit max-sm:mx-auto px-5 py-2 relative sm:text-base text-sm flex items-center gap-2"
+              style={{
+                background:
+                  "radial-gradient(at center top, #007937AD -40%, #0E0E0E 60%)",
+              }}
+            >
+              <div className="absolute inset-x-0 w-full h-px -top-px bg-gradient-to-r from-[#66666600] via-[#00FF99] to-[#66666600]" />
+              <Image
+                src={"/images/mt5.png"}
+                alt={"mt5"}
+                width={20}
+                height={20}
+              />{" "}
+              MT5 Available
+            </div>
           </div>
 
-          <div className="md:text-6xl sm:text-5xl xs:text-4xl text-3xl font-bold flex flex-col sm:items-start items-center max-sm:text-center">
-            <h1>Trusted by traders worldwide for speed,</h1>
+          <div className="md:text-7xl sm:text-6xl xs:text-5xl text-4xl font-bold flex flex-col sm:items-start items-center max-sm:text-center">
+            <h1>We Don&apos;t Just Fund Traders.</h1>
             <h1
               className="w-fit text-transparent bg-clip-text pb-1"
               style={{
@@ -44,7 +64,7 @@ export default function Hero() {
                   "linear-gradient(164.43deg, #50FFCA 53.05%, #006C43 96.81%)",
               }}
             >
-              transparency, and payouts.
+              We Build Empires.
             </h1>
           </div>
 

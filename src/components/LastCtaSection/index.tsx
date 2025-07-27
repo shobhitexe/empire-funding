@@ -21,7 +21,7 @@ export default function LastCTASection() {
         <Button variant={"green"} size={"xl"} asChild>
           <Link href={`/#challenges`}>Get Funded</Link>
         </Button>
-        <Button size={"xl"} asChild>
+        {/* <Button size={"xl"} asChild>
           <Link
             href={"https://app.empiretrading.co/login"}
             target="_blank"
@@ -29,7 +29,7 @@ export default function LastCTASection() {
           >
             Try Demo
           </Link>
-        </Button>
+        </Button> */}
 
         <Button size={"xl"} variant={"secondary"} asChild>
           <Link

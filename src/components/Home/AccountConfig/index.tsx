@@ -8,6 +8,7 @@ import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { checkOutLinks } from "./checkout-links";
+import Image from "next/image";
 
 const TradingPath = ["Instant", "1-Step", "2-Step"];
 
@@ -28,6 +29,14 @@ const PricingINR = [
   ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
   ["₹4,199", "₹5,749", "₹9,179", "₹19,479", "₹27,199", "₹51,199"],
 ];
+
+const hotTags = [
+  [false, false, false, true, false, false], // for "Instant"
+  [false, false, false, true, false, false], // for "1-Step"
+  [false, false, false, false, false, true], // for "2-Step"
+];
+
+const TagNames = ["Most Popular", "Most Passed", "Best Value"];
 
 export default function AccountConfig() {
   const [step, setStep] = useState(0);
@@ -82,15 +91,36 @@ export default function AccountConfig() {
                 Select Account Size
               </div>
               <div
-                className={`bg-[#00150D] p-2 rounded-2xl grid grid-cols-6 items-center sm:gap-3 gap-1`}
+                className={`bg-[#00150D] p-2 rounded-2xl sm:grid grid-cols-6 flex items-center sm:gap-3 gap-1 overflow-auto`}
               >
                 {AccountSize[step].map((item, idx) => (
                   <Button
                     key={item}
                     variant={accSize === idx ? "green" : "outline"}
                     onClick={() => setAccSize(idx)}
-                    className="sm:h-14 h-10 font-semibold sm:text-base text-sm"
+                    className="sm:h-14 h-10 px-4 font-semibold sm:text-base text-sm gap-1"
                   >
+                    {hotTags[step][idx] && (
+                      <>
+                        {accSize === idx ? (
+                          <Image
+                            src={"/images/fire.svg"}
+                            alt={"fire"}
+                            width={50}
+                            height={50}
+                            className="sm:size-5 size-4"
+                          />
+                        ) : (
+                          <Image
+                            src={"/images/fire-1.svg"}
+                            alt={"fire"}
+                            width={50}
+                            height={50}
+                            className="sm:size-5 size-4"
+                          />
+                        )}
+                      </>
+                    )}
                     {item}
                   </Button>
                 ))}
@@ -98,7 +128,26 @@ export default function AccountConfig() {
             </div>
           </div>
 
-          <div className="bg-[#00150D] sm:h-[85%] w-full rounded-3xl flex flex-col gap-3 items-center text-center justify-center p-5">
+          <div className="bg-[#00150D] max-sm:mt-2 sm:h-[85%] w-full relative rounded-3xl flex flex-col gap-3 items-center text-center justify-center p-5">
+            {hotTags[step][accSize] && (
+              <div
+                style={{
+                  background:
+                    "linear-gradient(175.3deg, #06130C -40.48%, #2FD476 209.25%)",
+                }}
+                className="absolute flex items-center -top-3 rounded-3xl gap-1 px-4 py-1"
+              >
+                <Image
+                  src={"/images/fire-1.svg"}
+                  alt={"fire-1"}
+                  width={22}
+                  height={27}
+                  className="size-4"
+                />
+                <div className="text-sm">{TagNames[step]}</div>
+              </div>
+            )}
+
             <div className="font-semibold">START NOW AT ONLY</div>
             <div className="text-6xl font-bold">
               {country === "India"

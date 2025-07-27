@@ -12,7 +12,7 @@ const FooterLinks = [
       },
       {
         title: "Login",
-        link: "https://app.empiretrading.co/login",
+        link: "https://dashboard.empirefunded.com",
         target: "_blank",
       },
     ],
