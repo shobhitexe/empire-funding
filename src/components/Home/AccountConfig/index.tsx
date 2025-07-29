@@ -5,7 +5,6 @@ import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
 import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { checkOutLinks } from "./checkout-links";
 import Image from "next/image";
@@ -159,13 +158,13 @@ export default function AccountConfig() {
               className="h-11 px-10 font-semibold"
               asChild
             >
-              <Link
+              <a
                 href={checkOutLinks[step][accSize]}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Start Challenge
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
