@@ -1,6 +1,5 @@
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
-import Image from "next/image";
 import { Marquee } from "./Marquee";
 
 const reviews = [
@@ -116,22 +115,24 @@ export default function Testimonials() {
           <GreenText>Real Reviews.</GreenText> Real Traders. Real Payouts.
         </Heading>
 
-        <Image
+        {/* <Image
           src={"/images/testimonials/t1.svg"}
           alt={"testinomials"}
           width={281}
           height={33}
           className="mt-2"
-        />
+        /> */}
 
         <div className="flex sm:flex-row flex-col gap-2 items-center">
-          <span className="pt-1">Rated 4.4 / 5 based on 4,258 reviews on</span>
-          <Image
+          <span className="pt-1">
+            Rated 4.4 / 5 based on 4,258 reviews on Trustpilot
+          </span>
+          {/* <Image
             src={"/images/testimonials/t2.svg"}
             alt={"trustpilot"}
             width={104}
             height={24}
-          />
+          /> */}
         </div>
       </div>
 
@@ -200,12 +201,12 @@ const ReviewCard = ({
           "relative h-full w-fit cursor-pointer overflow-hidden rounded-xl p-5 flex flex-col gap-4 bg-[#030907]"
         }
       >
-        <Image
+        {/* <Image
           src={"/images/testimonials/stars.svg"}
           alt={"stars"}
           width={136}
           height={24}
-        />
+        /> */}
 
         <div className="flex flex-row items-center gap-2">
           <div className="flex items-center gap-1">
