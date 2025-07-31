@@ -10,6 +10,7 @@ import MultipleAssets from "./Home/MultipleAssets";
 import PayoutTicker from "./Home/PayoutTicker";
 import Popup from "./Home/Popup";
 import ProfitCalculator from "./Home/ProfitCalculator";
+import SuccessStories from "./Home/SuccessStories";
 import Testimonials from "./Home/Testimonials";
 import TopRatedFirm from "./Home/TopRatedFirm";
 import TradingPlatform from "./Home/Tradingplatform";
@@ -40,4 +41,5 @@ export {
   Offerstrip,
   ProfitCalculator,
   Trackdesk,
+  SuccessStories,
 };

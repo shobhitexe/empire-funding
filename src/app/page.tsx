@@ -8,6 +8,7 @@ import {
   PayoutTicker,
   Popup,
   ProfitCalculator,
+  SuccessStories,
   Testimonials,
   TopRatedFirm,
   TradingPlatform,
@@ -22,6 +23,7 @@ export default function Home() {
       <TradingPlatform />
       <AccountConfig />
       <TopRatedFirm />
+      <SuccessStories />
       <ProfitCalculator />
       <BestTraders />
       <Testimonials />

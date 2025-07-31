@@ -53,6 +53,24 @@ export default function Hero() {
               />{" "}
               MT5 Available
             </div>
+
+            <div
+              className="trustpilot-widget"
+              data-locale="en-US"
+              data-template-id="5419b732fbfb950b10de65e5"
+              data-businessunit-id="6861f3966deaf67934e504cd"
+              data-style-height="24px"
+              data-style-width="100%"
+              data-theme="dark"
+            >
+              <a
+                href="https://www.trustpilot.com/review/empirefunded.com"
+                target="_blank"
+                rel="noopener"
+              >
+                Trustpilot
+              </a>
+            </div>
           </div>
 
           <div className="md:text-7xl sm:text-6xl xs:text-5xl text-4xl font-bold flex flex-col sm:items-start items-center max-sm:text-center">
