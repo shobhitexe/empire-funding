@@ -3,11 +3,11 @@
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
-import { PlayCircle } from "lucide-react";
+// import { PlayCircle } from "lucide-react";
 
 const testimonials = [
   {
-    videoSrc: "/videos/vid1.mp4",
+    videoSrc: "https://www.youtube.com/embed/lnq29XE2RIE",
   },
   {
     title: "Outstanding Support",
@@ -22,10 +22,10 @@ const testimonials = [
     position: "Full-time Trader",
   },
   {
-    videoSrc: "/videos/vid2.mp4",
+    videoSrc: "https://www.youtube.com/embed/Mg2wW9TIQuk",
   },
   {
-    videoSrc: "/videos/vid3.mp4",
+    videoSrc: "https://www.youtube.com/embed/Nbw-terhXwg",
   },
   {
     title: "Reliable Payments",
@@ -40,7 +40,7 @@ const testimonials = [
     position: "Full-time Trader",
   },
   {
-    videoSrc: "/videos/vid4.mp4",
+    videoSrc: "https://www.youtube.com/embed/_FSUTRY81zU",
   },
 ];
 
@@ -65,16 +65,24 @@ export default function SuccessStories() {
           >
             {item.videoSrc ? (
               <div className="relative rounded-xl overflow-hidden aspect-[9/12] bg-black/40 mb-4">
-                <video
+                {/* <video
                   className="w-full h-full object-cover"
                   src={item.videoSrc}
                   muted
                   loop
                   playsInline
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                /> */}
+                <iframe
+                  src={item.videoSrc}
+                  // title="JohnTestimonial"
+                  width={"200px"}
+                  height={"400px"}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  className="w-full h-full object-cover"
+                ></iframe>
+                {/* <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <PlayCircle className="w-14 h-14 text-white" />
-                </div>
+                </div> */}
               </div>
             ) : (
               <div className="p-2 h-full min-h-fulls min-h-[250px]">
