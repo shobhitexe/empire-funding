@@ -75,8 +75,8 @@ export default function SuccessStories() {
                 <iframe
                   src={item.videoSrc}
                   // title="JohnTestimonial"
-                  width={"200px"}
-                  height={"400px"}
+                  // width={"200px"}
+                  // height={"400px"}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   className="w-full h-full object-cover"
                 ></iframe>
