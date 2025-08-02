@@ -10,7 +10,7 @@ const testimonials = [
     videoSrc: "https://www.youtube.com/embed/lnq29XE2RIE",
   },
   {
-    title: "Janet McLean",
+    title: "Support That Never Sleeps",
     desc: "The 24/7 Discord support makes me feel like I have a full-time team behind me. And the other traders are great people. The Empire is just such a positive environment where you want to thrive.",
     name: "Robert Lacok",
     position: "Crypto Swing Trader",
@@ -40,7 +40,7 @@ const testimonials = [
     position: "Full-time Trader",
   },
   {
-    videoSrc: "https://www.youtube.com/embed/_FSUTRY81zU",
+    videoSrc: "https://www.youtube.com/embed/_fFZTfmDkRU",
   },
 ];
 
@@ -74,9 +74,6 @@ export default function SuccessStories() {
                 /> */}
                 <iframe
                   src={item.videoSrc}
-                  // title="JohnTestimonial"
-                  // width={"200px"}
-                  // height={"400px"}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   className="w-full h-full object-cover"
                 ></iframe>
