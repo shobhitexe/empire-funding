@@ -8,39 +8,51 @@ import SubHeading from "@/components/ui/sub-heading";
 const testimonials = [
   {
     videoSrc: "https://www.youtube.com/embed/lnq29XE2RIE",
+    title: "My Empire Funded Journey",
+    name: "Video Testimonial",
+    position: "",
   },
   {
-    title: "Support That Never Sleeps",
-    desc: "The 24/7 Discord support makes me feel like I have a full-time team behind me. And the other traders are great people. The Empire is just such a positive environment where you want to thrive.",
-    name: "Robert Lacok",
+    title: "From Odd Jobs to Full-Time Trader",
+    desc: "I was doing odd jobs when I found Empire Funded. Passed the challenge in three weeks, got my first payout in five days, and booked a Cape Town trip. Now I trade full-time. Fast payouts helped me turn everything around.",
+    name: "John",
     position: "Crypto Swing Trader",
   },
   {
-    title: "Always There for You",
-    desc: "I traded stocks successfully thanks to the support of Empire Funded's Discord community. They literally never leave you hanging—like one time I forgot my dashboard password and within seconds they helped me fix the issue.",
-    name: "Vanya Rege",
+    title: "Funded When I Had Nothing",
+    desc: "I was waiting tables to pay rent and felt stuck. A friend introduced me to forex, but I had no capital - until I found Empire Funded's instant account. Made profit fast, got paid in 24 hours, and went full-time trading.",
+    name: "Sofia",
     position: "Technical Analyst",
   },
   {
     videoSrc: "https://www.youtube.com/embed/Mg2wW9TIQuk",
+    title: "Breaking Barriers with Empire Funded",
+    name: "Video Testimonial",
+    position: "",
   },
   {
     videoSrc: "https://www.youtube.com/embed/Nbw-terhXwg",
+    title: "How Funding Changed My Life",
+    name: "Video Testimonial",
+    position: "",
   },
   {
-    title: "Fast & Trustworthy Payouts",
-    desc: "I chose Empire Funded because: #1 Best support team in the industry, #2 48-hour payouts or they give you $2500, #3 They haven’t denied a single payout, according to multiple Reddit users. I haven’t requested mine yet but will soon.",
-    name: "Dr Russell Andrews",
+    title: "Clean Tools, Fast Payouts, Real Growth",
+    desc: "I'm 22 and got funded in three weeks. The dashboard's clean, shows everything clearly, and the journaling plus AI helped me improve fast. I’ve already received two payouts, with a third on the way. Super smooth, reliable experience so far.",
+    name: "Omar",
     position: "Forex Scalper",
   },
   {
-    title: "Smarter Trading with AI",
-    desc: "The AI trader dashboard alerts help me spot mistakes early in the challenge so I can become a better trader faster. Yes, it helps you pass the challenge, but it also makes you a better trader so Empire will want to work with you and make you a Spartan trader.",
-    name: "Lavanya Sabharwal",
+    title: "From Engineer to Funded Trader",
+    desc: "I was stuck in a 9-to-6 engineering job with no real capital. Joined Empire Funded, passed in under a month, and got my first payout two weeks later. Paid off student loans, treated my family, and now trade full-time. Life-changing.",
+    name: "Arjun",
     position: "Full-time Trader",
   },
   {
     videoSrc: "https://www.youtube.com/embed/_fFZTfmDkRU",
+    title: "Real Stories, Real Results",
+    name: "Video Testimonial",
+    position: "",
   },
 ];
 
