@@ -328,9 +328,27 @@ export default function Testimonials() {
         /> */}
 
         <div className="flex sm:flex-row flex-col gap-2 items-center">
-          <span className="pt-1">
+          <div
+            className="trustpilot-widget"
+            data-locale="en-US"
+            data-template-id="5419b6ffb0d04a076446a9af"
+            data-businessunit-id="6861f3966deaf67934e504cd"
+            data-style-height="20px"
+            data-style-width="100%"
+            data-theme="dark"
+          >
+            <a
+              href="https://www.trustpilot.com/review/empirefunded.com"
+              target="_blank"
+              rel="noopener"
+            >
+              Trustpilot
+            </a>
+          </div>
+
+          {/* <span className="pt-1">
             Rated 4.4 / 5 based on 4,258 reviews on Trustpilot
-          </span>
+          </span> */}
           {/* <Image
             src={"/images/testimonials/t2.svg"}
             alt={"trustpilot"}
