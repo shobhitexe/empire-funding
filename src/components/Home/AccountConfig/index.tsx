@@ -24,9 +24,9 @@ const Pricing = [
 ];
 
 const PricingINR = [
-  ["₹7,459", "₹9,179", "₹14,319", "₹22,889", "₹34,039", "₹76,949"],
+  ["₹3,730", "₹4,590", "₹7,160", "₹11,445", "₹17,020", "₹38,475"],
   ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
-  ["₹4,199", "₹5,749", "₹9,179", "₹19,479", "₹27,199", "₹51,199"],
+  ["₹1,260", "₹1,725", "₹2,754", "₹5,844", "₹8,160", "₹15,360"],
 ];
 
 const hotTags = [
@@ -278,7 +278,7 @@ export default function AccountConfig() {
           100% Profit Split • 24-Hour Payout • 150% Refund • No Minimum Trading
           Days • 5% Profit Target
         </div> */}
-        <div
+        {/* <div
           style={{
             backgroundImage: "url('/images/paid-bg.svg')",
             backgroundSize: "cover",
@@ -288,7 +288,7 @@ export default function AccountConfig() {
           className="text-[#4BFFC6] font-bold text-center py-4 rounded-xl sm:text-2xl text-base"
         >
           Get Paid in 48 Hours or Get $2000!
-        </div>
+        </div> */}
       </div>
     </div>
   );
