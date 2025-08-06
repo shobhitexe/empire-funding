@@ -24,6 +24,12 @@ const Pricing = [
 ];
 
 const PricingINR = [
+  ["₹7,459", "₹9,179", "₹14,319", "₹22,889", "₹34,039", "₹76,949"],
+  ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
+  ["₹4,199", "₹5,749", "₹9,179", "₹19,479", "₹27,199", "₹51,199"],
+];
+
+const PricingINRDiscounted = [
   ["₹3,730", "₹4,590", "₹7,160", "₹11,445", "₹17,020", "₹38,475"],
   ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
   ["₹1,260", "₹1,725", "₹2,754", "₹5,844", "₹8,160", "₹15,360"],
@@ -149,9 +155,26 @@ export default function AccountConfig() {
 
             <div className="font-semibold">START NOW AT ONLY</div>
             <div className="text-6xl font-bold">
-              {country === "India"
-                ? PricingINR[step][accSize]
-                : Pricing[step][accSize]}
+              {country === "India" ? (
+                <>
+                  {step !== 1 ? (
+                    <div className="flex gap-2 items-center">
+                      <span className="relative text-3xl">
+                        {" "}
+                        <div className="absolute bg-red-500 h-1 w-full rotate-12 top-1/2" />{" "}
+                        {PricingINR[step][accSize]}
+                      </span>
+                      <span className="text-5xl">
+                        {PricingINRDiscounted[step][accSize]}
+                      </span>
+                    </div>
+                  ) : (
+                    <div>{PricingINR[step][accSize]}</div>
+                  )}
+                </>
+              ) : (
+                Pricing[step][accSize]
+              )}
             </div>
             <Button
               variant={"green"}
