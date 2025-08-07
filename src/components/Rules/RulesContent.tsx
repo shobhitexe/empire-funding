@@ -21,49 +21,47 @@ export const RulesContent = [
       ),
     },
     {
-      que: "Maximum Daily Drawdown",
+      que: "Daily Drawdown",
       ans: (
         <div className="flex flex-col gap-4">
           <div>
-            Maximum Daily Drawdown refers to the maximum loss allowed, in a
-            single trading day, before an account is breached. On our 2-Step
-            Challenge Accounts, we allow for a{" "}
+            Daily Drawdown refers to the maximum loss allowed, in a single
+            trading day, before an account is breached. On our 2-Step Challenge
+            Accounts, we allow for a{" "}
             <strong>5% Maximum Daily Drawdown limit.</strong>
           </div>
 
           <div>
             <div>
-              Maximum Daily Drawdown limits are <strong>static-based</strong> on
-              the <strong>current account balance,</strong> and reset at the
-              <strong>start</strong> of each new trading day. See the following
-              example:
+              Daily Drawdown limits are <strong>Static-trailing</strong> based
+              from the <strong>initial account balance.</strong> Daily Drawdown
+              Limits reset at the <strong>start of each trading day</strong>{" "}
+              (UTC 00:00:00).
             </div>
 
-            <ul>
-              <li>
-                - Trader A on our 2-Step 100K Challenge has taken a loss of
-                $4,000 in a single trading day.{" "}
-              </li>
-              <li>
-                - If they continue to trade and loss a further $1,000, they will
-                have exceeded the Maximum Daily Drawdown limit and their account
-                will be breached.{" "}
-              </li>
-              <li>
-                - However, if they refrain from trading and wait until the next
-                trading day, their Maximum Daily Drawdown Limit will be reset.
-              </li>
+            <div>
+              <strong>Daily Drawdown limit (DDL)</strong> = Initial account
+              balance x 0.95
+            </div>
 
-              <li>
-                - They may then lose a further $1,000 without breaching the
-                account under this rule.
-              </li>
-            </ul>
+            <div>
+              Maximum Daily Loss limits are also{" "}
+              <strong>static-trailing</strong> based from the{" "}
+              <strong>initial account balance.</strong> This means, traders will
+              only be able to lose 5% of their initial account balance at any
+              given time. Any profit made <strong>will not</strong> increase
+              this threshold.
+            </div>
+
+            <div>
+              <strong>Maximum Daily Loss (MDL)</strong> = Initial account
+              balance x 0.05
+            </div>
           </div>
 
           <div>
-            The table below outlines the maximum daily loss allowed for each
-            2-Step Challenge Account:
+            The table below outlines the Maximum Daily Loss allowed under each
+            account size:
           </div>
 
           <table className="table-auto border border-gray-400 w-full text-left">
@@ -73,7 +71,7 @@ export const RulesContent = [
                   Account Size
                 </th>
                 <th className="border border-gray-400 px-4 py-2">
-                  Minimum Equity Allowed
+                  Maximum Daily Loss
                 </th>
               </tr>
             </thead>
@@ -107,13 +105,114 @@ export const RulesContent = [
           <div>
             We want to encourage trading with proper risk management and
             structure, as opposed to a gambling mindset. If our system detects
-            that your equity has fallen below these thresholds, all open
+            that your equity has fallen below the Daily Drawdown Limit, all open
             positions will be automatically closed, and your account will be
             closed and marked as breached.
           </div>
         </div>
       ),
     },
+
+    {
+      que: "Max Drawdown",
+      ans: (
+        <div className="flex flex-col gap-4">
+          <div>
+            Max Drawdown refers to the <strong>maximum loss</strong> allowed
+            before an account is breached. We allow for a generous{" "}
+            <strong>12% max drawdown</strong> across all of our 2-Step Challenge
+            accounts.
+          </div>
+
+          <div>
+            Max Drawdown is <strong>trailing-based</strong> on the{" "}
+            <strong>highest equity point</strong> achieved on the account. This
+            limit adjusts at the end of each trading day (UTC: 00:00:00) if a
+            new high is achieved.
+          </div>
+
+          <div>
+            <strong>Maximum Drawdown Limit (MDL)</strong> = Highest equity point
+            x 0.88
+          </div>
+
+          <div>
+            Maximum Loss Limit is 12% of the{" "}
+            <strong>highest equity point</strong> the account has achieved.
+            <br />
+            <br />
+            <strong>Maximum Loss Limit (MLL)</strong>= Highest equity point x
+            0.12
+          </div>
+
+          <div>
+            <div>See the following example:</div>
+
+            <ul>
+              {" "}
+              <li>
+                - Trader A purchases Empire Funded&apos;s 2-Step 100K Challenge.
+              </li>{" "}
+              <li>
+                - Their Max Drawdown Limits are defined as follows:{" "}
+                <ul className="ml-4">
+                  {" "}
+                  <li>
+                    - Highest Equity Point: $100,000{" "}
+                    <em>(Account starting balance)</em>
+                  </li>{" "}
+                  <li>
+                    - Max Drawdown Limit: $100,000 x 0.88 ={" "}
+                    <strong>$88,000</strong>
+                  </li>{" "}
+                  <li>
+                    - Max Loss Limit: $100,000 x 0.12 = <strong>$12,000</strong>
+                  </li>{" "}
+                </ul>{" "}
+              </li>{" "}
+              <li>
+                - Trader A achieves a gain of $5,782 on trading day one. Their
+                new Max Drawdown Limits are re-calculated at the end of trading
+                day one based on the account&apos;s highest equity point:
+                <ul className="ml-4">
+                  {" "}
+                  <li>
+                    - Highest Equity Point: $100,000 + $5,782 ={" "}
+                    <strong>$105,782</strong>
+                  </li>{" "}
+                  <li>
+                    - Max Drawdown Limit: $105,782 x 0.88 ={" "}
+                    <strong>$93,088.16</strong> (new MDL)
+                  </li>{" "}
+                  <li>
+                    - Max Loss Limit: $105,782 x 0.12 ={" "}
+                    <strong>$12,693.84</strong> (new MLL limit)
+                  </li>{" "}
+                </ul>{" "}
+              </li>{" "}
+              <li>
+                - Trader A proceeds to end trading day two with losses amounting
+                to $5,040. Since their account did not reach a new highest
+                equity point, their Max Drawdown Limit remains the same.
+              </li>{" "}
+              <li>
+                - If they lose a further $7,653.84, they will have breached
+                their Max Loss Limit.
+              </li>{" "}
+            </ul>
+          </div>
+
+          <div>
+            Your account equity cannot drop below 12% of the highest equity
+            point achieved on the account at any time. If our system detects
+            that your equity has fallen below this threshold, all open positions
+            will be automatically closed, and your account will be marked as
+            breached.
+          </div>
+        </div>
+      ),
+    },
+
     {
       que: "Absolute Drawdown",
       ans: (
@@ -213,14 +312,15 @@ export const RulesContent = [
               </ul>
             </div>
             <br />
-            The Profit Target is balance-based meaning only closed positions
-            contribute to the profit earned on an account. Open positions DO NOT
+            The Profit Target is balance-based meaning only{" "}
+            <strong>closed positions</strong>
+            contribute to the profit earned on an account. Open positions{" "}
+            <strong>DO NOT</strong>
             contribute to the profit target.
             <br />
             <br />
-            You must close all open positions to advance through the evaluation
-            phase. Meeting the Profit Target will allow you to progress to the
-            Funded Stage.
+            You must close all open positions to advance through to the next
+            phase.
             <br />
             <br />
             The table below outlines the minimum equity required, for each
@@ -239,10 +339,10 @@ export const RulesContent = [
                     Account Size
                   </th>
                   <th className="border border-gray-400 px-4 py-2">
-                    Phase One - Profit Target
+                    Phase One - Minimum Equity
                   </th>
                   <th className="border border-gray-400 px-4 py-2">
-                    Phase Two - Profit Target
+                    Phase Two - Minimum Equity
                   </th>
                 </tr>
               </thead>
@@ -250,32 +350,32 @@ export const RulesContent = [
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$5,000</td>
                   <td className="border border-gray-400 px-4 py-2">$5,300</td>
-                  <td className="border border-gray-400 px-4 py-2">$5,250</td>
+                  <td className="border border-gray-400 px-4 py-2">$5,300</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$10,000</td>
                   <td className="border border-gray-400 px-4 py-2">$10,600</td>
-                  <td className="border border-gray-400 px-4 py-2">$10,500</td>
+                  <td className="border border-gray-400 px-4 py-2">$10,600</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$25,000</td>
                   <td className="border border-gray-400 px-4 py-2">$26,500</td>
-                  <td className="border border-gray-400 px-4 py-2">$26,250</td>
+                  <td className="border border-gray-400 px-4 py-2">$26,500</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$50,000</td>
                   <td className="border border-gray-400 px-4 py-2">$53,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$52,500</td>
+                  <td className="border border-gray-400 px-4 py-2">$53,000</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$100,000</td>
                   <td className="border border-gray-400 px-4 py-2">$106,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$105,000</td>
+                  <td className="border border-gray-400 px-4 py-2">$106,000</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$200,000</td>
                   <td className="border border-gray-400 px-4 py-2">$212,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$210,000</td>
+                  <td className="border border-gray-400 px-4 py-2">$212,000</td>
                 </tr>
               </tbody>
             </table>
@@ -300,43 +400,21 @@ export const RulesContent = [
       ans: (
         <div className="flex flex-col gap-4">
           <div>
-            To pass a Challenge, traders must satisfy the Minimum Profitable
-            Days amount. We require traders to maintain a minimum of three
-            profitable days across all Challenge accounts and phases.
+            To pass a Challenge phase, traders must satisfy a minimum of{" "}
+            <strong>three Profitable Days.</strong>
           </div>
 
           <div>
-            <div>
-              Trading days are considered Profitable if all closed trades equate
-              to a minimum gain of 0.5% of your initial balance. We included the
-              following example to articulate this rule:
-            </div>
-
-            <ul>
-              <li>- Trader A holds a 2-Step 100K Challenge Account.</li>
-              <li>
-                - Trader A maintains a gain of $1,000 by the end of the trading
-                day. Since this is a gain of 1% on the initial account balance,
-                it satisfies the minimum requirement and is counted as{" "}
-                <strong>one profitable trading day.</strong>
-              </li>
-              <li>
-                - Trader A then maintains a gain of $300 by the end of the next
-                trading day. Since this is a gain of 0.3% on the initial account
-                balance, it does not satisfy the minimum requirement and is
-                therefore, not considered a profitable trading day.
-              </li>
-
-              <li>
-                - Trader A still needs <strong>two</strong> more profitable
-                trading days to pass their challenge phase.
-              </li>
-            </ul>
+            Trading days are considered profitable if all{" "}
+            <strong>closed positions</strong>
+            equate to a minimum gain of <strong>0.05%</strong> of the{" "}
+            <strong>initial account balance</strong> at the end of the trading
+            day (UTC: 00:00:00).
           </div>
 
           <div>
-            The table below outlines the maximum daily loss allowed for each
-            2-Step Challenge Account:
+            The table below outlines the minimum gain required to end on, by the
+            end of each trading day, to satisfy the profitable day requirement:
           </div>
 
           <table className="table-auto border border-gray-400 w-full text-left">
@@ -378,9 +456,33 @@ export const RulesContent = [
             </tbody>
           </table>
           <div>
-            This is a hard requirement, meaning even if you reach the Profit
-            Target, you will not be able to pass the challenge unless you
-            satisfy this rule.
+            See the following example:
+            <ul>
+              <li>
+                - Trader A purchases Empire Funded&apos;s 2-Step 100K Challenge.
+              </li>
+              <li>
+                - Trader A achieves a gain of $626 by the end of trading day
+                one. Since this is a gain of 0.06% on the initial account
+                balance ($100,000), it satisfies the requirement and is counted
+                as <strong>one profitable trading day.</strong>
+              </li>
+              <li>
+                - Trader A achieves a gain of $314 by the end of trading day
+                two. Since this is a gain of 0.03% on the initial account
+                balance, it does not satisfy the Profitable Day requirement as
+                it is not counted as one.
+              </li>
+              <li>
+                - Trader A still requires <strong>two more</strong> Profitable
+                Days to pass their challenge phase.
+              </li>
+            </ul>
+            <div>
+              This is a hard requirement, meaning even if you reach the Profit
+              Target, you will not be able to pass the challenge unless you
+              satisfy this rule.{" "}
+            </div>
           </div>
         </div>
       ),
@@ -391,9 +493,9 @@ export const RulesContent = [
         <div>
           If your account remains inactive for 30 consecutive days, it will be
           closed. Accounts are deemed inactive and subject to breach if no
-          activity (open or closed position) occurs for a period of 30 days.
-          This period starts right after the purchase of the challenge and
-          resets after each sign of activity.
+          activity (open or closed position) occurs for 30 days. This period
+          starts right after the purchase of the challenge and resets after each
+          sign of activity.
           <br />
           <br />
           We reserve the right to close accounts that engage in minimal trading
@@ -426,49 +528,46 @@ export const RulesContent = [
       ),
     },
     {
-      que: "Maximum Daily Drawdown",
+      que: "Daily Drawdown",
       ans: (
         <div className="flex flex-col gap-4">
           <div>
-            Maximum Daily Drawdown refers to the maximum loss allowed, in a
-            single trading day, before an account is breached. On our 1-Step
-            Challenge Accounts, we allow for a{" "}
-            <strong>3% Maximum Daily Drawdown limit.</strong>
+            Daily Drawdown refers to the maximum loss allowed, in a single
+            trading day, before an account is breached. On our 1-Step Challenge
+            Accounts, we allow for a<strong>3% Daily Drawdown Limit.</strong>
           </div>
 
           <div>
             <div>
-              Maximum Daily Drawdown limits are <strong>static-based</strong> on
-              the <strong>current account balance,</strong> and reset at the
-              <strong>start</strong> of each new trading day. See the following
-              example:
+              Daily Drawdown limits are <strong>Static-trailing</strong> based
+              from the <strong>initial account balance.</strong> Daily Drawdown
+              Limits reset at the <strong>start of each trading day</strong>{" "}
+              (UTC 00:00:00).
             </div>
 
-            <ul>
-              <li>
-                - Trader A on our 1-Step 100K Challenge has taken a loss of
-                $2,000 in a single trading day.{" "}
-              </li>
-              <li>
-                - If they continue to trade and loss a further $1,000, they will
-                have exceeded the Maximum Daily Drawdown limit and their account
-                will be breached.{" "}
-              </li>
-              <li>
-                - However, if they refrain from trading and wait until the next
-                trading day, their Maximum Daily Drawdown Limit will be reset.
-              </li>
+            <div>
+              <strong>Daily Drawdown limit (DDL)</strong> = Initial account
+              balance x 0.97
+            </div>
 
-              <li>
-                - They may then lose a further $1,000 without breaching the
-                account under this rule.
-              </li>
-            </ul>
+            <div>
+              Maximum Daily Loss limits are also{" "}
+              <strong>static-trailing</strong> based from the{" "}
+              <strong>initial account balance.</strong> This means, traders will
+              only be able to lose 5% of their initial account balance at any
+              given time. Any profit made <strong>will not</strong> increase
+              this threshold.
+            </div>
+
+            <div>
+              <strong>Maximum Daily Loss (MDL)</strong> = Initial account
+              balance x 0.03
+            </div>
           </div>
 
           <div>
-            The table below outlines the maximum daily loss allowed for each
-            1-Step Challenge Account:
+            The table below outlines the Maximum Daily Loss allowed under each
+            account size:
           </div>
 
           <table className="table-auto border border-gray-400 w-full text-left">
@@ -478,7 +577,7 @@ export const RulesContent = [
                   Account Size
                 </th>
                 <th className="border border-gray-400 px-4 py-2">
-                  Minimum Equity Allowed
+                  Maximum Daily Loss
                 </th>
               </tr>
             </thead>
@@ -512,9 +611,108 @@ export const RulesContent = [
           <div>
             We want to encourage trading with proper risk management and
             structure, as opposed to a gambling mindset. If our system detects
-            that your equity has fallen below these thresholds, all open
+            that your equity has fallen below the Daily Drawdown Limit, all open
             positions will be automatically closed, and your account will be
             closed and marked as breached.
+          </div>
+        </div>
+      ),
+    },
+    {
+      que: "Max Drawdown",
+      ans: (
+        <div className="flex flex-col gap-4">
+          <div>
+            Max Drawdown refers to the <strong>maximum loss</strong> allowed
+            before an account is breached. We allow for a generous{" "}
+            <strong>7% max drawdown</strong> across all of our 1-Step Challenge
+            accounts.
+          </div>
+
+          <div>
+            Max Drawdown is <strong>trailing-based</strong> on the{" "}
+            <strong>highest equity point</strong> achieved on the account. This
+            limit adjusts at the end of each trading day (UTC: 00:00:00) if a
+            new high is achieved.
+          </div>
+
+          <div>
+            <strong>Maximum Drawdown Limit (MDL)</strong> = Highest equity point
+            x 0.93
+          </div>
+
+          <div>
+            Maximum Loss Limit is 7% of the{" "}
+            <strong>highest equity point</strong> the account has achieved.
+            <br />
+            <br />
+            <strong>Maximum Loss Limit (MLL)</strong>= Highest equity point x
+            0.07
+          </div>
+
+          <div>
+            <div>See the following example:</div>
+
+            <ul>
+              {" "}
+              <li>
+                - Trader A purchases Empire Funded&apos;s 1-Step 100K Challenge.
+              </li>{" "}
+              <li>
+                - Their Max Drawdown Limits are defined as follows:{" "}
+                <ul className="ml-4">
+                  {" "}
+                  <li>
+                    - Highest Equity Point: $100,000{" "}
+                    <em>(Account starting balance)</em>
+                  </li>{" "}
+                  <li>
+                    - Max Drawdown Limit: $100,000 x 0.93 ={" "}
+                    <strong>$93,000</strong>
+                  </li>{" "}
+                  <li>
+                    - Max Loss Limit: $100,000 x 0.07 = <strong>$7,000</strong>
+                  </li>{" "}
+                </ul>{" "}
+              </li>{" "}
+              <li>
+                - Trader A achieves a gain of $2,617.19 on trading day one.
+                Their new Max Drawdown Limits are re-calculated at the end of
+                trading day one based on the account&apos;s highest equity
+                point:
+                <ul className="ml-4">
+                  {" "}
+                  <li>
+                    - Highest Equity Point: $100,000 + $2,617.19 ={" "}
+                    <strong>$102,617.19</strong>
+                  </li>{" "}
+                  <li>
+                    - Max Drawdown Limit: $105,782 x 0.93 ={" "}
+                    <strong>$95,433.99</strong> (new MDL)
+                  </li>{" "}
+                  <li>
+                    - Max Loss Limit: $105,782 x 0.07 ={" "}
+                    <strong>$7,183.20</strong> (new MLL limit)
+                  </li>{" "}
+                </ul>{" "}
+              </li>{" "}
+              <li>
+                - Trader A proceeds to end trading day two with losses amounting
+                to $2,840. Since their account did not reach a new highest
+                equity point, their Max Drawdown Limit remains the same.
+              </li>{" "}
+              <li>
+                - If they lose a further $4343.2 they will have breached their
+                Max Loss Limit.
+              </li>{" "}
+            </ul>
+          </div>
+
+          <div>
+            Your account equity cannot drop below 7% of the highest equity point
+            achieved on the account at any time. If our system detects that your
+            equity has fallen below this threshold, all open positions will be
+            automatically closed, and your account will be marked as breached.
           </div>
         </div>
       ),
@@ -606,11 +804,14 @@ export const RulesContent = [
           <div>
             The Profit Target represents the total amount of profit required to
             pass a Challenge Phase. The amount is based on the initial account
-            balance.
+            balance. Our 1-Step Challenge Accounts require an 8% profit target
+            to pass.
             <br />
             <br />
-            The Profit Target is balance-based meaning only closed positions
-            contribute to the profit earned on an account. Open positions DO NOT
+            The Profit Target is balance-based meaning only{" "}
+            <strong>closed positions</strong>
+            contribute to the profit earned on an account. Open positions{" "}
+            <strong>DO NOT</strong>
             contribute to the profit target.
             <br />
             <br />
@@ -625,7 +826,7 @@ export const RulesContent = [
 
           <div>
             <div className="border border-gray-400 px-4 py-2">
-              1-Step Challenge
+              2-Step Challenge
             </div>
 
             <table className="table-auto border border-gray-400 w-full text-left">
@@ -635,7 +836,7 @@ export const RulesContent = [
                     Account Size
                   </th>
                   <th className="border border-gray-400 px-4 py-2">
-                    Total Balance Required
+                    Total balance required
                   </th>
                 </tr>
               </thead>
@@ -687,43 +888,21 @@ export const RulesContent = [
       ans: (
         <div className="flex flex-col gap-4">
           <div>
-            To pass a Challenge, traders must satisfy the Minimum Profitable
-            Days amount. We require traders to maintain a minimum of three
-            profitable days across all Challenge accounts and phases.
+            To pass a Challenge phase, traders must satisfy a minimum of{" "}
+            <strong>three Profitable Days.</strong>
           </div>
 
           <div>
-            <div>
-              Trading days are considered Profitable if all closed trades equate
-              to a minimum gain of 0.5% of your initial balance. We included the
-              following example to articulate this rule:
-            </div>
-
-            <ul>
-              <li>- Trader A holds a 1-Step 100K Challenge Account.</li>
-              <li>
-                - Trader A maintains a gain of $1,000 by the end of the trading
-                day. Since this is a gain of 1% on the initial account balance,
-                it satisfies the minimum requirement and is counted as{" "}
-                <strong>one profitable trading day.</strong>
-              </li>
-              <li>
-                - Trader A then maintains a gain of $300 by the end of the next
-                trading day. Since this is a gain of 0.3% on the initial account
-                balance, it does not satisfy the minimum requirement and is
-                therefore, not considered a profitable trading day.
-              </li>
-
-              <li>
-                - Trader A still needs <strong>two</strong> more profitable
-                trading days to pass their challenge phase.
-              </li>
-            </ul>
+            Trading days are considered profitable if all{" "}
+            <strong>closed positions</strong>
+            equate to a minimum gain of <strong>0.05%</strong> of the{" "}
+            <strong>initial account balance</strong> at the end of the trading
+            day (UTC: 00:00:00).
           </div>
 
           <div>
-            The table below outlines the maximum daily loss allowed for each
-            2-Step Challenge Account:
+            The table below outlines the minimum gain required to end on, by the
+            end of each trading day, to satisfy the profitable day requirement:
           </div>
 
           <table className="table-auto border border-gray-400 w-full text-left">
@@ -765,9 +944,33 @@ export const RulesContent = [
             </tbody>
           </table>
           <div>
-            This is a hard requirement, meaning even if you reach the Profit
-            Target, you will not be able to pass the challenge unless you
-            satisfy this rule.
+            See the following example:
+            <ul>
+              <li>
+                - Trader A purchases Empire Funded&apos;s 1-Step 100K Challenge.
+              </li>
+              <li>
+                - Trader A achieves a gain of $626 by the end of trading day
+                one. Since this is a gain of 0.06% on the initial account
+                balance ($100,000), it satisfies the requirement and is counted
+                as <strong>one profitable trading day.</strong>
+              </li>
+              <li>
+                - Trader A achieves a gain of $314 by the end of trading day
+                two. Since this is a gain of 0.03% on the initial account
+                balance, it does not satisfy the Profitable Day requirement as
+                it is not counted as one.
+              </li>
+              <li>
+                - Trader A still requires <strong>two more</strong> Profitable
+                Days to pass their challenge phase.
+              </li>
+            </ul>
+            <div>
+              This is a hard requirement, meaning even if you reach the Profit
+              Target, you will not be able to pass the challenge unless you
+              satisfy this rule.{" "}
+            </div>
           </div>
         </div>
       ),
