@@ -114,6 +114,12 @@ export default function RootLayout({
           src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
           async
         ></script>
+
+        <Script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=d9f5c6a5-3781-426f-9911-b80bb3d14e0e"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={`${figtree.variable} antialiased`}>
         <Navbar />
