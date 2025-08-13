@@ -228,12 +228,12 @@ export const RulesContent = [
               to be met:
               <ul>
                 <li>- Phase One: 6%</li>
-                <li>- Phase Two: 5%</li>
+                <li>- Phase Two: 6%</li>
               </ul>
             </div>
             <br />
             The Profit Target is balance-based meaning only{" "}
-            <strong>closed positions</strong>
+            <strong> closed positions </strong>
             contribute to the profit earned on an account. Open positions{" "}
             <strong>DO NOT</strong>
             contribute to the profit target.
@@ -326,8 +326,8 @@ export const RulesContent = [
 
           <div>
             Trading days are considered profitable if all{" "}
-            <strong>closed positions</strong>
-            equate to a minimum gain of <strong>0.05%</strong> of the{" "}
+            <strong>closed positions </strong>
+            equate to a minimum gain of <strong>0.005%</strong> of the{" "}
             <strong>initial account balance</strong> at the end of the trading
             day (UTC: 00:00:00).
           </div>
@@ -383,13 +383,13 @@ export const RulesContent = [
               </li>
               <li>
                 - Trader A achieves a gain of $626 by the end of trading day
-                one. Since this is a gain of 0.06% on the initial account
+                one. Since this is a gain of 0.006% on the initial account
                 balance ($100,000), it satisfies the requirement and is counted
                 as <strong>one profitable trading day.</strong>
               </li>
               <li>
                 - Trader A achieves a gain of $314 by the end of trading day
-                two. Since this is a gain of 0.03% on the initial account
+                two. Since this is a gain of 0.003% on the initial account
                 balance, it does not satisfy the Profitable Day requirement as
                 it is not counted as one.
               </li>
@@ -403,6 +403,66 @@ export const RulesContent = [
               Target, you will not be able to pass the challenge unless you
               satisfy this rule.{" "}
             </div>
+          </div>
+        </div>
+      ),
+    },
+
+    {
+      que: "Maximum loss per trade",
+      ans: (
+        <div className="flex flex-col gap-4">
+          <div>
+            We implement a strict <strong>2% Maximum loss per trade</strong>,
+            measured from the <strong>initial account balance.</strong>
+          </div>
+
+          <div>
+            The table below outlines the Maximum Loss per trade based on each
+            account size:
+          </div>
+
+          <table className="table-auto border border-gray-400 w-full text-left">
+            <thead>
+              <tr>
+                <th className="border border-gray-400 px-4 py-2">
+                  Account Size
+                </th>
+                <th className="border border-gray-400 px-4 py-2">
+                  Maximum Loss per trade
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$5,000</td>
+                <td className="border border-gray-400 px-4 py-2">$100</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$10,000</td>
+                <td className="border border-gray-400 px-4 py-2">$200</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$25,000</td>
+                <td className="border border-gray-400 px-4 py-2">$500</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$50,000</td>
+                <td className="border border-gray-400 px-4 py-2">$1,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$100,000</td>
+                <td className="border border-gray-400 px-4 py-2">$2,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$200,000</td>
+                <td className="border border-gray-400 px-4 py-2">$4,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            Losing more than 2% of your initial account balance in a single
+            trade will result in a hard breach and your account will be closed.{" "}
           </div>
         </div>
       ),
@@ -650,7 +710,7 @@ export const RulesContent = [
             <br />
             <br />
             The Profit Target is balance-based meaning only{" "}
-            <strong>closed positions</strong>
+            <strong>closed positions </strong>
             contribute to the profit earned on an account. Open positions{" "}
             <strong>DO NOT</strong>
             contribute to the profit target.
@@ -736,7 +796,7 @@ export const RulesContent = [
           <div>
             Trading days are considered profitable if all{" "}
             <strong>closed positions</strong>
-            equate to a minimum gain of <strong>0.05%</strong> of the{" "}
+            equate to a minimum gain of <strong>0.005%</strong> of the{" "}
             <strong>initial account balance</strong> at the end of the trading
             day (UTC: 00:00:00).
           </div>
@@ -792,13 +852,13 @@ export const RulesContent = [
               </li>
               <li>
                 - Trader A achieves a gain of $626 by the end of trading day
-                one. Since this is a gain of 0.06% on the initial account
+                one. Since this is a gain of 0.006% on the initial account
                 balance ($100,000), it satisfies the requirement and is counted
                 as <strong>one profitable trading day.</strong>
               </li>
               <li>
                 - Trader A achieves a gain of $314 by the end of trading day
-                two. Since this is a gain of 0.03% on the initial account
+                two. Since this is a gain of 0.003% on the initial account
                 balance, it does not satisfy the Profitable Day requirement as
                 it is not counted as one.
               </li>
@@ -816,6 +876,67 @@ export const RulesContent = [
         </div>
       ),
     },
+
+    {
+      que: "Maximum loss per trade",
+      ans: (
+        <div className="flex flex-col gap-4">
+          <div>
+            We implement a strict <strong>2% Maximum loss per trade</strong>,
+            measured from the <strong>initial account balance.</strong>
+          </div>
+
+          <div>
+            The table below outlines the Maximum Loss per trade based on each
+            account size:
+          </div>
+
+          <table className="table-auto border border-gray-400 w-full text-left">
+            <thead>
+              <tr>
+                <th className="border border-gray-400 px-4 py-2">
+                  Account Size
+                </th>
+                <th className="border border-gray-400 px-4 py-2">
+                  Maximum Loss per trade
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$5,000</td>
+                <td className="border border-gray-400 px-4 py-2">$100</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$10,000</td>
+                <td className="border border-gray-400 px-4 py-2">$200</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$25,000</td>
+                <td className="border border-gray-400 px-4 py-2">$500</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$50,000</td>
+                <td className="border border-gray-400 px-4 py-2">$1,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$100,000</td>
+                <td className="border border-gray-400 px-4 py-2">$2,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$200,000</td>
+                <td className="border border-gray-400 px-4 py-2">$4,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            Losing more than 2% of your initial account balance in a single
+            trade will result in a hard breach and your account will be closed.{" "}
+          </div>
+        </div>
+      ),
+    },
+
     {
       que: "Inactivity",
       ans: (
@@ -1320,6 +1441,66 @@ export const RulesContent = [
           If you do not meet the 45% consistency score, you can continue trading
           until you do. This means that the biggest winning day can not exceed
           45% of the profits.
+        </div>
+      ),
+    },
+
+    {
+      que: "Maximum loss per trade",
+      ans: (
+        <div className="flex flex-col gap-4">
+          <div>
+            We implement a strict <strong>2% Maximum loss per trade</strong>,
+            measured from the <strong>initial account balance.</strong>
+          </div>
+
+          <div>
+            The table below outlines the Maximum Loss per trade based on each
+            account size:
+          </div>
+
+          <table className="table-auto border border-gray-400 w-full text-left">
+            <thead>
+              <tr>
+                <th className="border border-gray-400 px-4 py-2">
+                  Account Size
+                </th>
+                <th className="border border-gray-400 px-4 py-2">
+                  Maximum Loss per trade
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$5,000</td>
+                <td className="border border-gray-400 px-4 py-2">$100</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$10,000</td>
+                <td className="border border-gray-400 px-4 py-2">$200</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$25,000</td>
+                <td className="border border-gray-400 px-4 py-2">$500</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$50,000</td>
+                <td className="border border-gray-400 px-4 py-2">$1,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$100,000</td>
+                <td className="border border-gray-400 px-4 py-2">$2,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$200,000</td>
+                <td className="border border-gray-400 px-4 py-2">$4,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            Losing more than 2% of your initial account balance in a single
+            trade will result in a hard breach and your account will be closed.{" "}
+          </div>
         </div>
       ),
     },
