@@ -2,11 +2,11 @@ export default function Offerstrip() {
   return (
     <div className="bg-[#00150D] relative w-full flex items-center justify-center gap-2 text-base max-sm:text-sm text-center z-50 p-2 text-white">
       <span className="flex items-center gap-1">
-        10-50% OFF <span className="sm:flex hidden">+ 120% Refund</span>
+        10-40% OFF <span className="sm:flex hidden">+ 120% Refund</span>
       </span>{" "}
       <OfferSvg />
       <span>Limited Time</span> <OfferSvg />
-      <span>Code: EMPIRE15</span>
+      <span>Code: EMPIRE40</span>
     </div>
   );
 }

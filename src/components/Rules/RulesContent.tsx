@@ -214,86 +214,6 @@ export const RulesContent = [
     },
 
     {
-      que: "Absolute Drawdown",
-      ans: (
-        <div className="flex flex-col gap-4">
-          <div>
-            Absolute Drawdown refers to the maximum loss allowed before an
-            account is breached. We allow for a generous 12% drawdown across all
-            2-Step Challenge accounts.
-          </div>
-
-          <div>
-            <div>
-              Absolute Drawdown is <strong>equity-based</strong> on the total
-              loss from the <strong>initial account balance.</strong> See the
-              following example below:{" "}
-            </div>
-
-            <ul>
-              <li>
-                - Trader A on our 2-Step 100K Challenge endures losses amounting
-                to $10,000, their current account balance is $90,000.{" "}
-              </li>
-              <li>
-                - If they lose a further $2,000, their account will be breached.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            The table below outlines the maximum absolute loss allowed for each
-            2-Step Challenge Account:
-          </div>
-
-          <table className="table-auto border border-gray-400 w-full text-left">
-            <thead>
-              <tr>
-                <th className="border border-gray-400 px-4 py-2">
-                  Account Size
-                </th>
-                <th className="border border-gray-400 px-4 py-2">
-                  Minimum Equity Allowed
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$5,000</td>
-                <td className="border border-gray-400 px-4 py-2">$4,400</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$10,000</td>
-                <td className="border border-gray-400 px-4 py-2">$8,800</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$25,000</td>
-                <td className="border border-gray-400 px-4 py-2">$22,000</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$50,000</td>
-                <td className="border border-gray-400 px-4 py-2">$44,000</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$100,000</td>
-                <td className="border border-gray-400 px-4 py-2">$88,000</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$200,000</td>
-                <td className="border border-gray-400 px-4 py-2">$176,000</td>
-              </tr>
-            </tbody>
-          </table>
-          <div>
-            Your account equity will not be allowed to drop below 12% of your
-            initial account size at any time. If our system detects that your
-            equity has fallen below this threshold, all open positions will be
-            automatically closed, and your account will be marked as breached.
-          </div>
-        </div>
-      ),
-    },
-    {
       que: "Profit Target",
       ans: (
         <div className="flex flex-col gap-4">
@@ -717,86 +637,7 @@ export const RulesContent = [
         </div>
       ),
     },
-    {
-      que: "Absolute Drawdown",
-      ans: (
-        <div className="flex flex-col gap-4">
-          <div>
-            Absolute Drawdown refers to the maximum loss allowed before an
-            account is breached. We allow for a generous 12% drawdown across all
-            1-Step Challenge accounts.
-          </div>
 
-          <div>
-            <div>
-              Absolute Drawdown is <strong>equity-based</strong> on the total
-              loss from the <strong>initial account balance.</strong> See the
-              following example below:{" "}
-            </div>
-
-            <ul>
-              <li>
-                - Trader A on our 1-Step 100K Challenge endures losses amounting
-                to $10,000, their current account balance is $90,000.{" "}
-              </li>
-              <li>
-                - If they lose a further $2,000, their account will be breached.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            The table below outlines the maximum absolute loss allowed for each
-            1-Step Challenge Account:
-          </div>
-
-          <table className="table-auto border border-gray-400 w-full text-left">
-            <thead>
-              <tr>
-                <th className="border border-gray-400 px-4 py-2">
-                  Account Size
-                </th>
-                <th className="border border-gray-400 px-4 py-2">
-                  Minimum Equity Allowed
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$5,000</td>
-                <td className="border border-gray-400 px-4 py-2">$4,400</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$10,000</td>
-                <td className="border border-gray-400 px-4 py-2">$8,800</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$25,000</td>
-                <td className="border border-gray-400 px-4 py-2">$22,000</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$50,000</td>
-                <td className="border border-gray-400 px-4 py-2">$44,000</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$100,000</td>
-                <td className="border border-gray-400 px-4 py-2">$88,000</td>
-              </tr>
-              <tr>
-                <td className="border border-gray-400 px-4 py-2">$200,000</td>
-                <td className="border border-gray-400 px-4 py-2">$176,000</td>
-              </tr>
-            </tbody>
-          </table>
-          <div>
-            Your account equity will not be allowed to drop below 12% of your
-            initial account size at any time. If our system detects that your
-            equity has fallen below this threshold, all open positions will be
-            automatically closed, and your account will be marked as breached.
-          </div>
-        </div>
-      ),
-    },
     {
       que: "Profit Target",
       ans: (
@@ -997,6 +838,19 @@ export const RulesContent = [
   // Funded Accounts
   [
     {
+      que: "Profit Target",
+      ans: <div>You&apos;re funded now, you don&apos;t have one…</div>,
+    },
+    {
+      que: "Drawdown",
+      ans: (
+        <div>
+          The drawdown requirements on a Funded Account are equivalent to the
+          Challenge phase.
+        </div>
+      ),
+    },
+    {
       que: "Consistency Rule",
       ans: (
         <div className="flex flex-col gap-4">
@@ -1039,31 +893,6 @@ export const RulesContent = [
       ),
     },
     {
-      que: "News Trading",
-      ans: (
-        <div>
-          In an Empire Funded Challenge Phase 1 and Phase 2, you can trade
-          freely during new releases. However, we implement restrictions on
-          Funded Accounts.
-          <br />
-          <br />
-          On a Funded Account, traders are NOT allowed to execute any new trade
-          or close an existing trade on the targeted instrument in the window of
-          two minutes before, and after the release of news.
-          <br />
-          <br />
-          We consider a trade execution as opening or closing either a pending
-          order (including Stop Loss or Take Profit) or market execution. You
-          are allowed to hold your trade(s) on the targeted instrument(s) that
-          were opened more than two minutes before the restricted news event. If
-          you Stop Loss or Take Profit is activated/filled during the restricted
-          time window, it is also considered an order execution. If our system
-          detects profits being made in this window,{" "}
-          <strong>they will be deducted during the payout.</strong>
-        </div>
-      ),
-    },
-    {
       que: "Stop Loss Requirement",
       ans: (
         <div>
@@ -1073,21 +902,21 @@ export const RulesContent = [
           Each trade must contain a Stop Loss Order. Any trades closed without a
           Stop Loss Order will not count, and any profits gained will be
           deducted at the payout.
-        </div>
-      ),
-    },
-    {
-      que: "Drawdown",
-      ans: (
-        <div>
-          Drawdown requirements in the Funded Stage are the same as
-          Evaluation/Challenge Stages.
+          <br />
+          <br />
+          Traders are given 60 seconds to place a Stop Loss Order after opening
+          a position. Not doing this will result in an account breach.
         </div>
       ),
     },
     {
       que: "Holding time restrictions",
-      ans: <div>All trades must be held for a minimum of two minutes.</div>,
+      ans: (
+        <div>
+          All trades must be held for a minimum of 30 minutes. Failing to do so
+          will result in an account breach.{" "}
+        </div>
+      ),
     },
     {
       que: "Lot size restrictions",
@@ -1237,122 +1066,219 @@ export const RulesContent = [
       ),
     },
     {
-      que: "Max Allocation",
-      ans: <div>We allow for a Maximum Allocation of 400K per trader.</div>,
-    },
-    {
-      que: "Account Scaling",
-      ans: <div>We allow for account scaling based on performance.</div>,
+      que: "Permitted vs Prohibited actions",
+      ans: (
+        <div>
+          While we allow the vast majority, we do possess limitations on
+          specific trading strategies and methods. This information can be found
+          here:{" "}
+        </div>
+      ),
     },
   ],
   // Instant-Funded Accounts
   [
     {
-      que: "90% What are Instant-Funded Accounts?",
+      que: "Profit Target",
+      ans: (
+        <div className="flex flex-col gap-4">
+          There isn&apos;t one, that&apos;s the point!
+          <br />
+          <br />
+          However, to request a payout on an Instant-Funded account, you must
+          achieve a minimum profit of 8% from the starting balance.
+        </div>
+      ),
+    },
+
+    {
+      que: "Daily Drawdown",
       ans: (
         <div className="flex flex-col gap-4">
           <div>
-            Instant offers a structured and scalable funded trader program
-            designed to reward skilled traders and help them grow their capital
-            while maintaining strict risk management. This program is ideal for
-            disciplined traders aiming for long-term success.
+            Daily Drawdown refers to the maximum loss allowed, in a single
+            trading day, before an account is breached. On our Instant-Funded
+            Accounts, we allow for a<strong>3% Daily Drawdown Limit.</strong>
           </div>
 
           <div>
             <div>
-              Here are some of the highlights of our Instant-Funded program:
+              Daily Drawdown limits are <strong>Static-trailing</strong> based
+              from the <strong>initial account balance.</strong> Daily Drawdown
+              Limits reset at the <strong>start of each trading day</strong>{" "}
+              (UTC 00:00:00).
             </div>
 
-            <ul>
-              <li>
-                - <strong>Access to Capital:</strong> Start trading with
-                company-funded accounts, reducing personal risk.
-              </li>
-              <li>
-                - <strong>Scaling Plan:</strong> Increase account size as you
-                hit performance milestones.
-              </li>
-              <li>
-                - <strong>Profit Sharing:</strong> Earn upto{" "}
-                <strong>90% of the profits.</strong>
-              </li>
-              <li>
-                - <strong>On-Demand Payouts:</strong> Withdraw your share
-                whenever you meet profit targets.
-              </li>
-              <li>
-                - <strong>No Personal Capital Risk:</strong> Trade without
-                risking your own money.
-              </li>
-              <li>
-                - <strong>Clear Rules & Transparent Structure:</strong> Designed
-                to encourage sustainable trading.
-              </li>
-            </ul>
+            <div>
+              <strong>Daily Drawdown limit (DDL)</strong> = Initial account
+              balance x 0.97
+            </div>
+
+            <div>
+              Maximum Daily Loss limits are also{" "}
+              <strong>static-trailing</strong> based from the{" "}
+              <strong>initial account balance.</strong> This means, traders will
+              only be able to lose 3% of their initial account balance at any
+              given time. Any profit made <strong>will not</strong> increase
+              this threshold.
+            </div>
+
+            <div>
+              <strong>Maximum Daily Loss (MDL)</strong> = Initial account
+              balance x 0.03
+            </div>
+          </div>
+
+          <div>
+            The table below outlines the Maximum Daily Loss allowed under each
+            account size:
+          </div>
+
+          <table className="table-auto border border-gray-400 w-full text-left">
+            <thead>
+              <tr>
+                <th className="border border-gray-400 px-4 py-2">
+                  Account Size
+                </th>
+                <th className="border border-gray-400 px-4 py-2">
+                  Maximum Daily Loss
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$5,000</td>
+                <td className="border border-gray-400 px-4 py-2">$150</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$10,000</td>
+                <td className="border border-gray-400 px-4 py-2">$300</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$25,000</td>
+                <td className="border border-gray-400 px-4 py-2">$750</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$50,000</td>
+                <td className="border border-gray-400 px-4 py-2">$1,500</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$100,000</td>
+                <td className="border border-gray-400 px-4 py-2">$3,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-400 px-4 py-2">$200,000</td>
+                <td className="border border-gray-400 px-4 py-2">$6,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            We want to encourage trading with proper risk management and
+            structure, as opposed to a gambling mindset. If our system detects
+            that your equity has fallen below the Daily Drawdown Limit, all open
+            positions will be automatically closed, and your account will be
+            closed and marked as breached.
           </div>
         </div>
       ),
     },
+
     {
-      que: "Profit Target",
+      que: "Max Drawdown",
       ans: (
         <div className="flex flex-col gap-4">
-          To request a payout on an Instant you must achieve a minimum of 8%
-          profit on your starting balance.
-        </div>
-      ),
-    },
-    // {
-    //   que: "Consistency Rule",
-    //   ans: (
-    //     <div className="flex flex-col gap-4">
-    //       <div>
-    //         The Consistency Rule refers to high-profit trading days. We have a
-    //         45% Consistency Score on Funded accounts, and this must be met to
-    //         request a payout. This means that the total profit gained cannot
-    //         exceed 45% on a single trading day.{" "}
-    //       </div>
+          <div>
+            Max Drawdown refers to the <strong>maximum loss</strong> allowed
+            before an account is breached. We allow for a generous{" "}
+            <strong>6% max drawdown</strong> across all of our Instant-Funded
+            accounts. accounts.
+          </div>
 
-    //       <ul>
-    //         <li>
-    //           - Trader A on a 100K Funded Account makes a gain of $2,000 on a
-    //           single trading day.
-    //         </li>
-    //         <li>
-    //           - They then make a further $1,000 the next trading day, totaling
-    //           their profits to $3,000.
-    //         </li>
-    //         <li>
-    //           - Trader A will be unable to request a payout since 60% ($2,000)
-    //           of their profit came from a single trading day.
-    //         </li>
-    //         <li>
-    //           - They will need to continue trading to decrease their consistency
-    //           score.
-    //         </li>
-    //         <li>
-    //           - Obtaining a further $2,000 will decrease their consistency score
-    //           to 40% which means they will be eligible for a payout.
-    //         </li>
-    //       </ul>
+          <div>
+            Max Drawdown is <strong>trailing-based</strong> on the{" "}
+            <strong>highest equity point</strong> achieved on the account. This
+            limit adjusts at the end of each trading day (UTC: 00:00:00) if a
+            new high is achieved.
+          </div>
 
-    //       <div>
-    //         If you do not meet the 45% consistency score, you can continue
-    //         trading until you do. This means that the biggest winning day can
-    //         not exceed 45% of the profits.
-    //       </div>
-    //     </div>
-    //   ),
-    // },
+          <div>
+            <strong>Maximum Drawdown Limit (MDL)</strong> = Highest equity point
+            x 0.94
+          </div>
 
-    {
-      que: "Drawdown",
-      ans: (
-        <div>
-          Considering the nature of Instant-Funding, our drawdown requirements
-          are stricter than Challenge Accounts. <br />
-          <br />
-          Daily Drawdown is set at 3%
+          <div>
+            Maximum Loss Limit is 7% of the{" "}
+            <strong>highest equity point</strong> the account has achieved.
+            <br />
+            <br />
+            <strong>Maximum Loss Limit (MLL)</strong>= Highest equity point x
+            0.06
+          </div>
+
+          <div>
+            <div>See the following example:</div>
+
+            <ul>
+              {" "}
+              <li>
+                - Trader A purchases Empire Funded&apos;s 1-Step 100K Challenge.
+              </li>{" "}
+              <li>
+                - Their Max Drawdown Limits are defined as follows:{" "}
+                <ul className="ml-4">
+                  {" "}
+                  <li>
+                    - Highest Equity Point: $100,000{" "}
+                    <em>(Account starting balance)</em>
+                  </li>{" "}
+                  <li>
+                    - Max Drawdown Limit: $100,000 x 0.94 ={" "}
+                    <strong>$94,000</strong>
+                  </li>{" "}
+                  <li>
+                    - Max Loss Limit: $100,000 x 0.06 = <strong>$6,000</strong>
+                  </li>{" "}
+                </ul>{" "}
+              </li>{" "}
+              <li>
+                - Trader A achieves a gain of $2,617.19 on trading day one.
+                Their new Max Drawdown Limits are re-calculated at the end of
+                trading day one based on the account&apos;s highest equity
+                point:
+                <ul className="ml-4">
+                  {" "}
+                  <li>
+                    - Highest Equity Point: $100,000 + $2,617.19 ={" "}
+                    <strong>$102,617.19</strong>
+                  </li>{" "}
+                  <li>
+                    - Max Drawdown Limit: $105,782 x 0.93 ={" "}
+                    <strong>$96,459.98</strong> (new MDL)
+                  </li>{" "}
+                  <li>
+                    - Max Loss Limit: $105,782 x 0.07 ={" "}
+                    <strong>$6,157.03</strong> (new MLL limit)
+                  </li>{" "}
+                </ul>{" "}
+              </li>{" "}
+              <li>
+                - Trader A proceeds to end trading day two with losses amounting
+                to $2,840. Since their account did not reach a new highest
+                equity point, their Max Drawdown Limit remains the same.
+              </li>{" "}
+              <li>
+                - If they lose a further $3317.21 they will have breached their
+                Max Loss Limit.
+              </li>{" "}
+            </ul>
+          </div>
+
+          <div>
+            Your account equity cannot drop below 7% of the highest equity point
+            achieved on the account at any time. If our system detects that your
+            equity has fallen below this threshold, all open positions will be
+            automatically closed, and your account will be marked as breached.
+          </div>
         </div>
       ),
     },
@@ -1400,7 +1326,7 @@ export const RulesContent = [
 
     {
       que: "Holding time restrictions",
-      ans: <div>All trades must be held for a minimum of 60 minutes.</div>,
+      ans: <div>All trades must be held for a minimum of 2 minutes.</div>,
     },
 
     {
@@ -1584,60 +1510,49 @@ export const RulesContent = [
   //Payouts and Scaling
   [
     {
-      que: "When can I request my payout",
+      que: "When can I request my payout - Payout periods",
       ans: (
         <div>
-          <strong>For the 1-step evaluation,</strong> you can request a payout
-          every 30 days during the live phase, starting from the date of your
-          first placed trade. No minimum number of trading days is required.
-          However, each trade must have a{" "}
+          On both Funded and Instant-funded accounts, your first payout can be
+          requested <strong>30 days after your first trade</strong> has been
+          placed during the live phase. No minimum number of trading days is
+          required. However, each trade must have a{" "}
           <strong>minimum duration of 2 minutes</strong> and must follow the
           other rules to qualify for withdrawal
           <br />
           <br />
-          <strong>For the 2-step evaluation,</strong>
-          you can request a payout every 5 days during the live phase, starting
-          from the date of your first placed trade. No minimum number of trading
-          days is required. However, each trade must have a{" "}
-          <strong>minimum duration of 1 minutes</strong> and must follow the
-          other rules to qualify for withdrawal.
+          After your first payout, further payout requests may be created on a
+          bi-weekly basis. Payouts are subject to approval by our team, and will
+          be responded to within 48 hours after making a request.
         </div>
       ),
     },
     {
-      que: "Payout Cycle Limits 🧾",
+      que: "Payout Cap",
       ans: (
         <div>
-          For <strong>1-Step Accounts:</strong>
-          <br />
-          The <strong>maximum payout per cycle is capped at 7%</strong> of your
-          account&apos;s starting balance. This means that even if you generate
-          more profit, only up to 7% will be eligible for withdrawal in each
-          payout request. Any excess profit remains in your account for future
-          payouts.
+          <strong>Funded accounts: </strong>
+          The maximum payout withdrawal amount is capped at 10% of the initial
+          account balance across all Funded accounts achieved through evaluation
+          challenges.
           <br />
           <br />
-          For <strong>2-Step Accounts:</strong>
-          <br />
-          The <strong>maximum payout per cycle</strong> is set at{" "}
-          <strong>10%</strong> of your starting balance. Similar to the 1-step
-          setup, any profit beyond the 10% cap won&apos;t be included in the
-          current payout and can&apos;t be added/withdrawn in the next cycle.
-        </div>
-      ),
-    },
-    {
-      que: "Payout Period",
-      ans: (
-        <div>
-          Our Payout Period is Bi-weekly (14 days).
+          <strong>Instant-funded accounts: </strong>
+          The maximum payout withdrawal amount is capped at 3% of the initial
+          account balance across all Instant-funded accounts achieved through
+          evaluation challenges.
           <br />
           <br />
-          Traders may request a Payout at the end of each Payout Period.
+          <strong>Giveaway accounts: </strong>
+          The maximum payout withdrawal amount is capped at 3% of the initial
+          account balance across all Giveaway accounts achieved through
+          evaluation challenges.
           <br />
           <br />
-          Payouts are subject to approval by our team, and will be responded to
-          within 48 hours after making a request.
+          If you generate more profit, you will only be able to withdraw up to
+          the approved amount of the initial account balance in each payout
+          request. Any excess profit remains in your account for future
+          payouts..
         </div>
       ),
     },
@@ -1647,15 +1562,6 @@ export const RulesContent = [
         <div>
           Approved payouts will be deposited into your account within 24 hours
           or sooner.
-        </div>
-      ),
-    },
-    {
-      que: "Payout Delays",
-      ans: (
-        <div>
-          We guarantee that payout requests will be responded to within 48
-          hours. If we fail to do so, we will deposit $2,500 into your account.
         </div>
       ),
     },
@@ -1707,11 +1613,14 @@ export const RulesContent = [
       que: "Minimum Payout Requirement",
       ans: (
         <div>
-          The Minimum Payout Requirement on accounts below $25,000 is $1.
+          <strong>Funded accounts:</strong> On Funded accounts achieved through
+          evaluation challenges, you must achieve a minimum of 5% profit on the
+          initial account balance to request a payout.
           <br />
           <br />
-          On accounts that are above $25,000, we require a minimum of 5% gain on
-          the initial account balance to request a payout.
+          <strong>Instant-funded accounts:</strong> On Instant-funded accounts,
+          you must achieve a minimum of 8% profit on the initial account balance
+          to request a payout.
         </div>
       ),
     },
@@ -1719,16 +1628,11 @@ export const RulesContent = [
       que: "Account Scaling",
       ans: (
         <div>
-          We provide the option to scale your account in place of a Payout.
-          Account Scaling refers to increasing the initial balance of your
-          Funded Account. We offer the opportunity to scale your account by
-          double the Payout Amount.
-          <br />
-          <br />
-          For instance, on a 100K Funded Account, if you have made a gain of
-          $10,000 and have reached the end of the Payout Period. You may request
-          to Scale your initial account size by $20,000, as opposed to receiving
-          a Payout.
+          We provide the option to scale your account based on performance. If
+          you consistently achieve a{" "}
+          <strong>minimum gain of 10% for three consecutive months</strong>, you
+          will be eligible to scale your account by 5% for each consequent
+          month, given that you continue to achieve the minimum profit amount.
           <br />
           <br />
           Accounts may be scaled up to $1 million in capital. If you wish to
@@ -1737,11 +1641,17 @@ export const RulesContent = [
       ),
     },
     {
+      que: "Max Allocation",
+      ans: (
+        <div>We allow for a Maximum Allocation of $2 million per trader.</div>
+      ),
+    },
+    {
       que: "Challenge Fee Refund",
       ans: (
         <div>
-          You will be refunded your challenge fee after passing your evaluation
-          and upon achieving your third payout on your Funded Account.
+          We provide a full challenge fee refund upon achieving your first
+          payout.
         </div>
       ),
     },
@@ -1905,6 +1815,29 @@ export const RulesContent = [
           <br />
           The first withdrawal on a giveaway account is set as an automatic
           purchase of a 2-Step Challenge account of equal value.
+        </div>
+      ),
+    },
+  ],
+  // Settings and Conditions
+  [
+    {
+      que: "Commissions",
+      ans: (
+        <div>
+          We have the most competitive commissions on the market at just $3 per
+          lot.
+        </div>
+      ),
+    },
+    {
+      que: "Spreads",
+      ans: (
+        <div>
+          We don&apos;t believe in spreads, which is why we don&apos;t have
+          them. <br />
+          <br />
+          Not convinced? Open an account with us and see for yourself {";)"}
         </div>
       ),
     },

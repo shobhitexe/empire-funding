@@ -106,7 +106,7 @@ export default function Footer() {
       <div className="flex flex-col gap-5">
         <div className="flex sm:flex-row flex-col gap-4 items-center justify-between text-sm">
           <div>© 2025 ET Markets Ltd. All rights reserved.</div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             <Link
               href={"/documents/tnc.pdf"}
               target="_blank"
@@ -131,6 +131,15 @@ export default function Footer() {
               className="underline"
             >
               AML Policy
+            </Link>
+
+            <Link
+              href={"/documents/prohibited.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Probihited Trading
             </Link>
           </div>
         </div>

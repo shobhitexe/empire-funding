@@ -17,6 +17,7 @@ const tabNames = [
   "Instant-Funded Accounts",
   "Payouts and Scaling",
   "Prohibited Actions",
+  "Settings and Conditions",
 ];
 
 export default function RulesSection() {
