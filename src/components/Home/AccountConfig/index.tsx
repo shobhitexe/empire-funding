@@ -215,7 +215,7 @@ export default function AccountConfig() {
                 <div className="flex items-center gap-2">
                   <TrendingUp className="text-[#59D28F]" /> Profit Target
                 </div>
-                <div>{step === 0 ? "N/A" : step === 1 ? "8%" : "6%"}</div>
+                <div>{step === 0 ? "N/A" : step === 1 ? "6%" : "6%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
