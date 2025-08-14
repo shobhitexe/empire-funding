@@ -164,11 +164,11 @@ export default function AccountConfig() {
               {country === "India" ? (
                 <>
                   {step !== 1 ? (
-                    <div className="flex gap-2 items-center relative -left-2">
+                    <div className="flex gap-2 items-center relative -lesft-2">
                       <span className="relative text-3xl">
-                        {" "}
+                        {/* {" "}
                         <div className="absolute bg-red-500 h-1 w-full rotate-12 top-1/2" />{" "}
-                        {PricingINR[step][accSize]}
+                        {PricingINR[step][accSize]} */}
                       </span>
                       <span className="text-5xl">
                         {PricingINRDiscounted[step][accSize]}
