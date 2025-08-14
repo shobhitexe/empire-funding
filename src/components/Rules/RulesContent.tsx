@@ -705,14 +705,14 @@ export const RulesContent = [
           <div>
             The Profit Target represents the total amount of profit required to
             pass a Challenge Phase. The amount is based on the initial account
-            balance. Our 1-Step Challenge Accounts require an 8% profit target
+            balance. Our 1-Step Challenge Accounts require an 6% profit target
             to pass.
             <br />
             <br />
             The Profit Target is balance-based meaning only{" "}
             <strong>closed positions </strong>
             contribute to the profit earned on an account. Open positions{" "}
-            <strong>DO NOT</strong>
+            <strong>DO NOT </strong>
             contribute to the profit target.
             <br />
             <br />
@@ -744,27 +744,27 @@ export const RulesContent = [
               <tbody>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$5,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$5,400</td>
+                  <td className="border border-gray-400 px-4 py-2">$5,300</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$10,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$10,800</td>
+                  <td className="border border-gray-400 px-4 py-2">$10,600</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$25,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$27,000</td>
+                  <td className="border border-gray-400 px-4 py-2">$26,500</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$50,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$54,000</td>
+                  <td className="border border-gray-400 px-4 py-2">$53,000</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$100,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$108,000</td>
+                  <td className="border border-gray-400 px-4 py-2">$106,000</td>
                 </tr>
                 <tr>
                   <td className="border border-gray-400 px-4 py-2">$200,000</td>
-                  <td className="border border-gray-400 px-4 py-2">$216,000</td>
+                  <td className="border border-gray-400 px-4 py-2">$212,000</td>
                 </tr>
               </tbody>
             </table>
