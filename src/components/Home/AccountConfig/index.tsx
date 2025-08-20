@@ -5,7 +5,7 @@ import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
 import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { checkOutLinks } from "./checkout-links";
 import Image from "next/image";
 
@@ -29,17 +29,17 @@ const Pricing = [
 //   ["$49", "$67", "$107", "$227", "$317", "$597"],
 // ];
 
-const PricingINR = [
-  ["₹7,459", "₹9,179", "₹14,319", "₹22,889", "₹34,039", "₹76,949"],
-  ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
-  ["₹4,199", "₹5,749", "₹9,179", "₹19,479", "₹27,199", "₹51,199"],
-];
+// const PricingINR = [
+//   ["₹7,459", "₹9,179", "₹14,319", "₹22,889", "₹34,039", "₹76,949"],
+//   ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
+//   ["₹4,199", "₹5,749", "₹9,179", "₹19,479", "₹27,199", "₹51,199"],
+// ];
 
-const PricingINRDiscounted = [
-  ["₹3,730", "₹4,590", "₹7,160", "₹11,445", "₹17,020", "₹38,475"],
-  ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
-  ["₹1,260", "₹1,725", "₹2,754", "₹5,844", "₹8,160", "₹15,360"],
-];
+// const PricingINRDiscounted = [
+//   ["₹3,730", "₹4,590", "₹7,160", "₹11,445", "₹17,020", "₹38,475"],
+//   ["₹5,749", "₹9,179", "₹13,469", "₹24,619", "₹34,919", "₹55,499"],
+//   ["₹1,260", "₹1,725", "₹2,754", "₹5,844", "₹8,160", "₹15,360"],
+// ];
 
 const hotTags = [
   [false, false, false, true, false, false], // for "Instant"
@@ -53,16 +53,16 @@ export default function AccountConfig() {
   const [step, setStep] = useState(0);
   const [accSize, setAccSize] = useState(0);
 
-  const [country, setCountry] = useState("");
+  // const [country, setCountry] = useState("");
 
-  useEffect(() => {
-    async function detectCountry() {
-      const { default: getUserCountry } = await import("js-user-country");
-      setCountry(getUserCountry().name);
-    }
+  // useEffect(() => {
+  //   async function detectCountry() {
+  //     const { default: getUserCountry } = await import("js-user-country");
+  //     setCountry(getUserCountry().name);
+  //   }
 
-    detectCountry();
-  }, []);
+  //   detectCountry();
+  // }, []);
 
   return (
     <div id="challenges" className="sm:my-24 my-14 container mx-auto px-5">
@@ -161,14 +161,12 @@ export default function AccountConfig() {
 
             <div className="font-semibold">START NOW AT ONLY</div>
             <div className="text-6xl font-bold">
-              {country === "India" ? (
+              {/* {country === "India" ? (
                 <>
                   {step !== 1 ? (
                     <div className="flex gap-2 items-center relative -lesft-2">
                       <span className="relative text-3xl">
-                        {/* {" "}
-                        <div className="absolute bg-red-500 h-1 w-full rotate-12 top-1/2" />{" "}
-                        {PricingINR[step][accSize]} */}
+                  
                       </span>
                       <span className="text-5xl">
                         {PricingINRDiscounted[step][accSize]}
@@ -180,7 +178,8 @@ export default function AccountConfig() {
                 </>
               ) : (
                 Pricing[step][accSize]
-              )}
+              )} */}
+              {Pricing[step][accSize]}
             </div>
             <Button
               variant={"green"}
