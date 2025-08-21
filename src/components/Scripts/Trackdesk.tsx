@@ -52,7 +52,7 @@ export default function Trackdesk() {
             }
 
             function updateLinksWithCid(cid) {
-              const links = document.querySelectorAll('a[href*="https://empirefundedcheckout.com/pay/"]');
+              const links = document.querySelectorAll('a[href*="https://empirefundedcheckout.com/product/"]');
               links.forEach(link => {
                 const url = new URL(link.href);
                 if (url.searchParams.get("cid") !== cid) {
