@@ -36,7 +36,7 @@ const FooterLinks = [
       },
       {
         title: "Discord",
-        link: "http://discord.gg/empirefunded",
+        link: "https://discord.gg/kC8ZktPJ",
         target: "_blank",
       },
       {
