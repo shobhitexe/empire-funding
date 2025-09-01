@@ -51,7 +51,7 @@ export default function Hero() {
                 width={20}
                 height={20}
               />{" "}
-              MT5 Available
+              Platform 5
             </div>
 
             <div
