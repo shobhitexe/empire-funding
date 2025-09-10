@@ -58,7 +58,7 @@ const HowItWorks = [
   },
   {
     title: "Share your link",
-    desc: "Receive your unique tracking link for referring to Blueberry Funded",
+    desc: "Receive your unique tracking link for referring to Empire Funded",
   },
   {
     title: "Track your referrals",
