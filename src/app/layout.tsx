@@ -98,14 +98,14 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff"></meta>
-
+        {/* 
         <Script
           id="hyros-tracking"
           strategy="afterInteractive"
           src={`https://210903.t.hyros.com/v1/lst/universal-script?ph=49b50fc4f265ec859a96ad2604b08ba63d3a8d8106fa1e51f89ca0510d61e032&tag=!clicked&ref_url=${encodeURIComponent(
             typeof window !== "undefined" ? window.location.href : ""
           )}`}
-        />
+        /> */}
 
         <Trackdesk />
 
@@ -139,7 +139,7 @@ export default function RootLayout({
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1278047563312829');
+          fbq('init', '23936770399281696');
           fbq('track', 'PageView');`,
           }}
         ></Script>
@@ -150,7 +150,7 @@ export default function RootLayout({
             width="1"
             alt="fb"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1278047563312829&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=23936770399281696&ev=PageView&noscript=1"
           />
         </noscript>
       </body>
