@@ -1,8 +1,22 @@
+"use client";
+
+import { useEffect } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function page() {
+export default function Page() {
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).fbq("track", "Purchase", {
+        value: 100.0,
+        currency: "USD",
+      });
+    }
+  }, []);
+
   return (
     <div className="sm:mt-20 mt-10 px-5">
       <div
@@ -21,7 +35,7 @@ export default function page() {
             You will receive an email shortly. Please check the spam folder in
             case.
           </div>
-          <Link href={"/"} className={`${buttonVariants({})}`}>
+          <Link href={"/"} className={buttonVariants({})}>
             Return to Dashboard
           </Link>
         </div>
