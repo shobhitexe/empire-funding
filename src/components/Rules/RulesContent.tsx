@@ -1985,17 +1985,13 @@ export const RulesContent = [
           concerning payouts.
           <br />
           <br />
-          Giveaway accounts require a minimum of 10% profit to be achieved
-          before requesting a payout in the Funded Account phase.
-          <br />
-          <br />
           Giveaway accounts contain a 3% profit cap per payout period. This
           means, the total profit you may withdraw from a giveaway account will
           always be 3% of the initial balance.
           <br />
           <br />
-          The first withdrawal on a giveaway account is set as an automatic
-          purchase of a 2-Step Challenge account of equal value.
+          Giveaway accounts are only active for 30 days following the issuing of
+          the account. After this they will become inactive.
         </div>
       ),
     },

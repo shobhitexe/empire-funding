@@ -33,7 +33,7 @@ export default function LastCTASection() {
 
         <Button size={"xl"} variant={"secondary"} asChild>
           <Link
-            href={"https://discord.gg/kC8ZktPJ"}
+            href={"https://discord.gg/2uJjt4Dtyj"}
             target="_blank"
             rel="noopener noreferrer"
           >

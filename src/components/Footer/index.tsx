@@ -36,7 +36,7 @@ const FooterLinks = [
       },
       {
         title: "Discord",
-        link: "https://discord.gg/kC8ZktPJ",
+        link: "https://discord.gg/2uJjt4Dtyj",
         target: "_blank",
       },
       {

@@ -10,6 +10,7 @@ import MultipleAssets from "./Home/MultipleAssets";
 import PayoutTicker from "./Home/PayoutTicker";
 import Popup from "./Home/Popup";
 import ProfitCalculator from "./Home/ProfitCalculator";
+import StatsAndPayouts from "./Home/StatsandPayouts/stats-and-payouts";
 import SuccessStories from "./Home/SuccessStories";
 import Testimonials from "./Home/Testimonials";
 import TopRatedFirm from "./Home/TopRatedFirm";
@@ -42,4 +43,5 @@ export {
   ProfitCalculator,
   Trackdesk,
   SuccessStories,
+  StatsAndPayouts,
 };

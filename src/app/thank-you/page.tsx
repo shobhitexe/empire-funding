@@ -1,21 +1,25 @@
 "use client";
 
 import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
+  const searchParams = useSearchParams();
+  const amount = searchParams.get("amount");
+
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if (typeof window !== "undefined" && (window as any).fbq) {
+    if (typeof window !== "undefined" && (window as any).fbq && amount) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).fbq("track", "Purchase", {
-        value: 100.0,
+        value: parseFloat(amount),
         currency: "USD",
       });
     }
-  }, []);
+  }, [amount]);
 
   return (
     <div className="sm:mt-20 mt-10 px-5">

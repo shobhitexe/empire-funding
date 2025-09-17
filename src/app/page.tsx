@@ -8,6 +8,7 @@ import {
   PayoutTicker,
   // Popup,
   ProfitCalculator,
+  StatsAndPayouts,
   SuccessStories,
   Testimonials,
   TopRatedFirm,
@@ -19,6 +20,7 @@ export default function Home() {
     <main>
       <Hero />
       <PayoutTicker />
+      <StatsAndPayouts />
       <MultipleAssets />
       <TradingPlatform />
       <AccountConfig />

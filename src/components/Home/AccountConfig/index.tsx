@@ -8,16 +8,19 @@ import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { checkOutLinks } from "./checkout-links";
 import Image from "next/image";
+import PayoutsCarousel from "./PayoutsCarousel";
 
-const TradingPath = ["Instant", "1-Step", "2-Step"];
+const TradingPath = ["Spartan", "Instant", "1-Step", "2-Step"];
 
 const AccountSize = [
+  ["$1K", "$3K", "$6K", "$15K", "$25K", "$50K", "$100K"],
   ["$5K", "$10K", "$15K", "$25K", "$50K", "$100K"],
   ["$5K", "$10k", "$25K", "$50K", "$100K", "$200K"],
   ["$5K", "$10k", "$25K", "$50K", "$100K", "$200K"],
 ];
 
 const Pricing = [
+  ["$17", "$39", "$75", "$112", "$159", "$225", "$419"],
   ["$119", "$178", "$204", "$319", "$497", "$897"],
   ["$67", "$119", "$219", "$340", "$619", "$847"],
   ["$54", "$99", "$197", "$319", "$599", "$793"],
@@ -42,6 +45,7 @@ const Pricing = [
 // ];
 
 const hotTags = [
+  [false, false, false, true, false, false], // for "Infinity"
   [false, false, false, true, false, false], // for "Instant"
   [false, false, false, true, false, false], // for "1-Step"
   [false, false, false, false, false, true], // for "2-Step"
@@ -83,16 +87,30 @@ export default function AccountConfig() {
               <div className="sm:text-xl text-lg font-semibold">
                 Choose your Trading Path
               </div>
-              <div className="bg-[#00150D] p-2 rounded-2xl grid grid-cols-3 items-center gap-3">
+              <div className="bg-[#00150D] p-2 rounded-2xl grid grid-cols-4 items-center gap-2">
                 {TradingPath.map((item, idx) => (
-                  <Button
-                    key={item}
-                    variant={step === idx ? "green" : "outline"}
-                    onClick={() => setStep(idx)}
-                    className="sm:h-14 h-10 font-semibold"
-                  >
-                    {item}
-                  </Button>
+                  <div key={item} className="relative w-full">
+                    {idx === 0 && (
+                      <div
+                        style={{
+                          background:
+                            "linear-gradient(175.3deg, #06130C -40.48%, #2FD476 209.25%)",
+                        }}
+                        className="absolute left-1/2 -translate-x-1/2 flex items-center -top-3 rounded-3xl gap-1 sm:px-4 px-1 py-px max-sm:text-xs"
+                      >
+                        🔥
+                        <div className="text-sm">New</div>
+                      </div>
+                    )}
+
+                    <Button
+                      variant={step === idx ? "green" : "outline"}
+                      onClick={() => setStep(idx)}
+                      className="sm:h-14 h-10 font-semibold w-full"
+                    >
+                      {item}
+                    </Button>
+                  </div>
                 ))}
               </div>
             </div>
@@ -102,7 +120,9 @@ export default function AccountConfig() {
                 Select Account Size
               </div>
               <div
-                className={`bg-[#00150D] p-2 rounded-2xl sm:grid grid-cols-6 flex items-center sm:gap-3 gap-1 overflow-auto`}
+                className={`bg-[#00150D] p-2 rounded-2xl sm:grid ${
+                  step === 0 ? "grid-cols-7" : "grid-cols-6"
+                } flex items-center sm:gap-3 gap-1 overflow-auto`}
               >
                 {AccountSize[step].map((item, idx) => (
                   <Button
@@ -160,27 +180,7 @@ export default function AccountConfig() {
             )}
 
             <div className="font-semibold">START NOW AT ONLY</div>
-            <div className="text-6xl font-bold">
-              {/* {country === "India" ? (
-                <>
-                  {step !== 1 ? (
-                    <div className="flex gap-2 items-center relative -lesft-2">
-                      <span className="relative text-3xl">
-                  
-                      </span>
-                      <span className="text-5xl">
-                        {PricingINRDiscounted[step][accSize]}
-                      </span>
-                    </div>
-                  ) : (
-                    <div>{PricingINR[step][accSize]}</div>
-                  )}
-                </>
-              ) : (
-                Pricing[step][accSize]
-              )} */}
-              {Pricing[step][accSize]}
-            </div>
+            <div className="text-6xl font-bold">{Pricing[step][accSize]}</div>
             <Button
               variant={"green"}
               className="h-11 px-10 font-semibold"
@@ -197,7 +197,7 @@ export default function AccountConfig() {
           </div>
         </div>
 
-        <div className="flex sm:flex-row flex-col items-stretch gap-5">
+        <div className="grid sm:grid-cols-2 items-stretch gap-5">
           <div className="bg-[#00150D] p-5 rounded-2xl flex flex-col gap-3">
             <div className="text-xl font-semibold border-b border-[#385546] pb-2">
               1. {step === 0 ? "FUNDED ACCOUNT" : "PHASE 1"}
@@ -247,59 +247,79 @@ export default function AccountConfig() {
               </div>
             </div>
           </div>
-          <div
-            className={`bg-[#00150D] p-5 rounded-2xl flex flex-col items-start gap-3 ${
-              step !== 2 ? "blur max-sm:hidden" : ""
-            }`}
-          >
-            <div className="text-xl font-semibold border-b border-[#385546] pb-2 w-full">
-              2. PHASE 2
+          {step === 3 ? (
+            <div
+              className={`bg-[#00150D] p-5 rounded-2xl flex flex-col items-start gap-3`}
+            >
+              <div className="text-xl font-semibold border-b border-[#385546] pb-2 w-full">
+                2. PHASE 2
+              </div>
+              <div className="text-[#8F8F8F] text-sm">
+                You can now start trading on a simulated basis in the
+                EmpireTrading program without simulated gain targets as long as
+                you won&apos;t reach max simulated loss or daily simulated loss
+                limits.
+              </div>
+
+              <div className="flex flex-col gap-2 w-full">
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="text-[#59D28F]" /> Profit Target
+                  </div>
+                  <div>{"5%"}</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingDown className="text-[#59D28F]" /> Daily Drawdown
+                  </div>
+                  <div>{"5%"}</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingDown className="text-[#59D28F]" /> Maximum Drawdown
+                  </div>
+                  <div>{"12%"}</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="text-[#59D28F] size-5" /> Minimum
+                    Trading Days
+                  </div>
+                  <div>{"3"}</div>
+                </div>
+
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Scale className="text-[#59D28F] size-5" /> Profit Split
+                  </div>
+                  <div>90%</div>
+                </div>
+              </div>
             </div>
-            <div className="text-[#8F8F8F] text-sm">
-              You can now start trading on a simulated basis in the
-              EmpireTrading program without simulated gain targets as long as
-              you won&apos;t reach max simulated loss or daily simulated loss
-              limits.
+          ) : (
+            <div
+              className={`bg-[#00150D] p-5 rounded-2xl flex flex-col items-start justify-between gap-3`}
+            >
+              <div className="flex flex-col items-start gap-3">
+                <div className="text-xl font-semibold border-b border-[#385546] pb-2 w-full flex items-center gap-3">
+                  Verified Trader Stats - Last 30 Days{" "}
+                  <div className="bg-red-600 p-2 w-fit rounded-full animate-pulse" />
+                </div>
+                <div className="text-[#8F8F8F] text-sm">
+                  On average, Empire Funded funded traders{" "}
+                  <strong>
+                    earn back their cost 12x over with their very first payout
+                  </strong>{" "}
+                  - no hype, just proof.
+                </div>
+              </div>
+
+              <PayoutsCarousel />
             </div>
-
-            <div className="flex flex-col gap-2 w-full">
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="text-[#59D28F]" /> Profit Target
-                </div>
-                <div>{step === 0 ? "N/A" : step === 1 ? "8%" : "5%"}</div>
-              </div>
-
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Daily Drawdown
-                </div>
-                <div>{step === 2 ? "5%" : "3%"}</div>
-              </div>
-
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Maximum Drawdown
-                </div>
-                <div>{step === 0 ? "6%" : "12%"}</div>
-              </div>
-
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <Calendar className="text-[#59D28F] size-5" /> Minimum Trading
-                  Days
-                </div>
-                <div>{step === 0 ? "4" : "3"}</div>
-              </div>
-
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <Scale className="text-[#59D28F] size-5" /> Profit Split
-                </div>
-                <div>90%</div>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* <div className="text-center sm:mt-3 mt-1 sm:text-base text-sm">
