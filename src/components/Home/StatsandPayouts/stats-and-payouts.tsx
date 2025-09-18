@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const stats = [
   { title: "Paid to Traders", stat: "600" },
-  { title: "Traders", stat: "8" },
+  { title: "Funded Traders", stat: "8" },
   { title: "Countries Served", stat: "130" },
 ];
 

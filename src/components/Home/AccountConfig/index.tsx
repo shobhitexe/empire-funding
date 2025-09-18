@@ -99,7 +99,7 @@ export default function AccountConfig() {
                         className="absolute left-1/2 -translate-x-1/2 flex items-center -top-3 rounded-3xl gap-1 sm:px-4 px-1 py-px max-sm:text-xs"
                       >
                         🔥
-                        <div className="text-sm">New</div>
+                        <div className="text-sm">HOT</div>
                       </div>
                     )}
 
@@ -129,7 +129,7 @@ export default function AccountConfig() {
                     key={item}
                     variant={accSize === idx ? "green" : "outline"}
                     onClick={() => setAccSize(idx)}
-                    className="sm:h-14 h-10 px-4 font-semibold sm:text-base text-sm gap-1"
+                    className="sm:h-14 h-10 px-4 font-semibold sm:text-lg text-base gap-1"
                   >
                     {hotTags[step][idx] && (
                       <>
@@ -191,7 +191,7 @@ export default function AccountConfig() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Start Challenge
+                Get Funded
               </a>
             </Button>
           </div>
