@@ -19,8 +19,15 @@ const AccountSize = [
   ["$5K", "$10k", "$25K", "$50K", "$100K", "$200K"],
 ];
 
-const Pricing = [
+const PricingBase = [
   ["$17", "$39", "$75", "$112", "$159", "$225", "$419"],
+  ["$119", "$178", "$204", "$319", "$497", "$897"],
+  ["$67", "$119", "$219", "$340", "$619", "$847"],
+  ["$54", "$99", "$197", "$319", "$599", "$793"],
+];
+
+const Pricing = [
+  ["$9", "$21", "$49", "$86", "$95", "$139", "$209"],
   ["$119", "$178", "$204", "$319", "$497", "$897"],
   ["$67", "$119", "$219", "$340", "$619", "$847"],
   ["$54", "$99", "$197", "$319", "$599", "$793"],
@@ -180,7 +187,23 @@ export default function AccountConfig() {
             )}
 
             <div className="font-semibold">START NOW AT ONLY</div>
-            <div className="text-6xl font-bold">{Pricing[step][accSize]}</div>
+
+            {step === 0 ? (
+              <div className="flex gap-2 items-center">
+                <span className="relative text-3xl">
+                  <div className="absolute bg-red-500 h-1 w-full rotate-12 top-1/2" />{" "}
+                  {PricingBase[step][accSize]}
+                </span>
+                <span className="text-5xl font-bold">
+                  {Pricing[step][accSize]}
+                </span>
+              </div>
+            ) : (
+              <div className="text-6xl font-bold">
+                {Pricing[step][accSize]}{" "}
+              </div>
+            )}
+
             <Button
               variant={"green"}
               className="h-11 px-10 font-semibold"
