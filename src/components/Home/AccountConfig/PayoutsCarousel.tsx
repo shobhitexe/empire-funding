@@ -2,11 +2,11 @@ import Image from "next/image";
 import { HorizontalTicker } from "../PayoutTicker/Ticker";
 
 const payouts = [
-  "/images/payouts/payout.webp",
-  "/images/payouts/payout.webp",
-  "/images/payouts/payout.webp",
-  "/images/payouts/payout.webp",
-  "/images/payouts/payout.webp",
+  "/images/payouts/1.jpg",
+  "/images/payouts/2.jpg",
+  "/images/payouts/3.jpg",
+  "/images/payouts/4.jpg",
+  "/images/payouts/5.jpg",
 ];
 
 export default function PayoutsCarousel() {
