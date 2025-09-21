@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
-import { Calendar, Scale, TrendingDown, TrendingUp } from "lucide-react";
+import { Calendar, Clock, Scale, TrendingDown, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { checkOutLinks } from "./checkout-links";
 import Image from "next/image";
@@ -27,7 +27,7 @@ const PricingBase = [
 ];
 
 const Pricing = [
-  ["$9", "$21", "$49", "$86", "$95", "$139", "$209"],
+  ["$9", "$21", "$49", "$86", "$99", "$159", "$209"],
   ["$119", "$178", "$204", "$319", "$497", "$897"],
   ["$67", "$119", "$219", "$340", "$619", "$847"],
   ["$54", "$99", "$197", "$319", "$599", "$793"],
@@ -268,6 +268,15 @@ export default function AccountConfig() {
                 </div>
                 <div>90%</div>
               </div>
+
+              {step === 0 && (
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Clock className="text-[#59D28F] size-5" /> Validity
+                  </div>
+                  <div>30 Days</div>
+                </div>
+              )}
             </div>
           </div>
           {step === 3 ? (

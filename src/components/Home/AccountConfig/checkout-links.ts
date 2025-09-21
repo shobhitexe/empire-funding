@@ -26,11 +26,12 @@ export const checkOutLinks = [
   ],
 
   [
-    "https://empirefundedcheckout.com/product/2-step-challenge-5k",
-    "https://empirefundedcheckout.com/product/2-step-challenge-10k",
-    "https://empirefundedcheckout.com/product/2-step-challenge-25k",
-    "https://empirefundedcheckout.com/product/2-step-challenge-50k",
-    "https://empirefundedcheckout.com/product/2-step-challenge-100k",
-    "https://empirefundedcheckout.com/product/2-step-challenge-200k",
+    "https://empirefundedcheckout.com/product/spartan-instant-1k",
+    "https://empirefundedcheckout.com/product/spartan-instant-3k",
+    "https://empirefundedcheckout.com/product/spartan-instant-6k",
+    "https://empirefundedcheckout.com/product/spartan-instant-15k",
+    "https://empirefundedcheckout.com/product/spartan-instant-25k",
+    "https://empirefundedcheckout.com/product/spartan-instant-50k",
+    "https://empirefundedcheckout.com/product/spartan-instant-100k",
   ],
 ];

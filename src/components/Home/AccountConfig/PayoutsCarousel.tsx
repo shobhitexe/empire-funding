@@ -20,7 +20,7 @@ export default function PayoutsCarousel() {
             alt={item}
             width={3106}
             height={2194}
-            className="pr-5 rounded-lg"
+            className="pr-5 rounded-lg object-contain w-[400px] h-[300px]"
           />
         ))}
       </HorizontalTicker>
