@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button";
 import GreenText from "@/components/ui/green-text";
 import Heading from "@/components/ui/heading";
 import SubHeading from "@/components/ui/sub-heading";
-import { Calendar, Clock, Scale, TrendingDown, TrendingUp } from "lucide-react";
+import {
+  Calendar,
+  Landmark,
+  Scale,
+  TrendingDown,
+  TrendingUp,
+} from "lucide-react";
 import { useState } from "react";
 import { checkOutLinks } from "./checkout-links";
 import Image from "next/image";
@@ -233,25 +239,29 @@ export default function AccountConfig() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="text-[#59D28F]" /> Profit Target
+              {step !== 0 && (
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="text-[#59D28F]" /> Profit Target
+                  </div>
+                  <div>{"6%"}</div>
                 </div>
-                <div>{step === 0 ? "N/A" : step === 1 ? "6%" : "6%"}</div>
-              </div>
+              )}
 
-              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                <div className="flex items-center gap-2">
-                  <TrendingDown className="text-[#59D28F]" /> Daily Drawdown
+              {step !== 0 && (
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <TrendingDown className="text-[#59D28F]" /> Daily Drawdown
+                  </div>
+                  <div>{step === 2 ? "5%" : "3%"}</div>
                 </div>
-                <div>{step === 2 ? "5%" : "3%"}</div>
-              </div>
+              )}
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
                   <TrendingDown className="text-[#59D28F]" /> Maximum Drawdown
                 </div>
-                <div>{step === 0 ? "6%" : "12%"}</div>
+                <div>{step === 0 ? "3%" : step === 1 ? "6%" : "12%"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
@@ -259,22 +269,59 @@ export default function AccountConfig() {
                   <Calendar className="text-[#59D28F] size-5" /> Minimum Trading
                   Days
                 </div>
-                <div>{step === 0 ? "4" : "3"}</div>
+                <div>{step === 0 ? "5" : step === 1 ? "4" : "3"}</div>
               </div>
 
               <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                 <div className="flex items-center gap-2">
                   <Scale className="text-[#59D28F] size-5" /> Profit Split
                 </div>
-                <div>90%</div>
+                <div>{step === 0 ? "80%" : "90%"}</div>
               </div>
 
-              {step === 0 && (
+              {/* {step === 0 && (
                 <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
                   <div className="flex items-center gap-2">
                     <Clock className="text-[#59D28F] size-5" /> Validity
                   </div>
                   <div>30 Days</div>
+                </div>
+              )} */}
+
+              {step === 0 && (
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="text-[#59D28F] size-5" /> Payout
+                    Frequency
+                  </div>
+                  <div>Weekly</div>
+                </div>
+              )}
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Scale className="text-[#59D28F] size-5" /> Trading Leverage
+                </div>
+                <div>Up to 1:10 Leverage</div>
+              </div>
+
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <Landmark className="text-[#59D28F] size-5" /> Instruments
+                </div>
+                <div className="text-sm">
+                  Fx, Commodities, Indices, <br />
+                  Stock, Crypto
+                </div>
+              </div>
+
+              {step === 0 && (
+                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="text-[#59D28F] size-5" /> Consistency
+                    Rule
+                  </div>
+                  <div>Not Applied</div>
                 </div>
               )}
             </div>
