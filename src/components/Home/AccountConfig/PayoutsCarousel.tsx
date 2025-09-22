@@ -11,8 +11,8 @@ const payouts = [
 
 export default function PayoutsCarousel() {
   return (
-    <div className="flex items-center">
-      <HorizontalTicker duration={3000}>
+    <div className="flex flex-col items-center gap-5">
+      <HorizontalTicker duration={6000}>
         {payouts.map((item) => (
           <Image
             key={item}
@@ -20,7 +20,20 @@ export default function PayoutsCarousel() {
             alt={item}
             width={3106}
             height={2194}
-            className="pr-5 rounded-lg object-contain w-[400px] h-[300px]"
+            className="pr-5 sm:rounded-lg object-contain"
+          />
+        ))}
+      </HorizontalTicker>
+
+      <HorizontalTicker duration={6000} reverse>
+        {payouts.map((item) => (
+          <Image
+            key={item}
+            src={item}
+            alt={item}
+            width={3106}
+            height={2194}
+            className="pr-5 rounded-lg object-contain max-md:hidden"
           />
         ))}
       </HorizontalTicker>
