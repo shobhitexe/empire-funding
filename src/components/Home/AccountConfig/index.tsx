@@ -39,6 +39,16 @@ const Pricing = [
   ["$54", "$99", "$197", "$319", "$599", "$793"],
 ];
 
+const SpartanProfitTarget = [
+  "$100",
+  "$240",
+  "$480",
+  "$960",
+  "$2000",
+  "$4500",
+  "$8500",
+];
+
 // const Pricing = [
 //   ["$87", "$107", "$167", "$267", "$397", "$897"],
 //   ["$67", "$107", "$157", "$287", "$407", "$647"],
@@ -239,14 +249,12 @@ export default function AccountConfig() {
             </div>
 
             <div className="flex flex-col gap-2">
-              {step !== 0 && (
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="text-[#59D28F]" /> Profit Target
-                  </div>
-                  <div>{"6%"}</div>
+              <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="text-[#59D28F]" /> Profit Target
                 </div>
-              )}
+                <div>{step === 0 ? SpartanProfitTarget[accSize] : "6%"}</div>
+              </div>
 
               {step !== 0 && (
                 <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
@@ -278,15 +286,6 @@ export default function AccountConfig() {
                 </div>
                 <div>{step === 0 ? "80%" : "90%"}</div>
               </div>
-
-              {/* {step === 0 && (
-                <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">
-                  <div className="flex items-center gap-2">
-                    <Clock className="text-[#59D28F] size-5" /> Validity
-                  </div>
-                  <div>30 Days</div>
-                </div>
-              )} */}
 
               {step === 0 && (
                 <div className="flex items-center bg-[#000000] rounded-xl p-2 text-[#8F8F8F] justify-between">

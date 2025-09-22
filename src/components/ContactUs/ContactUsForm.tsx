@@ -14,7 +14,7 @@ export default function ContactUsForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const mailtoLink = `mailto:support@empiretrading.co?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:support@empirefunded.com?subject=${encodeURIComponent(
       form.subject
     )}&body=${encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
