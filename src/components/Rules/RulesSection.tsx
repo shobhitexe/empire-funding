@@ -10,15 +10,7 @@ import {
 } from "../ui/accordion";
 import { RulesContent } from "./RulesContent";
 
-const tabNames = [
-  "2-Step Challenges",
-  "1-Step Challenges",
-  "Funded Accounts",
-  "Instant-Funded Accounts",
-  "Payouts and Scaling",
-  "Prohibited Actions",
-  "Settings and Conditions",
-];
+const tabNames = ["Standard", "Instant", "Spartan", "Settings and Conditions"];
 
 export default function RulesSection() {
   const [tab, setTab] = useState(0);
