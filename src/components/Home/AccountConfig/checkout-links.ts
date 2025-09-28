@@ -18,12 +18,12 @@ export const checkOutLinks = [
     "https://empirefundedcheckout.com/product/instant-100k",
   ],
   [
-    "https://empirefundedcheckout.com/product/instant-5k",
-    "https://empirefundedcheckout.com/product/instant-10k",
-    "https://empirefundedcheckout.com/product/instant-15k",
-    "https://empirefundedcheckout.com/product/instant-25k",
-    "https://empirefundedcheckout.com/product/instant-50k",
-    "https://empirefundedcheckout.com/product/instant-100k",
+    "https://empirefundedcheckout.com/product/1-step-challenge-5k",
+    "https://empirefundedcheckout.com/product/1-step-challenge-10k",
+    "https://empirefundedcheckout.com/product/1-step-challenge-25k",
+    "https://empirefundedcheckout.com/product/1-step-challenge-50k",
+    "https://empirefundedcheckout.com/product/1-step-challenge-100k",
+    "https://empirefundedcheckout.com/product/1-step-challenge-200k",
   ],
   [
     "https://empirefundedcheckout.com/product/2-step-challenge-5k",
