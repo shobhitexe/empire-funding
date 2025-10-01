@@ -5,6 +5,7 @@ import { Navbar, Footer, Trackdesk } from "@/components";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 import Image from "next/image";
+import IntercomWidget from "@/components/Scripts/Intercom";
 
 const figtree = Figtree({ variable: "--font-figtree", subsets: ["latin"] });
 
@@ -115,17 +116,19 @@ export default function RootLayout({
           async
         ></script>
 
-        <Script
+        {/* <Script
           id="ze-snippet"
           src="https://static.zdassets.com/ekr/snippet.js?key=d9f5c6a5-3781-426f-9911-b80bb3d14e0e"
           strategy="afterInteractive"
-        />
+        /> */}
       </head>
       <body className={`${figtree.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
         <Toaster />
+
+        <IntercomWidget />
 
         <Script
           id="fb-pixel"
@@ -141,14 +144,6 @@ export default function RootLayout({
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '23936770399281696');
           fbq('track', 'PageView');`,
-          }}
-        ></Script>
-
-        <Script
-          id="intercom"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: ` (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/q215b1or';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`,
           }}
         ></Script>
 
