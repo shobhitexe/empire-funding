@@ -20,7 +20,7 @@ const FooterLinks = [
   {
     heading: "INFORMATION",
     sub: [
-      { title: "About Us", link: "/about-us" },
+      // { title: "About Us", link: "/about-us" },
       { title: "FAQ", link: "/faqs" },
       { title: "Rules", link: "/rules" },
       { title: "Contact", link: `/contact-us` },

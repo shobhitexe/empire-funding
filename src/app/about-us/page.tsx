@@ -24,13 +24,13 @@ export default function page() {
           </div> */}
         </div>
 
-        <Image
+        {/* <Image
           src={"/images/founders.avif"}
           alt="about"
           width={1280}
           height={720}
           className="sm:w-[60%] mx-auto relative container px-5"
-        />
+        /> */}
 
         <div className="text-center flex flex-col gap-4">
           <div className="md:text-5xl sm:text-4xl text-3xl font-semibold">

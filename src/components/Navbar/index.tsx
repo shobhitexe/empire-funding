@@ -8,7 +8,7 @@ import Offerstrip from "./Offerstrip";
 export const links = [
   { title: "Programs", href: "/#challenges" },
   { title: "Affiliate", href: "/affiliate" },
-  { title: "About Us", href: "/about-us" },
+  // { title: "About Us", href: "/about-us" },
   { title: "FAQ", href: "/faqs" },
   { title: "Rules", href: "/rules" },
   { title: "Contact Us", href: "/contact-us" },
